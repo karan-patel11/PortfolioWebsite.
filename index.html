@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karan Hemendra Patel | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app-container">
+    <header>
+      <nav class="floating-nav" id="mainNav" role="navigation" aria-label="Primary">
+        <div class="nav-inner">
+          <a href="#hero" class="nav-logo" aria-label="Go to home">
+            <span class="logo-box">KHP</span>
+          </a>
+          <ul class="nav-links" role="menubar">
+            <li role="none"><a role="menuitem" href="#about">About</a></li>
+            <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+            <li role="none"><a role="menuitem" href="#twods-capital">Venture</a></li>
+            <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+            <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
+            <li role="none"><a role="menuitem" href="#education">Education</a></li>
+            <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </nav>
+      <!-- Spacer to push content below fixed nav -->
+      <div id="nav-spacer" aria-hidden="true"></div>
+    </header>
+    
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="assets/Intro_Vid-2.mp4" type="video/mp4" />
+          <img src="assets/fallback-tech-image.jpg" alt="Tech background" />
+        </video>
+        <div class="hero-content">
+          <h1 class="hero-name">Karan Patel</h1>
+          <span class="hero-masters">Master in Computer Science</span>
+          <h2 class="hero-title">Software Engineer &amp; AI Specialist</h2>
+          <p class="hero-desc">Engineering AI that actually works—fast, reliable, ready for the real world.</p>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section about" id="about">
+        <div class="about-container">
+          <div class="about-text">
+            <h2 class="section-title">About Me</h2>
+            <p>
+              A Computer Science master’s student with 2+ years of hands-on engineering experience, I’ve shipped fintech products, solved real-world business problems, and launched my own tech venture. My track record proves I can design, build, and scale robust systems—delivering fresh ideas and real value from day one.
+          </p>
+            <br>
+          <p>
+              I’m happiest building things people actually use: code review tools powered by GPT, food-delivery apps loved by customers—even AI that spots disease in medical scans or environmental hazards from satellite data. Whether I’m solving a tricky backend challenge or pushing the latest in deep learning, I focus on practical, scalable solutions that make a difference—for teams, businesses, and everyday users. If you want someone who blends technical depth with real-world hustle, let’s connect.
+          </p>
+          </div>
+          <div class="about-photo-card">
+            <img src="assets/Photo .JPG" alt="Profile photo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>CodeKraft — AI-Powered Code Assistant</h3>
+            <p>Built a VS Code extension powered by optimized GPT models. Developed scalable FastAPI backend on AWS EKS, secured with IAM, and maintained high performance with robust integration testing—making coding faster, safer, and more efficient.</p>
+            <div class="tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">GPT</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">AWS</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/kaps117/CodeKraft" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>MindMate — Mental Health Companion</h3>
+            <p>Chatbot integrating GPT and sentiment analysis to detect emotional tone in real time. Built in React, Firebase, AWS Lambda. Partnered with clinicians to ensure ethical, safe responses. Protected PII with Firebase security rules and at-rest encryption.</p>
+            <div class="tags">
+                <span class="tag">GPT</span>
+                <span class="tag">Sentiment Analysis</span>
+                <span class="tag">React</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">AWS Lambda</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/MentalHealthAi" target="_blank">GitHub</a>
+            </div>
+        </div>
+         <!-- Stock Market Forecasting -->
+         <div class="project-card">
+            <h3>Stock Market Forecasting System</h3>
+            <p>LSTM-driven prediction engine with sentiment analysis, delivering 30-day trend forecasts and real-time risk scoring. Combines Python, LSTM networks, financial APIs, and interactive dashboards for actionable market insights.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">Finance</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Dashboards</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/Stock-Market-Analysis-using-LSTM" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <!-- Pneumonia Detection -->
+        <div class="project-card">
+            <h3>Pneumonia Detection via X-ray Imaging</h3>
+            <p>Built a CNN in Python and TensorFlow to classify chest X-rays for pneumonia. Used advanced image preprocessing for higher accuracy—achieving over 90%—and deployed an optimized, lightweight prototype for efficient real-world use.</p>
+            <div class="tags">
+                <span class="tag">TensorFlow</span>
+                <span class="tag">CNN</span>
+                <span class="tag">Python</span>
+                <span class="tag">Medical Imaging</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/Oil-Spill-Identification" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <!-- Oil Spill Classification -->
+        <div class="project-card">
+            <h3>Oil Spill Classification using SAR Images</h3>
+            <p>Applied advanced image processing—including median filtering, histogram equalization, thresholding, edge detection, and morphological operations—to analyze SAR satellite images for oil spill identification. Successfully segmented and classified spills across varying image conditions, aiding in environmental monitoring and remediation.</p>
+            <div class="tags">
+                <span class="tag">Image Processing</span>
+                <span class="tag">SAR Imaging</span>
+                <span class="tag">Python</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/Oil-Spill-Identification" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <!-- HungerHunt -->
+        <div class="project-card">
+            <h3>HungerHunt (Full Stack App)</h3>
+            <p>Developed a full-stack food delivery app with React, Node.js, MongoDB, and Redis—letting users browse restaurants, place orders, and track deliveries in real time. Integrated Stripe for payments and Socket.io for instant updates. Added Redis caching to boost system performance by 20% and cut server response time by 15%.</p>
+            <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Stripe</span>
+                <span class="tag">JavaScript</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/HungerHunt-Full-Stack-App" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <!-- Scalable Blog App -->
+        <div class="project-card">
+            <h3>Scalable Blog App Deployment Pipeline</h3>
+            <p>Built a CI/CD pipeline with Jenkins, Nexus, SonarQube, and Trivy to automate build, test, and deployment of a scalable blog app on AWS EKS. Used Docker and Kubernetes for zero-downtime deployments and efficient scaling. Integrated Prometheus and Grafana for monitoring, reducing system downtime by 30% and improving performance.</p>
+            <div class="tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Prometheus</span>
+                <span class="tag">Grafana</span>
+                <span class="tag">CI/CD</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/Scalable-Blog-App-Deployment-Pipeline" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <!-- Data Mining Group Project -->
+        <div class="project-card">
+            <h3>DC Real Estate & Crime Insights</h3>
+            <p>Analyzed how neighborhood crime rates and socioeconomic factors impact residential property values in Washington, DC from 2014–2018. Used regression and classification to reveal key drivers in the city’s housing market.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Mining</span>
+                <span class="tag">Exploratory Analysis</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/samarthshete/Data-mining-Project" target="_blank">GitHub</a>
+            </div>
+        </div>
+           <!-- Recommender System Project -->
+           <div class="project-card">
+            <h3>CineMatch</h3>
+            <p>Built a personalized movie recommendation system using collaborative filtering and content-based algorithms. The app analyzes user preferences and movie metadata to suggest similar titles, enhancing user engagement and discovery.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">TMDb API</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/kaps117/CineMatch-" target="_blank">GitHub</a>
+            </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Venture -->
+      <section class="section twods-capital" id="twods-capital">
+        <video class="twods-bg-video" autoplay muted loop playsinline>
+          <source src="assets/stock .mp4" type="video/mp4" />
+        </video>
+        <div class="twods-overlay"></div>
+        <div class="twods-content">
+          <div class="twods-text-card">
+            <h2>TWODS CAPITAL</h2>
+            <p>
+              <strong>Co-Founder</strong>
+            </p>
+            <p>
+              Me and my partner Chintan Ruperal noticed how the younger generation struggles with financial literacy and often falls prey to "get rich quick" schemes. To combat this, we launched TWODS CAPITAL—a platform aimed at financial education and responsible investing. We hosted educational webinars, collaborated with platforms like Algobulls, and began building a community-driven finance brand. That’s how TWODS CAPITAL was born.
+            </p>
+            <p>
+              FinTech has always been my passion and inspiration. At TWODS CAPITAL, we focus on data-driven investing, ethical strategy building, and community-first values. Our mission is to empower the next generation with knowledge and tools to invest confidently, responsibly, and with impact.
+            </p>
+            <a class="apple-glass-button" href="#contact">Partner with us</a>
+          </div>
+          <div class="twods-image-card">
+            <img src="assets/photo2.jpg" alt="TWODS Capital brand" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section-title">Skills & Tech</h2>
+          <div class="skill-list">
+          <span class="skill-chip">Python (expert)</span>
+          <span class="skill-chip">Bash</span>
+          <span class="skill-chip">Git</span>
+          <span class="skill-chip">Linux</span>
+          <span class="skill-chip">PyTorch</span>
+          <span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">Keras</span>
+          <span class="skill-chip">Transformers</span>
+          <span class="skill-chip">Knowledge Distillation</span>
+          <span class="skill-chip">Quantization</span>
+          <span class="skill-chip">ONNX</span>
+          <span class="skill-chip">TensorFlow Lite</span>
+          <span class="skill-chip">HuggingFace</span>
+          <span class="skill-chip">GPT</span>
+          <span class="skill-chip">CodeBERT</span>
+          <span class="skill-chip">RAG</span>
+          <span class="skill-chip">Synthetic Data</span>
+          <span class="skill-chip">AWS</span>
+          <span class="skill-chip">Docker</span>
+          <span class="skill-chip">Kubernetes</span>
+          <span class="skill-chip">FastAPI</span>
+          <span class="skill-chip">Firebase</span>
+          <span class="skill-chip">MLflow (learning)</span>
+          <span class="skill-chip">Azure (beginner)</span>
+          <span class="skill-chip">Data Preprocessing</span>
+          <span class="skill-chip">Unit & Integration Testing</span>
+          <span class="skill-chip">Batch/Real-Time Inference</span>
+          <span class="skill-chip">CI/CD</span>
+          <span class="skill-chip">Agile/Scrum</span>
+          <span class="skill-chip">API Design</span>
+          <span class="skill-chip">Pandas</span>
+          <span class="skill-chip">NumPy</span>
+          <span class="skill-chip">SciPy</span>
+          <span class="skill-chip">Scikit-learn</span>
+          <span class="skill-chip">Matplotlib</span>
+          <span class="skill-chip">Seaborn</span>
+          <span class="skill-chip">Jupyter Notebook</span>
+          <span class="skill-chip">IPython</span>
+          <span class="skill-chip">Data Analysis</span>
+          <span class="skill-chip">RESTful API Design</span>
+          <span class="skill-chip">System Monitoring & Observability</span>
+          <span class="skill-chip">Natural Language Processing (NLP)</span>
+          <span class="skill-chip">Data Visualization</span>
+          <span class="skill-chip">Security & Compliance</span>
+          <span class="skill-chip">Technical Interviewing</span>
+          <span class="skill-chip">Mentorship</span>
+          <span class="skill-chip">Product Management</span>
+          <span class="skill-chip">Debugging & Profiling</span>
+          <span class="skill-chip">Open Source</span>
+          <span class="skill-chip">Cloud Security</span>
+          <span class="skill-chip">Performance Optimization</span>
+          <span class="skill-chip">Effective Communication</span>
+          <span class="skill-chip">Microservices</span>
+          <span class="skill-chip">Technical Documentation</span>
+          <span class="skill-chip">Responsible AI</span>
+          <span class="skill-chip">Cross-functional Leadership</span>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section experience" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">July 2025 – Present</div>
+            <div class="timeline-title">Technical Support Assistant</div>
+            <div class="timeline-org">George Washington University LAW</div>
+            <div class="timeline-desc">
+                In my role supporting the Law School’s technology infrastructure, I ensure every event, class, and presentation runs smoothly—managing multimedia systems, troubleshooting technical issues in real time, and proactively solving problems before they disrupt operations. My daily work sharpens my ability to deliver high-availability services, maintain robust system performance, and respond quickly to unexpected technical challenges—skills that directly translate to engineering reliable, zero-downtime applications and platforms. By collaborating closely with faculty, students, and IT teams, I also refine my cross-functional communication and user-focused problem-solving, understanding exactly how technology needs to perform for real-world users. Working in the media center further develops my hands-on experience with backend systems, technical documentation, and process automation, all of which are essential in both software engineering and AI/ML deployment.
+            </div>
+        </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Feb 2025 – Apr 2025</div>
+            <div class="timeline-title">Research Assistant</div>
+            <div class="timeline-org">George Washington University SEAS</div>
+            <div class="timeline-desc">
+                At GWU as a Research Assistant, I designed and developed a scalable AI-powered code checking and exam testing system that leverages large language models—including GPT, CodeBERT, and CodeT5—to automatically review student code submissions in real time. My work included building Python-based REST APIs, automating the grading pipeline with CI/CD, and deploying the service on the cloud with Docker and Kubernetes—ensuring high reliability, over 95% error-detection accuracy, and minimal deployment downtime. I also implemented unit and integration tests, monitored system performance, and iterated on features based on direct feedback from both students and faculty. Through this project, I gained hands-on experience in full-stack engineering, applied machine learning, and cloud infrastructure, while also seeing real impact on how instructors teach and students learn. My dual focus on both technical excellence and real-world usability helped create a system that’s both powerful and truly helpful in the classroom.
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-year">Jun 2023 – Jul 2024</div>
+            <div class="timeline-title">SDE 1 & Business Solution Analyst</div>
+            <div class="timeline-org">VE, Mumbai, India</div>
+            <div class="timeline-desc">
+                I spent a year at VE as both a Software Development Engineer and a Business Solution Analyst, leading the design, development, and deployment of cloud-based web and mobile platforms with Node.js, MongoDB, Docker, and Kubernetes. I delivered REST APIs, microservices, and robust CI/CD pipelines—driving feature launches, automated testing, and reliable incident response. Working closely with product and ops teams, I balanced engineering rigor with business insight: leveraging ML/AI to build predictive analytics for inventory, NLP chatbots to automate customer support, and dashboards that turned raw data into actionable decisions. I also led user interviews, gathered feedback, and mentored junior engineers—ensuring our code was clean, scalable, and genuinely valuable to both the business and its customers. By the end of my tenure, our team had accelerated critical workflows, delivered intelligent product features, and left a codebase and culture built for future growth.
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-year">Sep 2019 – Present</div>
+            <div class="timeline-title">Co-Founder</div>
+            <div class="timeline-org">TWODS CAPITAL</div>
+            <div class="timeline-desc">
+                Built algorithmic-trading systems in Python; added version-control workflows (Git) and continuous testing to maintain code quality. Hosted seminars on trading algorithms and technical analysis; emphasized responsible, confidentiality-aware data handling. Developed open-source tools and educational content that expanded a community of retail traders, leading to a 50% increase in member engagement and knowledge sharing.
+            </div>
+        </div>
+        </div>
+      </section>
+    
+
+      <!-- Education -->
+      <section class="section education" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Jul 2024 – May 2026</div>
+            <div class="timeline-title">Master of Science, Computer Science</div>
+            <div class="timeline-org">The George Washington University</div>
+            <div class="timeline-desc">Coursework: Distributed Systems, Advanced Software Engineering, Deep Learning</div>
+          </div>
+          <!-- Paste additional education items here -->
+          <div class="timeline-item">
+            <div class="timeline-year">Jul 2018 – May 2024</div>
+            <div class="timeline-title">Bachelor of Technology, Computer Engineering</div>
+            <div class="timeline-org">NMIMS, Mumbai, India</div>
+            <div class="timeline-desc">Honours in AI; Coursework: Machine Learning, Artificial Intelligence</div>
+        </div>
+    </div>
+  </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="_replyto" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="apple-glass-button">Send</button>
+        </form>
+        <div class="social-links">
+          <a href="https://github.com/kaps117" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/patelkaran11" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          <a href="assets/resume.pdf" aria-label="Resume" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Karan Hemendra Patel. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#twods-capital">TWODS</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
