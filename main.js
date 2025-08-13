@@ -129,4 +129,50 @@
     });
   
   })();
+
+// ==== Minimal Apple Loading Screen with Bar ====
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const loadingBar = document.getElementById('loading-bar');
+    const loadingPercent = document.getElementById('loading-percent');
+    const enterBtn = document.getElementById('loading-enter');
+    const portfolio = document.getElementById('portfolio-content');
+    if (!loadingScreen || !loadingBar || !loadingPercent || !enterBtn) return;
+    if (portfolio) portfolio.style.display = 'none';
   
+    // Bar and percent stay at 0% until click
+    loadingBar.style.width = '0%';
+    loadingPercent.textContent = '0%';
+    enterBtn.disabled = false; // button is ready right away for this scenario
+  
+    let percent = 0, duration = 1460, stepTime = 14;
+  
+    enterBtn.addEventListener('click', function() {
+      enterBtn.disabled = true;
+      enterBtn.style.opacity = 0.7;
+      percent = 0;
+      loadingBar.style.transition = "width 1.48s cubic-bezier(.37,1.17,.37,.98)";
+      loadingBar.style.width = '100%';
+      loadingPercent.textContent = '0%';
+  
+      const start = Date.now();
+      const timer = setInterval(() => {
+        const elapsed = Date.now() - start;
+        percent = Math.min(100, Math.round((elapsed / duration) * 100));
+        loadingPercent.textContent = percent + "%";
+        if (percent >= 100) {
+          clearInterval(timer);
+          loadingBar.style.width = '100%';
+          loadingPercent.textContent = "100%";
+          setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+              loadingScreen.style.display = 'none';
+              if (portfolio) portfolio.style.display = 'block';
+              document.body.style.overflow = 'auto';
+            }, 600);
+          }, 320);
+        }
+      }, stepTime);
+    });
+  });
