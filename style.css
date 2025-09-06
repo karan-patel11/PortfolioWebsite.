@@ -1572,165 +1572,208 @@ X
     color: var(--apple-blue);
   }
   
-  /* ==========================================================================
-     RESPONSIVE ADJUSTMENTS (MOBILE, TABLET, ETC.)
-     ========================================================================== */
-  @media (max-width: 800px) {
-    :root {
-      --nav-max-width: calc(100% - 32px);
-      --nav-radius-bottom: 14px;
-      --section-gap: var(--space-lg);
-    }
-    p,
-    li {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .hero-name {
-      font-size: 2.5rem;
-    }
-    .hero-masters {
-      font-size: 1.2rem;
-    }
-    .hero-title {
-      font-size: 1.4rem;
-      margin-bottom: var(--space-sm);
-    }
-    .hero-desc {
-      font-size: 1.05rem;
-      margin-bottom: var(--space-md);
-    }
-    .nav-links {
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0.5rem 0;
-    }
-    .nav-links a {
-      font-size: 0.825rem;
-      padding: 0.6rem 0.75rem;
-      border-radius: 10px;
-    }
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: var(--space-md);
-    }
-    .about-container {
-      flex-direction: column;
-      gap: var(--space-md);
-    }
-    .about-text {
-      order: 2;
-    }
-    .about-photo-card {
-      order: 1;
-      margin-bottom: var(--space-md);
-    }
-    .hero-video {
-      width: 100%;
-      height: 120%;
-      object-fit: cover;
-    }
-    .twods-content {
-      flex-direction: column;
-      gap: var(--space-lg);
-    }
-    .twods-text-card,
-    .twods-image-card {
-      flex: 1 1 auto;
-      width: 100%;
-      min-width: 0;
-    }
-    .twods-image-card img {
-      max-height: 240px;
-    }
-    .project-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-md);
-    }
-    .project-card {
-      padding: var(--space-lg) var(--space-md);
-      padding-bottom: 4rem;
-    }
-    .project-card h3 {
-      font-size: 1.3rem;
-    }
-    .timeline-item {
-      margin-bottom: var(--space-md);
-      padding-left: var(--space-md);
-    }
-    .timeline-title,
-    .timeline-desc {
-      font-size: 1rem;
-    }
-    .contact {
-      width: 100%;
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-    }
-    .footer-links {
-      gap: var(--space-md);
-      margin-top: var(--space-md);
-    }
-    .footer-links a {
-      font-size: 0.95rem;
-    }
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS (MOBILE, TABLET, ETC.)
+   ========================================================================== */
+@media (max-width: 800px) {
+  :root {
+    --nav-max-width: calc(100% - 32px);
+    --nav-radius-bottom: 14px;
+    --section-gap: var(--space-lg);
   }
-  
-  @media (min-width: 801px) and (max-width: 1200px) {
-    .about-container,
-    .twods-content {
-      flex-direction: row;
-      gap: var(--space-xl);
-      margin: 0 auto;
-      width: 100%;
-    }
-    .about-text,
-    .about-photo-card,
-    .twods-text-card,
-    .twods-image-card {
-      flex: 1 1 45%;
-      width: 45%;
-    }
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.5;
   }
-  
-  @media (min-width: 1201px) {
-    .about-container,
-    .twods-content {
-      margin: 0 auto;
-      width: 100%;
-    }
-    .about-text,
-    .about-photo-card,
-    .twods-text-card,
-    .twods-image-card {
-      flex: 1 1 45%;
-      width: 45%;
-    }
+  .hero-name {
+    font-size: 2.5rem;
   }
-  
-  @media (max-width: 480px) {
-    .hero-video,
-    .twods-bg-video {
-      width: 100%;
-      height: 120%;
-      object-fit: cover;
-    }
+  .hero-masters {
+    font-size: 1.2rem;
   }
-  
-  @media (hover: none) {
-    .nav-links a:hover,
-    .project-card:hover,
-    .skill-chip:hover,
-    .social-links a:hover {
-      background: initial !important;
-      transform: none !important;
-    }
+  .hero-title {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-sm);
   }
+  .hero-desc {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-md);
+  }
+  .nav-links {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+  .nav-links a {
+    font-size: 0.825rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+  .about-container {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .about-text {
+    order: 2;
+  }
+  .about-photo-card {
+    order: 1;
+    margin-bottom: var(--space-md);
+  }
+  /* --- FIX: About Flip Card Layout Mobile Alignment --- */
+  .about-front-layout,
+  .about-back-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1.1rem !important;
+    width: 100%;
+  }
+  .about-flip-face {
+    padding: 1.2rem 0.4rem !important;
+    min-height: unset !important;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .about-quote {
+    text-align: center !important;
+    width: 100%;
+    font-size: 1.15rem !important;
+  }
+  .about-longtext {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+  }
+  .about-avatar,
+  .about-photo-card {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .about-avatar img,
+  .about-photo-card img {
+    width: 96px !important;
+    height: 96px !important;
+    min-width: 96px !important;
+    min-height: 96px !important;
+    object-fit: cover !important;
+    border-radius: 24px !important;
+    display: block !important;
+    margin: 0 auto;
+  }
+  /* --- END FIX --- */
+  .hero-video {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+  }
+  .twods-content {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .twods-text-card,
+  .twods-image-card {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+  }
+  .twods-image-card img {
+    max-height: 240px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .project-card {
+    padding: var(--space-lg) var(--space-md);
+    padding-bottom: 4rem;
+  }
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+  .timeline-item {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-md);
+  }
+  .timeline-title,
+  .timeline-desc {
+    font-size: 1rem;
+  }
+  .contact {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+  .footer-links {
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  .footer-links a {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .about-container,
+  .twods-content {
+    flex-direction: row;
+    gap: var(--space-xl);
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about-text,
+  .about-photo-card,
+  .twods-text-card,
+  .twods-image-card {
+    flex: 1 1 45%;
+    width: 45%;
+  }
+}
+@media (min-width: 1201px) {
+  .about-container,
+  .twods-content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about-text,
+  .about-photo-card,
+  .twods-text-card,
+  .twods-image-card {
+    flex: 1 1 45%;
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-video,
+  .twods-bg-video {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+  }
+}
+@media (hover: none) {
+  .nav-links a:hover,
+  .project-card:hover,
+  .skill-chip:hover,
+  .social-links a:hover {
+    background: initial !important;
+    transform: none !important;
+  }
+}
+
   
   /* ==========================================================================
      ENTRY OVERLAY & ZOOM-REVEAL (FOR CINEMATIC ENTRY)
