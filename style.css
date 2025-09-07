@@ -1573,251 +1573,167 @@ X
   }
   
 /* ==========================================================================
-   RESPONSIVE ADJUSTMENTS (MOBILE, TABLET, ETC.)
+   Universal Responsive Adjustments - Make Everything Adapt!
    ========================================================================== */
+
+/* 1. Always use fluid containers and flexible units */
+body, .container, .floating-nav, .about-flip-card, .section {
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 2. Responsive NAVBAR: stack, wrap, and fill on small screens */
 @media (max-width: 800px) {
-  :root {
-    --nav-max-width: calc(100% - 32px);
-    --nav-radius-bottom: 14px;
-    --section-gap: var(--space-lg);
+  .floating-nav {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    transform: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0 0 18px 18px !important;
+    padding: 0.6rem 0.1rem !important;
   }
-  p,
-  li {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  .hero-name {
-    font-size: 2.5rem;
-  }
-  .hero-masters {
-    font-size: 1.2rem;
-  }
-  .hero-title {
-    font-size: 1.4rem;
-    margin-bottom: var(--space-sm);
-  }
-  .hero-desc {
-    font-size: 1.05rem;
-    margin-bottom: var(--space-md);
+  .floating-nav .nav-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 0.1rem !important;
+    padding: 0.3rem 0 !important;
   }
   .nav-links {
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0.5rem 0;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    gap: 0.31rem !important;
   }
   .nav-links a {
-    font-size: 0.825rem;
-    padding: 0.6rem 0.75rem;
-    border-radius: 10px;
+    font-size: 0.98rem !important;
+    min-width: 40vw !important;
+    padding: 0.33rem 0.44rem !important;
+    border-radius: 10px !important;
+    margin: 2px 0 !important;
+    text-align: center !important;
   }
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: var(--space-md);
+  .logo-box {
+    min-width: 80px !important;
+    font-size: 0.92rem !important;
+    padding: 0.17rem 0.77rem !important;
+    margin-bottom: 0.22rem !important;
   }
-  .about-container {
-    flex-direction: column;
-    gap: var(--space-md);
+  .theme-toggle {
+    width: 27px !important;
+    height: 27px !important;
+    margin-top: 0.1rem !important;
   }
-  .about-text {
-    order: 2;
-  }
-  .about-photo-card {
-    order: 1;
-    margin-bottom: var(--space-md);
-  }
-  .about-front-layout,
-  .about-back-layout {
+}
+
+/* 3. Responsive About Card: always vertical stack on mobile */
+@media (max-width: 800px) {
+  .about-front-layout, .about-back-layout {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 1.1rem !important;
-    width: 100%;
+    gap: 1.2rem !important;
+    width: 100% !important;
   }
   .about-flip-face {
-    padding: 1.2rem 0.6rem !important;
+    padding: 1.4rem 0.6rem !important;
+    width: 100% !important;
     min-height: unset !important;
     box-sizing: border-box;
-    width: 100%;
   }
-  .about-quote {
-    text-align: center !important;
-    width: 100%;
-    font-size: 1.15rem !important;
-  }
+  .about-quote,
   .about-longtext {
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    font-size: 1.05rem;
-    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    font-size: 1.05rem !important;
+    padding: 0 2vw !important;
   }
-  .about-avatar,
-  .about-photo-card {
+  .about-avatar, .about-photo-card {
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 auto !important;
   }
-  .about-avatar img,
-  .about-photo-card img {
-    width: 96px !important;
-    height: 96px !important;
-    min-width: 96px !important;
-    min-height: 96px !important;
+  .about-avatar img, .about-photo-card img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 28px !important;
     object-fit: cover !important;
-    border-radius: 24px !important;
     display: block !important;
     margin: 0 auto;
   }
-  .hero-video {
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-  }
-  .twods-content {
-    flex-direction: column;
-    gap: var(--space-lg);
-  }
-  .twods-text-card,
-  .twods-image-card {
-    flex: 1 1 auto;
-    width: 100%;
-    min-width: 0;
-  }
-  .twods-image-card img {
-    max-height: 240px;
+}
+
+/* 4. Make all sections, grids, and cards fluid and stack naturally */
+@media (max-width: 800px) {
+  .section, .project-grid, .skills-gallery, .twods-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    padding: 0.9rem 0.1rem !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.1rem !important;
   }
   .project-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+    grid-template-columns: 1fr !important;
   }
-  .project-card {
-    padding: var(--space-lg) var(--space-md);
-    padding-bottom: 4rem;
-  }
-  .project-card h3 {
-    font-size: 1.3rem;
-  }
-  .timeline-item {
-    margin-bottom: var(--space-md);
-    padding-left: var(--space-md);
-  }
-  .timeline-title,
-  .timeline-desc {
-    font-size: 1rem;
-  }
-  .contact {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-  }
-  .footer-links {
-    gap: var(--space-md);
-    margin-top: var(--space-md);
-  }
-  .footer-links a {
-    font-size: 0.95rem;
+  .skills-gallery {
+    grid-template-columns: 1fr !important;
   }
 }
-/* Portrait fix for mobile About card: force vertical stacking */
-@media (max-width: 800px) and (orientation: portrait) {
-  .about-front-layout,
-  .about-back-layout {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 1.1rem !important;
-    width: 100%;
-  }
-  .about-flip-face {
-    padding: 1.2rem 0.4rem !important;
-    min-height: unset !important;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .about-quote {
-    text-align: center !important;
-    width: 100%;
-    font-size: 1.15rem !important;
-  }
-  .about-longtext {
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    font-size: 1.05rem;
-    box-sizing: border-box;
-  }
-  .about-avatar,
-  .about-photo-card {
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-  }
-  .about-avatar img,
-  .about-photo-card img {
-    width: 96px !important;
-    height: 96px !important;
-    min-width: 96px !important;
-    min-height: 96px !important;
-    object-fit: cover !important;
-    border-radius: 24px !important;
-    display: block !important;
-    margin: 0 auto;
+
+/* 5. Typography: scale smoothly for small and large devices */
+html {
+  font-size: clamp(14px, 2vw, 18px);
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 15px;
   }
 }
-@media (min-width: 801px) and (max-width: 1200px) {
-  .about-container,
-  .twods-content {
-    flex-direction: row;
-    gap: var(--space-xl);
-    margin: 0 auto;
-    width: 100%;
-  }
-  .about-text,
-  .about-photo-card,
-  .twods-text-card,
-  .twods-image-card {
-    flex: 1 1 45%;
-    width: 45%;
-  }
+
+/* 6. Images: always scale and fill container */
+img, .about-avatar img, .about-photo-card img, .twods-image-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
-@media (min-width: 1201px) {
-  .about-container,
-  .twods-content {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .about-text,
-  .about-photo-card,
-  .twods-text-card,
-  .twods-image-card {
-    flex: 1 1 45%;
-    width: 45%;
-  }
+
+/* 7. Never overflow horizontally */
+body {
+  overflow-x: hidden !important;
 }
-@media (max-width: 480px) {
-  .hero-video,
-  .twods-bg-video {
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-  }
+
+/* 8. Ensures buttons, links, etc. are touch-friendly */
+button, a, .nav-links a {
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 1rem;
+  padding: 0.35em 0.9em;
 }
-@media (hover: none) {
-  .nav-links a:hover,
-  .project-card:hover,
-  .skill-chip:hover,
-  .social-links a:hover {
-    background: initial !important;
-    transform: none !important;
-  }
+
+/* 9. Optional: override any leftover pixel widths to 100%/auto for containers and sections */
+.container, .main-content, .footer, header, .floating-nav, nav, section, .about-flip-card {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
 }
+
+
 
   
   /* ==========================================================================
