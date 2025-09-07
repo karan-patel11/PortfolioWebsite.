@@ -1626,7 +1626,6 @@ X
     order: 1;
     margin-bottom: var(--space-md);
   }
-  /* Mobile About Card Layout Fix */
   .about-front-layout,
   .about-back-layout {
     flex-direction: column !important;
@@ -1671,7 +1670,6 @@ X
     display: block !important;
     margin: 0 auto;
   }
-  /* END About Card Fix */
   .hero-video {
     width: 100%;
     height: 120%;
@@ -1726,7 +1724,7 @@ X
     font-size: 0.95rem;
   }
 }
-/* Fix only for portrait orientation on mobile */
+/* Portrait fix for mobile About card: force vertical stacking */
 @media (max-width: 800px) and (orientation: portrait) {
   .about-front-layout,
   .about-back-layout {
