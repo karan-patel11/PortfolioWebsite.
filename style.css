@@ -1631,43 +1631,25 @@ body, .container, .floating-nav, .about-flip-card, .section {
     margin-top: 0.1rem !important;
   }
 }
-/* 3. Responsive About Card: always vertical stack on mobile */
+/* 3. Responsive About Card: Always show only card 2 on phone, hide card 1, zoom out by 10% */
 @media (max-width: 800px) {
-  .about-front-layout, .about-back-layout {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 1.2rem !important;
-    width: 100% !important;
+  .about-front-layout {
+    display: none !important;
   }
-  .about-flip-face {
-    padding: 1.4rem 0.6rem !important;
-    width: 100% !important;
-    min-height: unset !important;
-    box-sizing: border-box;
-  }
-  .about-quote,
-  .about-longtext {
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: left !important;
-    font-size: 1.05rem !important;
-    padding: 0 2vw !important;
-  }
-  .about-avatar, .about-photo-card {
+  .about-back-layout {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    flex-direction: column !important;
     width: 100% !important;
-    margin: 0 auto !important;
   }
-  .about-avatar img, .about-photo-card img {
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 28px !important;
-    object-fit: cover !important;
-    display: block !important;
-    margin: 0 auto;
+  /* Remove any close (X) button below the cards if any */
+  .close-button, .card-close-x {
+    display: none !important;
+  }
+  /* Zoom out entire website body by 10% on phones */
+  body {
+    transform: scale(0.9);
+    transform-origin: top center;
+    overflow-x: hidden;
   }
 }
 /* 4. Make all sections, grids, and cards fluid and stack naturally */
