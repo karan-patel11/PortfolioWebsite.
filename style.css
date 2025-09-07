@@ -1575,7 +1575,6 @@ X
 /* ==========================================================================
    Universal Responsive Adjustments - Make Everything Adapt!
    ========================================================================== */
-
 /* 1. Always use fluid containers and flexible units */
 body, .container, .floating-nav, .about-flip-card, .section {
   width: 100vw;
@@ -1584,7 +1583,6 @@ body, .container, .floating-nav, .about-flip-card, .section {
   margin: 0 auto;
   padding: 0;
 }
-
 /* 2. Responsive NAVBAR: stack, wrap, and fill on small screens */
 @media (max-width: 800px) {
   .floating-nav {
@@ -1633,7 +1631,6 @@ body, .container, .floating-nav, .about-flip-card, .section {
     margin-top: 0.1rem !important;
   }
 }
-
 /* 3. Responsive About Card: always vertical stack on mobile */
 @media (max-width: 800px) {
   .about-front-layout, .about-back-layout {
@@ -1673,7 +1670,6 @@ body, .container, .floating-nav, .about-flip-card, .section {
     margin: 0 auto;
   }
 }
-
 /* 4. Make all sections, grids, and cards fluid and stack naturally */
 @media (max-width: 800px) {
   .section, .project-grid, .skills-gallery, .twods-content {
@@ -1693,7 +1689,6 @@ body, .container, .floating-nav, .about-flip-card, .section {
     grid-template-columns: 1fr !important;
   }
 }
-
 /* 5. Typography: scale smoothly for small and large devices */
 html {
   font-size: clamp(14px, 2vw, 18px);
@@ -1703,7 +1698,6 @@ html {
     font-size: 15px;
   }
 }
-
 /* 6. Images: always scale and fill container */
 img, .about-avatar img, .about-photo-card img, .twods-image-card img {
   max-width: 100%;
@@ -1711,12 +1705,10 @@ img, .about-avatar img, .about-photo-card img, .twods-image-card img {
   object-fit: cover;
   display: block;
 }
-
 /* 7. Never overflow horizontally */
 body {
   overflow-x: hidden !important;
 }
-
 /* 8. Ensures buttons, links, etc. are touch-friendly */
 button, a, .nav-links a {
   min-height: 44px;
@@ -1724,7 +1716,6 @@ button, a, .nav-links a {
   font-size: 1rem;
   padding: 0.35em 0.9em;
 }
-
 /* 9. Optional: override any leftover pixel widths to 100%/auto for containers and sections */
 .container, .main-content, .footer, header, .floating-nav, nav, section, .about-flip-card {
   width: 100vw !important;
@@ -1732,8 +1723,6 @@ button, a, .nav-links a {
   box-sizing: border-box !important;
   margin: 0 auto !important;
 }
-
-
 
   
   /* ==========================================================================
