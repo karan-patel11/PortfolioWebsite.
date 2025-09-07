@@ -1577,67 +1577,38 @@
   }
 }
 
-/* Flip Card Responsive Fix & Reorder Written Content Above Image */
 @media (max-width: 800px) {
-  .about-flip-card {
-    max-width: 100vw !important;
-    min-height: 500px !important;
-  }
-  .about-flip-card .about-flip-face {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: unset !important;
-    padding: 2rem !important;
-    border-radius: 20px !important;
-    box-shadow: none !important;
+  /* About Section Card 1 & Card 2: place text above image */
+  .about-front-layout, .about-back-layout {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     justify-content: flex-start !important;
-    text-align: center !important;
   }
-  .about-flip-face .about-quote,
-  .about-flip-face .about-longtext {
+  .about-front-layout .about-quote,
+  .about-back-layout .about-longtext {
     order: 1;
     width: 100%;
+    margin-bottom: 1rem !important;
   }
-  .about-flip-face .about-avatar,
-  .about-flip-face .about-photo-card {
+  .about-front-layout .about-avatar,
+  .about-back-layout .about-photo-card {
     order: 2;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 1rem !important;
   }
-  .about-flip-face .about-quote {
-    font-size: 1.4rem !important;
-    line-height: 1.3 !important;
+  /* Make both About cards bigger on mobile if text overflows */
+  .about-flip-card {
+    min-height: 650px !important;
+    padding-bottom: 2rem !important;
+  }
+  /* Text inside About Card 2 wraps correctly above image, big or small text */
+  .about-back-layout .about-longtext {
+    padding-bottom: 0 !important;
     margin-bottom: 1rem !important;
   }
-  .about-flip-face .about-avatar {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-  .about-flip-face .about-avatar img {
-    width: 120px !important;
-    height: 120px !important;
-    border-radius: 20px !important;
-  }
-  .about-flip-face .about-longtext {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-    padding: 1rem !important;
-  }
-  .about-flip-face .about-photo-card {
-    margin-top: 1rem !important;
-    width: 90% !important;
-  }
-  .about-flip-face .about-photo-card img {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 24px !important;
-  }
-}
 
 /* Projects Section Responsive Fix */
 @media (max-width: 700px) {
@@ -1657,50 +1628,50 @@
   }
 }
 
-/* Venture Section Responsive Fix & Reorder */
-@media (max-width: 900px) {
+  /* Venture (TWODS Capital): stack text above image */
   .twods-content {
+    display: flex !important;
     flex-direction: column !important;
-    gap: 2.2rem !important;
+    gap: 1.5rem !important;
   }
   .twods-text-card {
     order: 1;
+    width: 100% !important;
+    margin-bottom: 1.2rem !important;
   }
   .twods-image-card {
     order: 2;
     width: 100% !important;
     display: flex;
     justify-content: center;
+    margin-top: 0 !important;
+  }
+  .twods-image-card img {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 18px;
   }
 }
 
-/* Skills Section Responsive Fix - smaller tags & stacked top 4 cards */
+     /* Adjust skill tags size and stack skill cards vertically on small screens */
 @media (max-width: 900px) {
   .skills-tags .tag {
-    font-size: 0.7rem !important;
-    padding: 0.2rem 0.4rem !important;
-    margin: 2px 3px !important;
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+    margin: 3px 4px !important;
   }
-  .skills .glass-skill-card:nth-child(-n+4) {
+
+  .skills .glass-skill-card {
     width: 100% !important;
     margin-bottom: 1rem !important;
   }
-  .skills .glass-skill-card:nth-child(n+5) {
-    width: auto !important;
-  }
+
   .skills-gallery {
     grid-template-columns: 1fr !important;
-    max-width: 490px !important;
+    max-width: 500px !important;
     gap: 1.25rem 0 !important;
-  }
-}
-@media (max-width: 950px) {
-  .skills-gallery {
-    max-width: 530px !important;
-    gap: 1.1rem 0 !important;
-  }
-  .glass-skill-card {
-    padding: 1rem !important;
   }
 }
 
