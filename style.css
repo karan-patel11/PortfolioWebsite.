@@ -1523,9 +1523,11 @@
   
   .footer-links a:hover {
     color: var(--apple-blue);
- /* ========= Combined Responsive Media Queries for Portfolio Website ========= */
 
-/* Navbar Responsive Fix */
+
+/* ========= Combined Responsive Media Queries for Portfolio Website ========= */
+
+/* Navbar Responsive Fix (mobile portrait) */
 @media (max-width: 480px) {
   .floating-nav {
     width: 100vw !important;
@@ -1575,13 +1577,13 @@
   }
 }
 
-/* Flip Card Responsive Fix */
+/* Flip Card Responsive Fix & Reorder Written Content Above Image */
 @media (max-width: 800px) {
-  .about .about-flip-card {
+  .about-flip-card {
     max-width: 100vw !important;
     min-height: 500px !important;
   }
-  .about .about-flip-card .about-flip-face {
+  .about-flip-card .about-flip-face {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
@@ -1589,39 +1591,48 @@
     padding: 2rem !important;
     border-radius: 20px !important;
     box-shadow: none !important;
-  }
-  .about .about-flip-card .about-flip-face.about-flip-front,
-  .about .about-flip-card .about-flip-face.about-flip-back {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     text-align: center !important;
   }
-  .about .about-flip-card .about-flip-face .about-quote {
+  .about-flip-face .about-quote,
+  .about-flip-face .about-longtext {
+    order: 1;
+    width: 100%;
+  }
+  .about-flip-face .about-avatar,
+  .about-flip-face .about-photo-card {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .about-flip-face .about-quote {
     font-size: 1.4rem !important;
     line-height: 1.3 !important;
     margin-bottom: 1rem !important;
   }
-  .about .about-flip-card .about-flip-face .about-avatar {
+  .about-flip-face .about-avatar {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
-  .about .about-flip-card .about-flip-face .about-avatar img {
+  .about-flip-face .about-avatar img {
     width: 120px !important;
     height: 120px !important;
     border-radius: 20px !important;
   }
-  .about .about-flip-card .about-flip-face .about-longtext {
+  .about-flip-face .about-longtext {
     font-size: 1rem !important;
     line-height: 1.5 !important;
     padding: 1rem !important;
   }
-  .about .about-flip-card .about-flip-face .about-photo-card {
+  .about-flip-face .about-photo-card {
     margin-top: 1rem !important;
     width: 90% !important;
   }
-  .about .about-flip-card .about-flip-face .about-photo-card img {
+  .about-flip-face .about-photo-card img {
     width: 100% !important;
     height: auto !important;
     border-radius: 24px !important;
@@ -1646,28 +1657,41 @@
   }
 }
 
-/* Venture Section Responsive Fix */
+/* Venture Section Responsive Fix & Reorder */
 @media (max-width: 900px) {
   .twods-content {
     flex-direction: column !important;
     gap: 2.2rem !important;
   }
-  .twods-text-card,
+  .twods-text-card {
+    order: 1;
+  }
   .twods-image-card {
-    flex: 1 1 100% !important;
+    order: 2;
     width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
 }
 
-/* Skills Section Responsive Fix */
+/* Skills Section Responsive Fix - smaller tags & stacked top 4 cards */
 @media (max-width: 900px) {
+  .skills-tags .tag {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+    margin: 2px 3px !important;
+  }
+  .skills .glass-skill-card:nth-child(-n+4) {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  .skills .glass-skill-card:nth-child(n+5) {
+    width: auto !important;
+  }
   .skills-gallery {
     grid-template-columns: 1fr !important;
     max-width: 490px !important;
     gap: 1.25rem 0 !important;
-  }
-  .glass-skill-card {
-    padding: 1rem !important;
   }
 }
 @media (max-width: 950px) {
@@ -1675,8 +1699,10 @@
     max-width: 530px !important;
     gap: 1.1rem 0 !important;
   }
+  .glass-skill-card {
+    padding: 1rem !important;
+  }
 }
-
 
   
   /* ==========================================================================
