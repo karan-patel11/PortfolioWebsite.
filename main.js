@@ -250,3 +250,15 @@ document.addEventListener('DOMContentLoaded', function () {
   setupLoadingScreen();
   setupAboutFlipCard();
 });
+
+const flipCard = document.getElementById('aboutFlipCard');
+const flipInner = flipCard.querySelector('.about-flip-inner');
+const btnFront = flipCard.querySelector('.about-toggle-btn');
+const btnBack = flipCard.querySelector('.about-close-btn');
+
+btnFront.addEventListener('click', () => {
+  flipCard.classList.add('flipped');
+});
+btnBack.addEventListener('click', () => {
+  flipCard.classList.remove('flipped');
+});
