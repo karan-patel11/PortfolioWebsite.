@@ -1578,73 +1578,117 @@
 }
 
 /* Flip Card Responsive Fix & Reorder Written Content Above Image */
-/* Fully responsive About card stacking for all screens */
-.about-front-layout, .about-back-layout {
+.about-flip-card {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 32px 0 rgba(36,80,200,0.09);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  perspective: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Flip mechanics – no overflow */
+.about-flip-inner {
+  width: 100%;
+  min-height: 520px;
+  transition: transform 0.7s cubic-bezier(.66,1.66,.33,1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.about-flip-card.flipped .about-flip-inner {
+  transform: rotateY(180deg);
+}
+.about-flip-face {
+  position: absolute;
+  width: 100%;
+  min-height: 520px;
+  left: 0; top: 0;
+  backface-visibility: hidden;
+  background: #fff;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 2rem 1.2rem 2.4rem 1.2rem;
+}
+.about-flip-face.about-flip-back {
+  transform: rotateY(180deg);
 }
 
-/* Large screens: side by side */
-@media (min-width: 801px) {
-  .about-front-layout, .about-back-layout {
-    flex-direction: row;
-    gap: 3rem;
-  }
-  .about-front-layout .about-quote,
-  .about-back-layout .about-longtext {
-    flex: 2 1 320px;
-    min-width: 0;
-  }
-  .about-front-layout .about-avatar,
-  .about-back-layout .about-photo-card {
-    flex: 1 1 200px;
-    min-width: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+/* Card interior: stacks vertically, keeps everything IN the card */
+.about-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
 }
 
-/* Small screens: stack content vertically in order */
+/* Avatar/Photo: always centered and fluid on phone/tablet */
+.about-avatar img, .about-photo-card img {
+  width: 120px;
+  max-width: 70vw;
+  height: auto;
+  border-radius: 22px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Long text: ensures wrapping and room for lots of content */
+.about-longtext {
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: left;
+  width: 100%;
+  max-width: 98%;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+/* Indicators and buttons: always inside the card */
+.about-indicators {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+.status-indicator, .experience-indicator {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.about-toggle-btn, .about-close-btn {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  background: #fff;
+  color: #168dff;
+  border: 1.5px solid #d5eaff;
+  box-shadow: 0 2px 10px rgba(36,80,200,0.06);
+  cursor: pointer;
+}
+.about-toggle-btn:focus, .about-close-btn:focus {
+  outline: 2px solid #168dff;
+}
+
 @media (max-width: 800px) {
-  .about-front-layout, .about-back-layout {
-    flex-direction: column !important;
-    gap: 1.4rem !important;
-    align-items: stretch !important;
-  }
-  .about-front-layout .about-quote,
-  .about-back-layout .about-longtext {
-    order: 1;
-    width: 100%;
-    font-size: 1.08rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 1rem !important;
-    word-break: break-word;
-  }
-  .about-front-layout .about-avatar,
-  .about-back-layout .about-photo-card {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0 !important;
-  }
-  .about-front-layout .about-avatar img,
-  .about-back-layout .about-photo-card img {
-    max-width: 190px;
-    width: 72vw;
-    height: auto;
-    border-radius: 18px;
-  }
-
-  /* Make card taller for more content/image space */
-  .about-flip-card {
-    min-height: 620px !important;
-    padding: 1.1rem 0.7rem !important;
-  }
+  .about-flip-card, .about-flip-face { max-width: 98vw !important; }
+  .about-flip-inner, .about-flip-face { min-height: 530px !important; }
+  .about-card-content { gap: 1.5rem !important; }
+  .about-longtext { font-size: 1.07rem !important; }
+  .about-avatar img, .about-photo-card img { width: 100px !important; max-width: 90vw !important;}
 }
+
 
 
 /* Projects Section Responsive Fix */
