@@ -1578,31 +1578,50 @@
 }
 
 /* Flip Card Responsive Fix & Reorder Written Content Above Image */
-@media (max-width: 800px) {
-  .about-flip-card {
-    max-width: 100vw !important;
-    min-height: 650px !important;
-    padding-bottom: 2rem !important;
+/* Fully responsive About card stacking for all screens */
+.about-front-layout, .about-back-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Large screens: side by side */
+@media (min-width: 801px) {
+  .about-front-layout, .about-back-layout {
+    flex-direction: row;
+    gap: 3rem;
   }
-  .about-flip-card .about-flip-face {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: unset !important;
-    padding: 2rem !important;
-    border-radius: 20px !important;
-    box-shadow: none !important;
-    display: flex !important;
+  .about-front-layout .about-quote,
+  .about-back-layout .about-longtext {
+    flex: 2 1 320px;
+    min-width: 0;
+  }
+  .about-front-layout .about-avatar,
+  .about-back-layout .about-photo-card {
+    flex: 1 1 200px;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+/* Small screens: stack content vertically in order */
+@media (max-width: 800px) {
+  .about-front-layout, .about-back-layout {
     flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
+    gap: 1.4rem !important;
+    align-items: stretch !important;
   }
   .about-front-layout .about-quote,
   .about-back-layout .about-longtext {
     order: 1;
     width: 100%;
+    font-size: 1.08rem !important;
+    line-height: 1.5 !important;
     margin-bottom: 1rem !important;
+    word-break: break-word;
   }
   .about-front-layout .about-avatar,
   .about-back-layout .about-photo-card {
@@ -1610,32 +1629,23 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1rem !important;
+    margin-top: 0 !important;
   }
-  .about-flip-face .about-quote {
-    font-size: 1.4rem !important;
-    line-height: 1.3 !important;
+  .about-front-layout .about-avatar img,
+  .about-back-layout .about-photo-card img {
+    max-width: 190px;
+    width: 72vw;
+    height: auto;
+    border-radius: 18px;
   }
-  .about-flip-face .about-avatar img {
-    width: 120px !important;
-    height: 120px !important;
-    border-radius: 20px !important;
-  }
-  .about-flip-face .about-longtext {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-    padding: 1rem 0 !important;
-  }
-  .about-flip-face .about-photo-card {
-    margin-top: 1rem !important;
-    width: 90% !important;
-  }
-  .about-flip-face .about-photo-card img {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 24px !important;
+
+  /* Make card taller for more content/image space */
+  .about-flip-card {
+    min-height: 620px !important;
+    padding: 1.1rem 0.7rem !important;
   }
 }
+
 
 /* Projects Section Responsive Fix */
 @media (max-width: 700px) {
