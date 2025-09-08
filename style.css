@@ -1656,31 +1656,18 @@
 }
 
 /* Venture Section Responsive Fix & Reorder */
-@media (max-width: 800px) {
-  .twods-content {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  .twods-text-card {
-    order: 1;
-    width: 100% !important;
-    margin-bottom: 1.2rem !important;
-  }
-  .twods-image-card {
-    order: 2;
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
-    margin-top: 0 !important;
-  }
-  .twods-image-card img {
-    max-width: 90vw !important;
-    height: auto !important;
-    max-width: 400px;
-    object-fit: cover;
-    border-radius: 18px;
-  }
-}
+    .twods-content {
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .twods-text-card, .twods-image-card {
+      flex: 1 1 auto;
+      width: 100%;
+      min-width: 0;
+    }
+    .twods-image-card img {
+      max-height: 240px;
+    }
 
 /* Skills Section Responsive Adjustments */
 @media (max-width: 900px) {
