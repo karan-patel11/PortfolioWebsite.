@@ -222,14 +222,17 @@ function setupAboutFlipCard() {
     const flipCard = document.getElementById('aboutFlipCard');
     const toggleBtn = document.getElementById('aboutToggleBtn');
     const closeBtn = document.getElementById('aboutCloseBtn');
-    if (toggleBtn && flipCard) {
+    // Disable flip on phones (matches CSS: max-width:768 portrait)
+    const isPhonePortrait = () => window.matchMedia('(max-width: 768px) and (orientation: portrait)').matches;
+
+    if (toggleBtn && flipCard && !isPhonePortrait()) {
         toggleBtn.addEventListener('click', () => {
             flipCard.classList.add('flipped');
             setTimeout(() => closeBtn && closeBtn.focus(), 330);
             requestAnimationFrame(() => adjustAboutCardHeight());
         });
     }
-    if (closeBtn && flipCard) {
+    if (closeBtn && flipCard && !isPhonePortrait()) {
         closeBtn.addEventListener('click', () => {
             flipCard.classList.remove('flipped');
             setTimeout(() => toggleBtn && toggleBtn.focus(), 330);
