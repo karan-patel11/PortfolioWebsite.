@@ -77,55 +77,51 @@
     </section>
 
     <!-- ABOUT SECTION -->
-<section class="section about" id="about">
-  <div class="container">
-    <h2 class="section-title about-headline" data-reveal="fade-up">About</h2>
-    <div class="about-flip-card" id="aboutFlipCard">
-      <div class="about-flip-inner">
-        <!-- Front Face -->
-        <div class="about-flip-face about-flip-front">
-          <div class="about-indicators">
-            <span class="status-indicator">
-              <span class="green-dot"></span> Available for work
-            </span>
-            <span class="experience-indicator">
-              <strong>2+</strong> Years of Experience
-            </span>
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title about-headline" data-reveal="fade-up">About</h2>
+        <div class="about-flip-card" id="aboutFlipCard" data-reveal="fade-up">
+          <div class="about-flip-face about-flip-front">
+            <div class="about-indicators">
+              <span class="status-indicator">
+                <span class="green-dot"></span> Available for work
+              </span>
+              <span class="experience-indicator">
+                <strong>2+</strong> Years of Experience
+              </span>
+            </div>
+            <div class="about-front-layout">
+              <div class="about-quote">
+                <span class="quote-large">
+                  "You know, I'm<br>
+                  <span class="about-accent">something of a scientist</span> myself."
+                </span>
+              </div>
+              <div class="about-avatar">
+                <img src="assets/memoji3.jpeg" alt="Memoji avatar" />
+              </div>
+            </div>
+            <button class="about-toggle-btn card-fab" id="aboutToggleBtn" aria-label="See more" title="See more">+</button>
           </div>
-          <div class="about-card-content">
-            <div class="about-quote">
-              "You know, I'm<br>
-              <span class="about-accent">something of a scientist</span> myself."
+          <div class="about-flip-face about-flip-back">
+            <div class="about-back-layout">
+              <div class="about-longtext">
+                <p>
+                  A Computer Science master’s student with 2+ years of hands-on engineering experience, I’ve shipped fintech products, solved real-world business problems, and launched my own tech venture. My track record proves I can design, build, and scale robust systems—delivering fresh ideas and real value from day one.
+                </p>
+                <p>
+                  I’m happiest building things people actually use: code review tools powered by GPT, food-delivery apps loved by customers—even AI that spots disease in medical scans or environmental hazards from satellite data. Whether I’m solving a tricky backend challenge or pushing the latest in deep learning, I focus on practical, scalable solutions that make a difference—for teams, businesses, and everyday users. If you want someone who blends technical depth with real-world hustle, let’s connect.
+                </p>
+              </div>
+              <div class="about-photo-card">
+                <img src="assets/Photo .JPG" alt="Profile photo" />
+              </div>
             </div>
-            <div class="about-avatar">
-              <img src="assets/memoji3.jpeg" alt="Memoji avatar" />
-            </div>
+            <button class="about-close-btn card-fab" id="aboutCloseBtn" aria-label="Close" title="Close">×</button>
           </div>
-          <button class="about-toggle-btn card-fab" id="aboutToggleBtn" aria-label="See more" title="See more">+</button>
-        </div>
-        <!-- Back Face -->
-        <div class="about-flip-face about-flip-back">
-          <div class="about-card-content">
-            <div class="about-longtext">
-              <p>
-                A Computer Science master’s student with 2+ years of hands-on engineering experience, I’ve shipped fintech products, solved real-world business problems, and launched my own tech venture. My track record proves I can design, build, and scale robust systems—delivering fresh ideas and real value from day one.
-              </p>
-              <p>
-                I’m happiest building things people actually use: code review tools powered by GPT, food-delivery apps loved by customers—even AI that spots disease in medical scans or environmental hazards from satellite data. Whether I’m solving a tricky backend challenge or pushing the latest in deep learning, I focus on practical, scalable solutions that make a difference—for teams, businesses, and everyday users. If you want someone who blends technical depth with real-world hustle, let’s connect.
-              </p>
-            </div>
-            <div class="about-photo-card">
-              <img src="assets/Photo\ .JPG" alt="Profile photo" />
-            </div>
-          </div>
-          <button class="about-close-btn card-fab" id="aboutCloseBtn" aria-label="Close" title="Close">×</button>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
 
     <!-- PROJECTS SECTION -->
     <section class="section projects" id="projects">
@@ -445,7 +441,7 @@
     <section class="section contact" id="contact">
       <div class="container">
         <h2 class="section-title" data-reveal="fade-up">Get in Touch</h2>
-        <form class="contact-form liquid-glass" action="https://formspree.io/f/xyzpnbre" method="POST" data-reveal="fade-up">
+        <form class="contact-form liquid-glass" action="https://formspree.io/f/your-formspree-id" method="POST" data-reveal="fade-up">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="_replyto" placeholder="Email" required />
           <textarea name="message" placeholder="Message" rows="5" required></textarea>
