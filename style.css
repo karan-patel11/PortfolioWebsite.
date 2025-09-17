@@ -1004,9 +1004,11 @@ a:hover {
   }
 
   .about-quote {
-    font-size: 1.5rem;
-    line-height: 1.25;
+    font-size: clamp(1.55rem, 4.8vw, 1.85rem);
+    line-height: 1.22;
     text-align: center;
+    max-width: 26ch;
+    margin: 0 auto;
   }
 
   .about-avatar img {
@@ -1015,14 +1017,17 @@ a:hover {
   }
 
   .about-photo-card img {
-    height: 180px !important;
+    height: 190px !important;
     border-radius: 16px;
+    object-position: top center;
   }
 
   .about-longtext {
-    font-size: 1rem;
-    line-height: 1.55;
+    font-size: clamp(1rem, 3.3vw, 1.08rem);
+    line-height: 1.58;
     text-align: center;
+    max-width: 60ch;
+    margin: 0 auto;
   }
 
   .about-indicators {
@@ -1060,8 +1065,10 @@ a:hover {
   }
 
   .about-quote {
-    font-size: 1.3rem;
-    line-height: 1.25;
+    font-size: clamp(1.35rem, 5vw, 1.5rem);
+    line-height: 1.22;
+    max-width: 26ch;
+    margin: 0 auto;
   }
 
   .about-avatar img {
@@ -1070,12 +1077,15 @@ a:hover {
   }
 
   .about-photo-card img {
-    height: 140px !important;
+    height: 150px !important;
+    object-position: top center;
   }
 
   .about-longtext {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: clamp(0.95rem, 3.4vw, 1.02rem);
+    line-height: 1.55;
+    max-width: 60ch;
+    margin: 0 auto;
   }
 
   .about-indicators {
