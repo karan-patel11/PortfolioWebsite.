@@ -8,7 +8,6 @@
   <title>Karan Hemendra Patel | Portfolio</title>
 
   <!-- EXTERNAL FONTS & ICONS -->
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
   <!-- MAIN CSS -->
@@ -16,22 +15,6 @@
 </head>
 
 <body>
-  <!-- LOADING SCREEN -->
-  <div id="loading-screen" class="loading-screen">
-    <div class="loading-center">
-      <img src="assets/emoji1.jpg" alt="Logo" class="loading-logo" />
-      <div class="loading-bar-bg">
-        <div class="loading-bar" id="loading-bar"></div>
-      </div>
-      <span class="loading-message" id="loading-message">Ready to innovate!</span>
-      <span class="loading-percent" id="loading-percent">0%</span>
-      <button id="loading-enter" class="loading-enter-button">
-        <span>Enter Portfolio</span>
-        <span class="arrow">→</span>
-      </button>
-    </div>
-  </div>
-
   <!-- MAIN WEBSITE LAYOUT -->
   <div id="app-container">
     <!-- SITE HEADER & NAVIGATION -->
@@ -44,7 +27,7 @@
           <ul class="nav-links" role="menubar">
             <li role="none"><a role="menuitem" href="#about">About</a></li>
             <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
-            <li role="none"><a role="menuitem" href="#twods-capital">Venture</a></li>
+            <li role="none"><a role="menuitem" href="#venture">Venture</a></li>
             <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
             <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
             <li role="none"><a role="menuitem" href="#education">Education</a></li>
@@ -63,9 +46,8 @@
       <!-- HERO / INTRO SECTION -->
       <section class="section hero" id="hero">
         <div class="hero-media" data-parallax data-parallax-speed="0.18" aria-hidden="true">
-          <video class="hero-video" autoplay muted loop playsinline poster="assets/fallback-tech-image.jpg">
+          <video class="hero-video" autoplay muted loop playsinline>
             <source src="assets/Intro_Vid-2.mp4" type="video/mp4" />
-            <img src="assets/fallback-tech-image.jpg" alt="" />
           </video>
           <div class="hero-gradient"></div>
         </div>
@@ -173,7 +155,7 @@
                   class="tag">FastAPI</span><span class="tag">AWS</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/CodeKraft" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/CodeKraft" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
 
@@ -187,7 +169,7 @@
                   class="tag">React</span><span class="tag">Firebase</span><span class="tag">AWS Lambda</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/MentalHealthAi" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/MentalHealthAi" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
 
@@ -201,7 +183,7 @@
                   class="tag">Data Analysis</span><span class="tag">Dashboards</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/Stock-Market-Analysis-using-LSTM" target="_blank"
+                <a href="https://github.com/karan-patel11/Stock-Market-Analysis-using-LSTM" target="_blank"
                   rel="noopener">GitHub</a>
               </div>
             </article>
@@ -216,7 +198,7 @@
                   class="tag">Medical Imaging</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/Oil-Spill-Identification" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/Pneumonia-Detection-Using-Xray" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
 
@@ -231,7 +213,7 @@
                   class="tag">Python</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/Oil-Spill-Identification" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/Oil-Spill-Identification" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
 
@@ -246,7 +228,7 @@
                   class="tag">Redis</span><span class="tag">Stripe</span><span class="tag">JavaScript</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/HungerHunt-Full-Stack-App" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/HungerHunt-Full-Stack-App" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
 
@@ -262,7 +244,7 @@
                   class="tag">CI/CD</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/Scalable-Blog-App-Deployment-Pipeline" target="_blank"
+                <a href="https://github.com/karan-patel11/Scalable-Blog-App-Deployment-Pipeline" target="_blank"
                   rel="noopener">GitHub</a>
               </div>
             </article>
@@ -291,7 +273,7 @@
                   class="tag">Streamlit</span><span class="tag">TMDb API</span>
               </div>
               <div class="links">
-                <a href="https://github.com/kaps117/CineMatch-" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/karan-patel11/CineMatch-" target="_blank" rel="noopener">GitHub</a>
               </div>
             </article>
           </div>
@@ -512,20 +494,16 @@
       <section class="section contact" id="contact">
         <div class="container">
           <h2 class="section-title" data-reveal="fade-up">Get in Touch</h2>
-          <form class="contact-form liquid-glass" action="https://formspree.io/f/your-formspree-id" method="POST"
-            data-reveal="fade-up">
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="_replyto" placeholder="Email" required />
-            <textarea name="message" placeholder="Message" rows="5" required></textarea>
-            <button type="submit" class="apple-glass-button">Send</button>
-          </form>
+          <div class="contact-actions">
+            <a href="mailto:patelkaran.tech@gmail.com">patelkaran.tech@gmail.com</a>
+            <button type="button" id="copy-email" class="apple-glass-button" hidden>Copy email</button>
+            <p id="copy-email-status" role="status" aria-live="polite"></p>
+          </div>
           <div class="social-links" data-reveal="fade-up">
-            <a href="https://github.com/kaps117" aria-label="GitHub" target="_blank" rel="noopener"><i
+            <a href="https://github.com/karan-patel11" aria-label="GitHub" target="_blank" rel="noopener"><i
                 class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/patelkaran11" aria-label="LinkedIn" target="_blank" rel="noopener"><i
                 class="fab fa-linkedin-in"></i></a>
-            <a href="assets/resume.pdf" aria-label="Resume" target="_blank" rel="noopener"><i
-                class="fas fa-file-alt"></i></a>
           </div>
         </div>
       </section>
@@ -539,7 +517,7 @@
           <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#twods-capital">TWODS</a>
+          <a href="#venture">TWODS</a>
           <a href="#contact">Contact</a>
         </div>
       </div>

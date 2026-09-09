@@ -163,54 +163,20 @@ function setupSkillsBarAnimation() {
     }, { passive: true });
 }
 
-// ============================================================================
-// Loading Screen: Dynamic Progress
-// Shows progress bar and percent while "loading" the portfolio.
-// ============================================================================
-function setupLoadingScreen() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const loadingBar = document.getElementById('loading-bar');
-    const loadingPercent = document.getElementById('loading-percent');
-    const enterBtn = document.getElementById('loading-enter');
-    const portfolio = document.getElementById('portfolio-content');
-    if (!loadingScreen || !loadingBar || !loadingPercent || !enterBtn) return;
-    if (portfolio) portfolio.style.display = 'none';
-
-    loadingBar.style.width = '0%';
-    loadingPercent.textContent = '0%';
-    enterBtn.disabled = false;
-
-    let percent = 0, duration = 1460, stepTime = 14;
-
-    // Click to start loading animation
-    enterBtn.addEventListener('click', function () {
-        enterBtn.disabled = true;
-        enterBtn.style.opacity = 0.7;
-        percent = 0;
-        loadingBar.style.transition = "width 1.48s cubic-bezier(.37,1.17,.37,.98)";
-        loadingBar.style.width = '100%';
-        loadingPercent.textContent = '0%';
-
-        // Animate the progress bar and percentage
-        const start = Date.now();
-        const timer = setInterval(() => {
-            const elapsed = Date.now() - start;
-            percent = Math.min(100, Math.round((elapsed / duration) * 100));
-            loadingPercent.textContent = percent + "%";
-            if (percent >= 100) {
-                clearInterval(timer);
-                loadingBar.style.width = '100%';
-                loadingPercent.textContent = "100%";
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                        if (portfolio) portfolio.style.display = 'block';
-                        document.body.style.overflow = 'auto';
-                    }, 600);
-                }, 320);
-            }
-        }, stepTime);
+// Contact: keep the mailto link available if clipboard access fails.
+function setupCopyEmail() {
+    const button = document.getElementById('copy-email');
+    const status = document.getElementById('copy-email-status');
+    const link = document.querySelector('.contact-actions a[href^="mailto:"]');
+    if (!button || !status || !link) return;
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(link.getAttribute('href').slice(7));
+            status.textContent = 'Email address copied.';
+        } catch {
+            status.textContent = 'Unable to copy. Select the email address above to copy it or open your email app.';
+        }
     });
 }
 
@@ -284,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupSkillTagBounce();
     setupSkillCardToggle();
     setupSkillsBarAnimation();
-    setupLoadingScreen();
+    setupCopyEmail();
     setupAboutFlipCard();
     setupAboutCardAutoSize();
 });
