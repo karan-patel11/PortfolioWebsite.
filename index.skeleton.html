@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karan Patel — Software Engineer</title>
+<link rel="stylesheet" href="assets/css/motion.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER RAIL  (desktop: 64px left rail / mobile: top bar)
+     Theme flips per panel via data-header-theme on each panel.
+     ============================================================ -->
+<header class="rail" data-header data-intro-header aria-label="Site header">
+  <span class="rail__progress" data-header-scroll-progress aria-hidden="true"></span>
+
+  <button class="rail__menu" id="menu-toggle" type="button" disabled
+          aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open menu">
+    <span class="rail__menu-bar" aria-hidden="true"></span>
+    <span class="rail__menu-bar" aria-hidden="true"></span>
+  </button>
+
+  <a class="rail__logo" href="#site-top" aria-label="Back to top">KP</a>
+
+  <div class="rail__vertical" aria-hidden="true">
+    <span class="rail__vtext">Software Engineer</span>
+    <span class="rail__vtext">© 2026</span>
+  </div>
+
+  <button class="rail__theme" data-theme-toggle type="button" aria-label="Switch to light theme">
+    <span data-theme-icon aria-hidden="true">◐</span>
+  </button>
+</header>
+
+<nav class="menu" id="fullscreen-menu" data-menu hidden aria-label="Main">
+  <ul class="menu__list">
+    <li><a href="#chapter-about"><span data-menu-index>01</span> About</a></li>
+    <li><a href="#chapter-projects"><span data-menu-index>02</span> Projects</a></li>
+    <li><a href="#chapter-build"><span data-menu-index>03</span> What I build</a></li>
+    <li><a href="#chapter-experience"><span data-menu-index>04</span> Experience</a></li>
+    <li><a href="#chapter-contact"><span data-menu-index>05</span> Contact</a></li>
+    <li><a href="/projects/">All projects (plain list)</a></li>
+  </ul>
+</nav>
+
+<div id="dissolve-mount" aria-hidden="true"></div>
+
+<main>
+<div class="story" data-horizontal-story id="site-top">
+  <div class="story__pin" data-horizontal-pin>
+    <div class="story__track" data-horizontal-track>
+
+      <!-- ======================= CH 0 — HERO ======================= -->
+      <section class="panel panel--hero" data-horizontal-panel data-panel="hero"
+               data-header-theme="dark" data-header-transparent aria-label="Introduction">
+
+        <span class="hero__sweep" data-intro-sweep aria-hidden="true"></span>
+
+        <!-- Year odometer: sits in the SAME slot the name will occupy -->
+        <div class="hero__slot hero__slot--year" data-hero-year aria-hidden="true">
+          <div class="odometer" data-year-row>
+            <span class="odometer__prefix" data-year-prefix>20</span>
+            <span class="odometer__window">
+              <span class="odometer__strip" data-year-strip>
+                <span class="odometer__cell">19</span><span class="odometer__cell">20</span>
+                <span class="odometer__cell">21</span><span class="odometer__cell">22</span>
+                <span class="odometer__cell">23</span><span class="odometer__cell">24</span>
+                <span class="odometer__cell">25</span><span class="odometer__cell">26</span>
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Real accessible heading + aria-hidden split copy -->
+        <h1 class="visually-hidden">Karan Patel — Software Engineer</h1>
+        <div class="hero__slot hero__slot--name" data-hero-name aria-hidden="true">
+          <div class="display display--xl" data-name-row>
+            <span class="line-mask"><span class="line-mask__inner" data-split-words>Karan</span></span>
+            <span class="line-mask"><span class="line-mask__inner" data-split-words>Patel</span></span>
+          </div>
+        </div>
+
+        <p class="hero__tagline" data-intro-tagline>
+          MSCS, George Washington University. I build systems that know when to abstain.
+        </p>
+
+        <p class="hero__meta" data-reveal-line>
+          <span class="line-mask"><span class="line-mask__inner" data-line>Arlington, Virginia</span></span>
+          <span class="line-mask"><span class="line-mask__inner" data-line>(EST) <span data-clock>--:--</span></span></span>
+        </p>
+
+        <p class="hero__avail" data-reveal-line>
+          <span class="line-mask"><span class="line-mask__inner" data-line>Open to full-time</span></span>
+          <span class="line-mask"><span class="line-mask__inner" data-line>SWE &amp; AI roles</span></span>
+        </p>
+
+        <p class="hero__scroll" data-reveal-line>
+          <span class="line-mask"><span class="line-mask__inner" data-line>Scroll</span></span>
+        </p>
+
+        <p class="hero__journey" data-intro-journey>Seven years of building, in seven screens</p>
+      </section>
+
+      <!-- ======================= CH I — ABOUT ======================= -->
+      <section class="panel panel--about" id="chapter-about" data-horizontal-panel data-panel="about"
+               data-header-theme="light" aria-label="About">
+        <p class="panel__num">I</p>
+
+        <div class="about__copy" data-reveal-group>
+          <p class="label" data-reveal-item>About</p>
+          <p class="display display--md" data-reveal-item>
+            Final-semester MSCS at GWU. Capital-markets background, four years shipping
+            production software, and a habit of making models say “I don’t know”.
+          </p>
+        </div>
+
+        <a class="link link--to" href="/about/" data-link-to>More about me</a>
+
+        <figure class="about__portrait" data-curtain>
+          <span class="curtain__card" data-curtain-card aria-hidden="true"></span>
+          <span class="curtain__clip" data-curtain-clip>
+            <img src="assets/img/about.jpg" alt="Karan Patel" width="882" height="1176"
+                 loading="lazy" decoding="async">
+          </span>
+        </figure>
+
+        <blockquote class="about__quote" data-reveal-item>
+          <p>Ship the boring part first.</p>
+        </blockquote>
+
+        <p class="about__foot" data-reveal-line>
+          <span class="line-mask"><span class="line-mask__inner" data-line>Outside work: markets, teaching, public speaking.</span></span>
+        </p>
+      </section>
+
+      <!-- ================= CH II — EXPAND PANEL (signature) ================= -->
+      <section class="panel panel--expand" data-horizontal-panel data-panel="expand"
+               data-expand-panel data-header-theme="light" aria-label="Selected work">
+        <div class="expand__rect" data-expand-rect aria-hidden="true">
+          <video data-expand-video src="assets/video/work-desktop.mp4"
+                 poster="assets/img/work-poster.jpg"
+                 autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <p class="expand__word" data-expand-word="lead">Selected</p>
+        <p class="expand__word" data-expand-word="trail">Work</p>
+      </section>
+
+      <!-- ======================= CH III — PROJECTS ======================= -->
+      <section class="panel panel--projects" id="chapter-projects" data-horizontal-panel
+               data-panel="projects" data-header-theme="light" aria-label="Projects">
+        <p class="panel__num">II</p>
+
+        <div class="projects__head">
+          <p class="label" data-reveal-line>
+            <span class="line-mask"><span class="line-mask__inner" data-line>Featured</span></span>
+          </p>
+
+          <ul class="worklist" data-work-list>
+            <li class="worklist__row" data-work-row="0">
+              <a href="/projects/verdict/" data-transition-color="var(--bg-panel-light)">
+                <span class="line-mask"><span class="line-mask__inner" data-line>Verdict</span></span>
+                <span class="worklist__meta">Calibrated abstention · SMB credit</span>
+              </a>
+              <span class="worklist__rule" data-work-rule aria-hidden="true"></span>
+              <span class="worklist__rule worklist__rule--hover" data-work-rule-hover aria-hidden="true"></span>
+            </li>
+            <li class="worklist__row" data-work-row="1">
+              <a href="/projects/northport/" data-transition-color="var(--bg-panel-light)">
+                <span class="line-mask"><span class="line-mask__inner" data-line>NorthPort</span></span>
+                <span class="worklist__meta">SEC Form N-PORT pre-filing validator</span>
+              </a>
+              <span class="worklist__rule" data-work-rule aria-hidden="true"></span>
+              <span class="worklist__rule worklist__rule--hover" data-work-rule-hover aria-hidden="true"></span>
+            </li>
+            <li class="worklist__row" data-work-row="2">
+              <a href="/projects/quantera/" data-transition-color="var(--bg-panel-light)">
+                <span class="line-mask"><span class="line-mask__inner" data-line>QuantEra</span></span>
+                <span class="worklist__meta">Fail-closed LLM equity research</span>
+              </a>
+              <span class="worklist__rule" data-work-rule aria-hidden="true"></span>
+              <span class="worklist__rule worklist__rule--hover" data-work-rule-hover aria-hidden="true"></span>
+            </li>
+            <li class="worklist__row" data-work-row="3">
+              <a href="/projects/bnpl-marketplace/" data-transition-color="var(--bg-panel-light)">
+                <span class="line-mask"><span class="line-mask__inner" data-line>BNPL Marketplace</span></span>
+                <span class="worklist__meta">Checkout &amp; settlement services</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="projects__preview" data-work-preview aria-hidden="true">
+          <img data-work-image="0" src="assets/img/verdict-16-9.webp"   alt="" width="1440" height="810" loading="lazy" decoding="async">
+          <img data-work-image="1" src="assets/img/northport-16-9.webp" alt="" width="1440" height="810" loading="lazy" decoding="async">
+          <img data-work-image="2" src="assets/img/quantera-16-9.webp"  alt="" width="1440" height="810" loading="lazy" decoding="async">
+          <img data-work-image="3" src="assets/img/bnpl-16-9.webp"      alt="" width="1440" height="810" loading="lazy" decoding="async">
+        </div>
+
+        <a class="link link--to" href="/projects/" data-link-to>All projects</a>
+        <p class="projects__note">❋ Some demos are offline; source is on GitHub.</p>
+      </section>
+
+      <!-- ================== CH IV — WHAT I BUILD (over-wide) ================== -->
+      <section class="panel panel--build" id="chapter-build" data-horizontal-panel data-panel="build"
+               data-header-theme="dark" aria-label="What I build">
+        <div class="build__intro">
+          <p class="panel__num">III</p>
+          <div>
+            <p class="label" data-reveal-line>
+              <span class="line-mask"><span class="line-mask__inner" data-line>What I build</span></span>
+            </p>
+            <p class="display display--md" data-reveal-line>
+              <span class="line-mask"><span class="line-mask__inner" data-line>Backends, evaluation harnesses, and the plumbing between them.</span></span>
+            </p>
+          </div>
+        </div>
+
+        <article class="card" data-build-card>
+          <span class="card__bg" data-parallax aria-hidden="true">
+            <span class="card__scrim"></span>
+            <img data-parallax-media src="assets/img/build-1.webp" alt="" width="1536" height="2752" loading="lazy" decoding="async">
+          </span>
+          <p class="card__num">01</p>
+          <p class="card__title">Backend services</p>
+          <p class="card__body">Python, FastAPI, Postgres. Idempotent jobs, typed contracts, real migrations.</p>
+        </article>
+
+        <article class="card" data-build-card>
+          <span class="card__bg" data-parallax aria-hidden="true">
+            <span class="card__scrim"></span>
+            <img data-parallax-media src="assets/img/build-2.webp" alt="" width="1536" height="2752" loading="lazy" decoding="async">
+          </span>
+          <p class="card__num">02</p>
+          <p class="card__title">Applied ML</p>
+          <p class="card__body">Calibration, abstention, and evaluation that survives out-of-sample data.</p>
+        </article>
+
+        <article class="card" data-build-card>
+          <span class="card__bg" data-parallax aria-hidden="true">
+            <span class="card__scrim"></span>
+            <img data-parallax-media src="assets/img/build-3.webp" alt="" width="1536" height="2752" loading="lazy" decoding="async">
+          </span>
+          <p class="card__num">03</p>
+          <p class="card__title">Data pipelines</p>
+          <p class="card__body">Ingestion, validation, provenance. Every number traceable to a source.</p>
+        </article>
+
+        <article class="card" data-build-card>
+          <span class="card__bg" data-parallax aria-hidden="true">
+            <span class="card__scrim"></span>
+            <img data-parallax-media src="assets/img/build-4.webp" alt="" width="1536" height="2752" loading="lazy" decoding="async">
+          </span>
+          <p class="card__num">04</p>
+          <p class="card__title">Fintech domain</p>
+          <p class="card__body">Equities, filings, credit. Domain fluency, not just a wrapper around an API.</p>
+        </article>
+      </section>
+
+      <!-- ======================= CH V — EXPERIENCE ======================= -->
+      <section class="panel panel--exp" id="chapter-experience" data-horizontal-panel data-panel="experience"
+               data-header-theme="light" aria-label="Experience">
+        <p class="panel__num">IV</p>
+
+        <div class="exp__wrap">
+          <p class="label" data-reveal-line>
+            <span class="line-mask"><span class="line-mask__inner" data-line>Experience</span></span>
+          </p>
+
+          <ul class="exp__list" data-clients-list>
+            <li class="exp__row" data-client-row>
+              <span class="exp__card" aria-hidden="true"><img src="assets/img/logo-gwu.svg" alt="" width="140" height="140" loading="lazy"></span>
+              <span class="line-mask"><span class="line-mask__inner" data-line>George Washington University</span></span>
+              <span class="exp__meta">Technical Assistant · 2025–2026</span>
+            </li>
+            <li class="exp__row" data-client-row>
+              <span class="exp__card" aria-hidden="true"><img src="assets/img/logo-vipul.svg" alt="" width="140" height="140" loading="lazy"></span>
+              <span class="line-mask"><span class="line-mask__inner" data-line>Vipul Enterprise</span></span>
+              <span class="exp__meta">SDE · 2022–2024</span>
+            </li>
+            <li class="exp__row" data-client-row>
+              <span class="exp__card" aria-hidden="true"><img src="assets/img/logo-twods.svg" alt="" width="140" height="140" loading="lazy"></span>
+              <span class="line-mask"><span class="line-mask__inner" data-line>TWODS Capital</span></span>
+              <span class="exp__meta">Co-founder · 2019–</span>
+            </li>
+          </ul>
+
+          <!-- mobile-only stacked logo slot -->
+          <div class="exp__mobile-logos" data-clients-mobile aria-hidden="true">
+            <span data-client-mobile-logo><img src="assets/img/logo-gwu.svg" alt="" width="56" height="56"></span>
+            <span data-client-mobile-logo><img src="assets/img/logo-vipul.svg" alt="" width="56" height="56"></span>
+            <span data-client-mobile-logo><img src="assets/img/logo-twods.svg" alt="" width="56" height="56"></span>
+          </div>
+        </div>
+
+        <p class="exp__foot">Capital markets, enterprise software, and university research.</p>
+      </section>
+
+      <!-- ======================= CH VI — CONTACT ======================= -->
+      <section class="panel panel--contact" id="chapter-contact" data-horizontal-panel data-panel="contact"
+               data-header-theme="dark" aria-label="Contact">
+        <h2 class="visually-hidden">Next chapter — get in touch</h2>
+        <div class="contact__head" data-char-line-heading aria-hidden="true">
+          <div class="display display--xl">
+            <span class="line-mask"><span class="line-mask__inner" data-split-words>Next</span></span>
+            <span class="line-mask"><span class="line-mask__inner" data-split-words>chapter</span></span>
+          </div>
+        </div>
+
+        <div class="contact__block" data-reveal-line>
+          <span class="line-mask"><span class="line-mask__inner" data-line><span class="label">Email</span></span></span>
+          <span class="line-mask"><span class="line-mask__inner" data-line>
+            <a class="link link--from" href="mailto:patelkaran.tech@gmail.com" data-link-from>patelkaran.tech@gmail.com</a>
+          </span></span>
+        </div>
+
+        <ul class="contact__social" data-reveal-line>
+          <li><span class="line-mask"><span class="line-mask__inner" data-line><a class="link link--from" href="https://github.com/karan-patel11">GitHub</a></span></span></li>
+          <li><span class="line-mask"><span class="line-mask__inner" data-line><a class="link link--from" href="#">LinkedIn</a></span></span></li>
+          <li><span class="line-mask"><span class="line-mask__inner" data-line><a class="link link--from" href="/resume.pdf">Résumé</a></span></span></li>
+        </ul>
+
+        <p class="contact__foot">© 2026 — Karan Patel</p>
+      </section>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+</body>
+</html>
