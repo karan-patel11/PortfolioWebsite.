@@ -1,0 +1,4 @@
+*.zip
+karan-patel-single-design-handoff/
+.openai/
+node_modules/
