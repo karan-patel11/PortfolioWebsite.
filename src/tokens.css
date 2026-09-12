@@ -1,0 +1,8 @@
+/* Recommended recreation tokens; no proprietary font files included. */
+:root { --surface-hero:#3A3632; --surface-paper:#FAF9F6; --surface-stone:#EDEAE6; --surface-dark:#1F1D1B; --ink:#2E2B28; --text-light:#F3EEE8; --muted-light:#C8C0B8; --rule:#5A524D; --font-display:Georgia,serif; --font-body:Arial,sans-serif; --rail:64px; --gutter:64px; --body:1.125rem; --leading:1.5; --display:clamp(5rem,11.67vw,10.5rem); --feedback:250ms; --reveal:700ms; --ease-out:cubic-bezier(.22,1,.36,1); }
+* { box-sizing:border-box; } body { margin:0; font:var(--body)/var(--leading) var(--font-body); color:var(--ink); background:var(--surface-paper); }
+.chapter { padding:64px var(--gutter); margin-left:var(--rail); } .reading { max-width:65ch; } img { display:block; max-width:100%; height:auto; } .label { font-size:.875rem; } :focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+@media(max-width:1023px) { :root { --rail:0px; --gutter:32px; } .chapter { min-height:0; padding-block:48px; } }
+@media(max-width:767px) { :root { --gutter:20px; --body:1rem; --display:clamp(4rem,21.54vw,5.25rem); } }
+@media(prefers-reduced-motion:reduce) { :root { --feedback:0ms; --reveal:0ms; } html { scroll-behavior:auto; } [data-reveal] { opacity:1!important; transform:none!important; clip-path:none!important; } }
+/* JS must also disable horizontal pins, smooth scrolling and WebGL on reduced motion. */
