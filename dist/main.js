@@ -1,99 +1,73 @@
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('#menu');
-const preference = matchMedia('(prefers-reduced-motion: reduce)');
-let observer;
-const animations = new Set();
-const chapters = [...document.querySelectorAll('main > section.chapter')];
-let navigationObserver;
-
-function currentChapter(chapter) {
-  const rail = document.querySelector('.rail');
-  if (rail) rail.dataset.surface = chapter.classList.contains('dark') ? 'dark'
-    : chapter.classList.contains('hero') ? 'hero'
-    : chapter.classList.contains('projects') ? 'stone' : 'paper';
-  document.querySelectorAll('#menu nav a, .footer-nav a').forEach(link => {
-    if (new URL(link.href).hash === `#${chapter.id}`) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
-  });
+const panels=[...document.querySelectorAll('[data-horizontal-panel]')];
+const preference=matchMedia('(prefers-reduced-motion: reduce)');
+const desktop=matchMedia('(min-width: 1024px) and (min-height: 500px)');
+const rail=[...document.querySelectorAll('[data-rail-label]')];
+let opened=null,origin=null,ownedEntry=false,bodyOverflow='',loading;
+function currentChapter(panel){
+ if(!panel)return;
+ rail.forEach(a=>a.toggleAttribute('aria-current',a.hash===`#${panel.id}`));
+ rail.forEach(a=>{if(a.hasAttribute('aria-current'))a.setAttribute('aria-current','location')});
+ const i=panels.indexOf(panel);document.querySelector('[data-header-scroll-progress]').style.transform=`scaleX(${i/(panels.length-1)})`;
 }
-if ('IntersectionObserver' in window && chapters.length) {
-  navigationObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if (entry.isIntersecting) currentChapter(entry.target); });
-  }, { rootMargin: '-15% 0px -80% 0px' });
-  chapters.forEach(chapter => navigationObserver.observe(chapter));
+function position(panel){
+ panel.scrollTop=0;panel.scrollLeft=0;
+ if(window.portfolioMotion)window.portfolioMotion.go(panel);
+ else {scrollTo({top:panel.offsetTop,behavior:'instant'});currentChapter(panel)}
 }
-
-// Content is visible by default. The Web Animations API never supplies
-// a persistent hidden state, so cancellation and script failure fail open.
-function reveal(element, delay = 0) {
-  if (preference.matches || !element.animate) return;
-  const animation = element.animate([
-    { opacity: 0, transform: 'translateY(24px)' },
-    { opacity: 1, transform: 'translateY(0)' },
-  ], { duration: 700, delay, easing: 'cubic-bezier(.22,1,.36,1)' });
-  animations.add(animation);
-  animation.finished.catch(() => {}).finally(() => animations.delete(animation));
+function hideDetail(){
+ if(!opened)return;
+ const dialog=opened;opened=null;dialog.close();document.body.style.overflow=bodyOverflow;
+ window.portfolioMotion?.unlock();
+ const card=origin;origin=null;ownedEntry=false;
+ if(card){position(card.closest('[data-horizontal-panel]'));card.focus({preventScroll:true})}
 }
-
-function stopMotion() {
-  observer?.disconnect();
-  animations.forEach(animation => animation.cancel());
-  animations.clear();
+function openDetail(dialog,card,push){
+ if(opened===dialog)return;
+ if(opened)hideDetail();
+ const panel=dialog.closest('[data-horizontal-panel]');position(panel);
+ origin=card||document.querySelector(`a[href="#${dialog.dataset.detail}"]`);
+ if(push){history.pushState({portfolioDetail:true},'',`#${dialog.dataset.detail}`);ownedEntry=true}
+ opened=dialog;bodyOverflow=document.body.style.overflow;
+ window.portfolioMotion?.lock();document.body.style.overflow='hidden';
+ dialog.showModal();dialog.scrollTop=0;dialog.querySelector('h2').focus({preventScroll:true});
 }
-
-if (toggle && menu && typeof menu.showModal === 'function') {
-  toggle.hidden = false;
-  toggle.setAttribute('aria-label', 'Open chapter menu');
-  toggle.addEventListener('click', () => {
-    menu.showModal();
-    toggle.setAttribute('aria-expanded', 'true');
-    if (!preference.matches) reveal(menu, 0);
-  });
-  document.querySelector('.menu-close').addEventListener('click', () => menu.close());
-  menu.addEventListener('close', () => {
-    toggle.setAttribute('aria-expanded', 'false');
-    if (!menu.returnValue) toggle.focus({ preventScroll: true });
-    menu.returnValue = '';
-  });
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', event => {
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const destination = new URL(link.href);
-    const target = destination.pathname === location.pathname
-      ? document.getElementById(destination.hash.slice(1)) : null;
-    menu.close('navigate');
-    if (target) {
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-    }
-  }));
+function route(){
+ const hash=decodeURIComponent(location.hash.slice(1));
+ const dialog=[...document.querySelectorAll('[data-detail]')].find(d=>d.dataset.detail===hash);
+ if(dialog){openDetail(dialog,null,false);return}
+ hideDetail();const panel=document.getElementById(hash)?.closest('[data-horizontal-panel]');if(panel)position(panel);
 }
-
-if (!preference.matches && 'IntersectionObserver' in window) {
-  observer = new IntersectionObserver(entries => {
-    for (const entry of entries) if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-      reveal(entry.target);
-    }
-  }, { threshold: 0.12 });
-  document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
-
+function closeDetail(){
+ if(!opened)return;
+ if(ownedEntry){history.back()}else{const id=opened.closest('[data-horizontal-panel]').id;history.replaceState(null,'',`#${id}`);hideDetail()}
 }
-preference.addEventListener('change', stopMotion);
-window.addEventListener('pagehide', () => { stopMotion(); navigationObserver?.disconnect(); });
-window.addEventListener('pageshow', event => {
-  if (event.persisted) chapters.forEach(chapter => navigationObserver?.observe(chapter));
+document.addEventListener('click',event=>{
+ if(event.target.closest('[data-detail-close]')){closeDetail();return}
+ const a=event.target.closest('a[href]');if(!a||event.button!==0||event.metaKey||event.ctrlKey||event.altKey||event.shiftKey)return;
+ const url=new URL(a.href);if(url.origin!==location.origin||url.pathname!==location.pathname||!url.hash)return;
+ const dialog=[...document.querySelectorAll('[data-detail]')].find(d=>`#${d.dataset.detail}`===url.hash);
+ if(dialog){event.preventDefault();openDetail(dialog,a,true);return}
+ const panel=document.getElementById(url.hash.slice(1));if(panel?.matches('[data-horizontal-panel]')){event.preventDefault();history.pushState(null,'',url.hash);position(panel)}
 });
-window.addEventListener('resize', () => animations.forEach(animation => animation.cancel()), { passive: true });
-
-const themeToggle = document.querySelector('[data-theme-toggle]');
-function applyTheme(light) {
-  document.documentElement.dataset.theme = light ? 'light' : 'dark';
-  themeToggle?.setAttribute('aria-pressed', String(light));
-  themeToggle?.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
+for(const dialog of document.querySelectorAll('[data-detail]')){
+ dialog.addEventListener('cancel',e=>{e.preventDefault();closeDetail()});
+ dialog.addEventListener('keydown',e=>{
+  if(e.key!=='Tab')return;
+  const items=[...dialog.querySelectorAll('a[href],button,[tabindex="0"]')].filter(el=>el.getClientRects().length);
+  const first=items[0],last=items.at(-1);
+  if(e.shiftKey&&(document.activeElement===first||document.activeElement===dialog.querySelector('h2'))){e.preventDefault();last.focus()}
+  else if(!e.shiftKey&&(document.activeElement===last||document.activeElement===dialog.querySelector('h2'))){e.preventDefault();first.focus()}
+ });
 }
-try { applyTheme(localStorage.getItem('portfolio-theme') === 'light'); } catch { applyTheme(false); }
-themeToggle?.addEventListener('click', () => {
-  const light = document.documentElement.dataset.theme !== 'light';
-  applyTheme(light);
-  try { localStorage.setItem('portfolio-theme', light ? 'light' : 'dark'); } catch {}
-});
+document.addEventListener('focusin',event=>{if(opened)return;const panel=event.target.closest('[data-horizontal-panel]');if(panel)position(panel)});
+window.addEventListener('popstate',route);window.addEventListener('hashchange',route);
+const observer=new IntersectionObserver(entries=>{if(!window.portfolioMotion)for(const e of entries)if(e.isIntersecting)currentChapter(e.target)},{threshold:.6});panels.forEach(p=>observer.observe(p));
+async function loadMotion(){
+ if(!desktop.matches||preference.matches){route();return}
+ if(loading)return;
+ loading=Promise.all([import('https://cdn.jsdelivr.net/npm/gsap@3.13.0/ScrollTrigger.js'),import('https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs'),import('./motion.js')]).then(([{ScrollTrigger},{default:Lenis},{initHorizontal}])=>initHorizontal({gsap:window.gsap,ScrollTrigger,Lenis,currentChapter,onReady:()=>{if(opened){position(opened.closest('[data-horizontal-panel]'));window.portfolioMotion?.lock()}else route()}})).catch(error=>{console.error('Horizontal engine failed',error);route()});
+ await loading;
+}
+window.portfolioReady=(async()=>{await document.fonts.ready;await loadMotion();route();document.documentElement.dataset.ready='true'})();
+desktop.addEventListener('change',loadMotion);preference.addEventListener('change',loadMotion);
+const theme=document.querySelector('[data-theme-toggle]');theme?.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';theme.setAttribute('aria-pressed',String(light));theme.setAttribute('aria-label',`Switch to ${light?'dark':'light'} theme`)});

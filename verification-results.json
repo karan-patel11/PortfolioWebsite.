@@ -1,0 +1,4786 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.83",
+    "revision": "@79460ebecaa5625e57a5fb679a735659e73dc687",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.21"
+  },
+  "viewports": [
+    {
+      "viewport": "320x568",
+      "a": [
+        {
+          "id": "intro",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 562
+        },
+        {
+          "id": "about",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 483.96875
+        },
+        {
+          "id": "education",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 441.15625
+        },
+        {
+          "id": "expand",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 485.0625
+        },
+        {
+          "id": "projects-b",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 434.96875
+        },
+        {
+          "id": "experience",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 558.4375
+        },
+        {
+          "id": "venture",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 320,
+          "height": 568,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 552.5
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 966,
+          "overflowX": 0,
+          "width": 296,
+          "height": 476,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 266,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 12,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 96,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 199,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 361,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 230,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 61,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 339,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 22,
+          "overflowX": 0,
+          "width": 320,
+          "height": 568,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 2560,
+        "travel": 2560,
+        "engineTravel": null,
+        "trackLength": 2880
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 173
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 160,
+          "width": 68.15625,
+          "height": 68.15625,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 284,
+          "width": 38.390625,
+          "height": 68.140625,
+          "naturalRatio": 0.5633802816901409,
+          "renderedRatio": 0.5634028892455859,
+          "delta": 0.00004012841091493024,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 115,
+          "width": 94.8125,
+          "height": 68.140625,
+          "naturalRatio": 1.391304347826087,
+          "renderedRatio": 1.3914239853244668,
+          "delta": 0.00008598945196051228,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 226,
+          "width": 48.25,
+          "height": 68.140625,
+          "naturalRatio": 0.7079646017699115,
+          "renderedRatio": 0.708094473744554,
+          "delta": 0.00018344416418258346,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "vertical",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "360x640",
+      "a": [
+        {
+          "id": "intro",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 634
+        },
+        {
+          "id": "about",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 483.96875
+        },
+        {
+          "id": "education",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 422.96875
+        },
+        {
+          "id": "expand",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 485.0625
+        },
+        {
+          "id": "projects-b",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 434.96875
+        },
+        {
+          "id": "experience",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 558.4375
+        },
+        {
+          "id": "venture",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 360,
+          "height": 640,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 516.125
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 848,
+          "overflowX": 0,
+          "width": 336,
+          "height": 548,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 157,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 127,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 200,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 86,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 176,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 360,
+          "height": 640,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 2880,
+        "travel": 2880,
+        "engineTravel": null,
+        "trackLength": 3240
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 173
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 160,
+          "width": 76.796875,
+          "height": 76.796875,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 284,
+          "width": 43.265625,
+          "height": 76.78125,
+          "naturalRatio": 0.5633802816901409,
+          "renderedRatio": 0.5634920634920635,
+          "delta": 0.00019841269841264496,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 115,
+          "width": 106.84375,
+          "height": 76.78125,
+          "naturalRatio": 1.391304347826087,
+          "renderedRatio": 1.3915343915343916,
+          "delta": 0.00016534391534400728,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 226,
+          "width": 54.359375,
+          "height": 76.78125,
+          "naturalRatio": 0.7079646017699115,
+          "renderedRatio": 0.707977207977208,
+          "delta": 0.000017806267806283472,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "vertical",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "a": [
+        {
+          "id": "intro",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 838
+        },
+        {
+          "id": "about",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 444.1875
+        },
+        {
+          "id": "education",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 440.390625
+        },
+        {
+          "id": "expand",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 485.0625
+        },
+        {
+          "id": "projects-b",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 434.96875
+        },
+        {
+          "id": "experience",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 527.09375
+        },
+        {
+          "id": "venture",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 390,
+          "height": 844,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 497.9375
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 560,
+          "overflowX": 0,
+          "width": 366,
+          "height": 752,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 390,
+          "height": 844,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 3120,
+        "travel": 3120,
+        "engineTravel": null,
+        "trackLength": 3510
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 173
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 160,
+          "width": 101.265625,
+          "height": 101.265625,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 284,
+          "width": 57.046875,
+          "height": 101.25,
+          "naturalRatio": 0.5633802816901409,
+          "renderedRatio": 0.5634259259259259,
+          "delta": 0.00008101851851839981,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 115,
+          "width": 140.890625,
+          "height": 101.25,
+          "naturalRatio": 1.391304347826087,
+          "renderedRatio": 1.3915123456790124,
+          "delta": 0.00014949845679017998,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 226,
+          "width": 71.6875,
+          "height": 101.25,
+          "naturalRatio": 0.7079646017699115,
+          "renderedRatio": 0.7080246913580247,
+          "delta": 0.00008487654320990939,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "vertical",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "844x390",
+      "a": [
+        {
+          "id": "intro",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 382.984375
+        },
+        {
+          "id": "about",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 291.71875
+        },
+        {
+          "id": "education",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 368.640625
+        },
+        {
+          "id": "expand",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 295.65625
+        },
+        {
+          "id": "projects-b",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 332.859375
+        },
+        {
+          "id": "experience",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 338.03125
+        },
+        {
+          "id": "venture",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 844,
+          "height": 390,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 376.796875
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 419,
+          "overflowX": 0,
+          "width": 793.375,
+          "height": 334,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 311,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 124,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 192,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 318,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 108,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 102,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 23,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 160,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 4,
+          "overflowX": 0,
+          "width": 844,
+          "height": 390,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": true,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 6752,
+        "travel": 6752,
+        "engineTravel": null,
+        "trackLength": 7596
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 173
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 160,
+          "width": 62.390625,
+          "height": 62.390625,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 284,
+          "width": 35.140625,
+          "height": 62.359375,
+          "naturalRatio": 0.5633802816901409,
+          "renderedRatio": 0.5635179153094463,
+          "delta": 0.00024429967426710386,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 115,
+          "width": 86.796875,
+          "height": 62.375,
+          "naturalRatio": 1.391304347826087,
+          "renderedRatio": 1.3915330661322645,
+          "delta": 0.00016439128256511004,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-160.webp",
+          "naturalWidth": 160,
+          "naturalHeight": 226,
+          "width": 33.125,
+          "height": 46.78125,
+          "naturalRatio": 0.7079646017699115,
+          "renderedRatio": 0.7080828323313293,
+          "delta": 0.0001670006680026398,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "vertical",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "768x1024",
+      "a": [
+        {
+          "id": "intro",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 1012.484375
+        },
+        {
+          "id": "about",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 408.453125
+        },
+        {
+          "id": "education",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 657.9375
+        },
+        {
+          "id": "expand",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 366.5
+        },
+        {
+          "id": "projects-b",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 408.203125
+        },
+        {
+          "id": "experience",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 451.25
+        },
+        {
+          "id": "venture",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 768,
+          "height": 1024,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 448.484375
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 721.9375,
+          "height": 964,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 768,
+          "height": 1024,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": null,
+          "triggerEnabled": null,
+          "scrollAllowed": false,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 6144,
+        "travel": 6144,
+        "engineTravel": null,
+        "trackLength": 6912
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 173
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 320,
+          "width": 236.796875,
+          "height": 236.796875,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 569,
+          "width": 172.75,
+          "height": 307.15625,
+          "naturalRatio": 0.562390158172232,
+          "renderedRatio": 0.5624173364533523,
+          "delta": 0.00004832638111705173,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 231,
+          "width": 320,
+          "height": 231,
+          "naturalRatio": 1.3852813852813852,
+          "renderedRatio": 1.3852813852813852,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 453,
+          "width": 86.796875,
+          "height": 122.859375,
+          "naturalRatio": 0.7064017660044151,
+          "renderedRatio": 0.7064733562253592,
+          "delta": 0.00010134490652407949,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "vertical",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "1280x800",
+      "a": [
+        {
+          "id": "intro",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 785.609375
+        },
+        {
+          "id": "about",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 432.140625
+        },
+        {
+          "id": "education",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 616.53125
+        },
+        {
+          "id": "expand",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 425.171875
+        },
+        {
+          "id": "projects-b",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 471.3125
+        },
+        {
+          "id": "experience",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 476.671875
+        },
+        {
+          "id": "venture",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 1280,
+          "height": 800,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 462.609375
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1203.21875,
+          "height": 739.21875,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1280,
+          "height": 800,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 10240,
+        "travel": 10240,
+        "engineTravel": 10240,
+        "trackLength": 11520,
+        "actualTravel": 10239.998999999953
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 175
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 320,
+          "width": 240,
+          "height": 240,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 569,
+          "width": 134.96875,
+          "height": 239.984375,
+          "naturalRatio": 0.562390158172232,
+          "renderedRatio": 0.5624064066671007,
+          "delta": 0.000028891854938403734,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 231,
+          "width": 320,
+          "height": 231,
+          "naturalRatio": 1.3852813852813852,
+          "renderedRatio": 1.3852813852813852,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 453,
+          "width": 67.8125,
+          "height": 95.984375,
+          "naturalRatio": 0.7064017660044151,
+          "renderedRatio": 0.706495197786098,
+          "delta": 0.00013226436594495903,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": -0.00048828125,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": -0.00048828125,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "horizontal",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "a": [
+        {
+          "id": "intro",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 883.8125
+        },
+        {
+          "id": "about",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 480.15625
+        },
+        {
+          "id": "education",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 687.609375
+        },
+        {
+          "id": "expand",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 467.578125
+        },
+        {
+          "id": "projects-b",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 517.984375
+        },
+        {
+          "id": "experience",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 524.015625
+        },
+        {
+          "id": "venture",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 1440,
+          "height": 900,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 514.296875
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1353.625,
+          "height": 837.625,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1440,
+          "height": 900,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 11520,
+        "travel": 11520,
+        "engineTravel": 11520,
+        "trackLength": 12960,
+        "actualTravel": 11519.998999999953
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 14,
+        "textNodes": 175
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 320,
+          "width": 270,
+          "height": 270,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 569,
+          "width": 151.84375,
+          "height": 269.984375,
+          "naturalRatio": 0.562390158172232,
+          "renderedRatio": 0.5624168065281555,
+          "delta": 0.00004738410787642963,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 231,
+          "width": 320,
+          "height": 231,
+          "naturalRatio": 1.3852813852813852,
+          "renderedRatio": 1.3852813852813852,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 453,
+          "width": 76.28125,
+          "height": 107.984375,
+          "naturalRatio": 0.7064017660044151,
+          "renderedRatio": 0.7064100709014615,
+          "delta": 0.000011756619881304538,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": -0.00048828125,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": -0.00048828125,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "horizontal",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "a": [
+        {
+          "id": "intro",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 1060.5625
+        },
+        {
+          "id": "about",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 552.203125
+        },
+        {
+          "id": "education",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 759.078125
+        },
+        {
+          "id": "expand",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "projects",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 512.78125
+        },
+        {
+          "id": "projects-b",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 567.609375
+        },
+        {
+          "id": "experience",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 571.5625
+        },
+        {
+          "id": "venture",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 0
+        },
+        {
+          "id": "contact",
+          "width": 1920,
+          "height": 1080,
+          "overflowY": 0,
+          "overflowX": 0,
+          "overflow": "hidden",
+          "contentBottom": 494.125
+        }
+      ],
+      "b": [
+        {
+          "id": "venture/twods-capital",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1804.8125,
+          "height": 1014.75,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/verdict",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/northport",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/quantera-ai",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/codekraft",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/mindmate",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "projects-b/skills",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "overflowY": 0,
+          "overflowX": 0,
+          "width": 1920,
+          "height": 1080,
+          "headingFocused": true,
+          "modal": true,
+          "lenisStopped": true,
+          "triggerEnabled": false,
+          "scrollAllowed": false,
+          "pass": true
+        }
+      ],
+      "c": {
+        "panelCount": 9,
+        "expected": 15360,
+        "travel": 15360,
+        "engineTravel": 15360,
+        "trackLength": 17280,
+        "actualTravel": 15359.998999999953
+      },
+      "d": {
+        "expected": 11,
+        "cards": 12,
+        "itemCards": 11,
+        "details": 13,
+        "ventureDirect": 1,
+        "orphans": []
+      },
+      "e": {
+        "minimum": 16,
+        "textNodes": 175
+      },
+      "f": [
+        {
+          "id": "projects/verdict",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/northport",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "tabReachable": 1,
+          "inView": 1,
+          "trapped": 1,
+          "restored": 1,
+          "motionRestored": 1
+        }
+      ],
+      "g": {
+        "labels": 9,
+        "panels": 9,
+        "missing": 0,
+        "duplicates": 0,
+        "gaps": 0,
+        "clipped": 0
+      },
+      "h": [
+        {
+          "panel": "about",
+          "src": "/assets/karan-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 320,
+          "width": 320,
+          "height": 320,
+          "naturalRatio": 1,
+          "renderedRatio": 1,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "960",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/karan-160.webp 1x, /assets/karan-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/gwu-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 569,
+          "width": 182.203125,
+          "height": 323.96875,
+          "naturalRatio": 0.562390158172232,
+          "renderedRatio": 0.5624095688241536,
+          "delta": 0.000034514565448041236,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "736",
+            "height": "1308",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/gwu-160.webp 1x, /assets/gwu-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "education",
+          "src": "/assets/nmims-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 231,
+          "width": 320,
+          "height": 231,
+          "naturalRatio": 1.3852813852813852,
+          "renderedRatio": 1.3852813852813852,
+          "delta": 0,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "959",
+            "height": "692",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/nmims-160.webp 1x, /assets/nmims-320.webp 2x"
+          ],
+          "pass": true
+        },
+        {
+          "panel": "venture",
+          "src": "/assets/twods-320.webp",
+          "naturalWidth": 320,
+          "naturalHeight": 453,
+          "width": 91.53125,
+          "height": 129.5625,
+          "naturalRatio": 0.7064017660044151,
+          "renderedRatio": 0.7064640617462614,
+          "delta": 0.0000881874095512422,
+          "inside": true,
+          "fit": "contain",
+          "attributes": {
+            "width": "960",
+            "height": "1358",
+            "srcset": true,
+            "sizes": true,
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          "sourceSets": [
+            "/assets/twods-160.webp 1x, /assets/twods-320.webp 2x"
+          ],
+          "pass": true
+        }
+      ],
+      "deepLinks": [
+        {
+          "id": "experience/gwu-technical-assistant",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects/verdict",
+          "open": 1,
+          "ownerLeft": -0.00048828125,
+          "ownerTop": 0,
+          "focused": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "open": 1,
+          "ownerLeft": 0,
+          "ownerTop": 0,
+          "focused": 1
+        }
+      ],
+      "mode": "horizontal",
+      "history": [
+        {
+          "id": "projects/verdict",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/northport",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/quantera-ai",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects/bnpl-marketplace",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/codekraft",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/scalable-blog-platform",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/mindmate",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "projects-b/skills",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-technical-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/gwu-research-assistant",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-software-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        },
+        {
+          "id": "experience/vipul-junior-engineer",
+          "back": 1,
+          "forward": 1,
+          "close": 1,
+          "restored": 1
+        }
+      ]
+    }
+  ],
+  "reducedMotion": [
+    {
+      "width": 1280,
+      "height": 800,
+      "horizontal": 0,
+      "modal": 1,
+      "panelOverflows": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "horizontal": 0,
+      "modal": 1,
+      "panelOverflows": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "static": {
+    "cover": 0,
+    "maxContentWidth": 0,
+    "minHeight1000": 0,
+    "experienceBullets": 25,
+    "missingBullets": 0
+  },
+  "failures": [],
+  "mediaChanges": [
+    "src/style.css: .photo img object-fit:cover → contain",
+    "src/motion-source.css: .curtain__clip img object-fit:cover → contain",
+    "src/motion-source.css: .expand__rect video object-fit:cover → contain",
+    "src/motion-source.css: .projects__preview img object-fit:cover → contain",
+    "src/motion-source.css: .card__bg img object-fit:cover → contain",
+    "dist/style.css: regenerated .photo img"
+  ]
+}
