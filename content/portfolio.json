@@ -1,0 +1,367 @@
+{
+  "contact": {
+    "email": "patelkaran.tech@gmail.com"
+  },
+  "intro": "Karan Patel\nAI Systems Engineer · Software Engineer · Founder\nBuilding reliable AI systems at the intersection of LLM orchestration, backend infrastructure, quantitative finance, and high-stakes decision systems.\nProduction AI · Applied LLMs · Backend Systems · FinTech\nScroll → Explore the Chapters\nI build AI systems that know when to automate, when to verify, and when to abstain.\nFrom credit underwriting and SEC filing validation to production support automation and quantitative research systems, my work focuses on making AI useful without sacrificing reliability, traceability, or engineering rigor.\n\n",
+  "chapters": [
+    {
+      "slug": "intro",
+      "label": "Hero",
+      "heading": "CHAPTER 1: HERO"
+    },
+    {
+      "slug": "about",
+      "label": "About",
+      "heading": "CHAPTER 2: ABOUT",
+      "copy": "Engineering Intelligence Into Systems\nI’m an AI systems and software engineer focused on turning machine learning and LLM capabilities into reliable production systems. My work sits at the intersection of LLM orchestration, backend infrastructure, deterministic validation, model evaluation, and quantitative financial problems.\nAcross George Washington University, production software roles, and my work building Twods Capital, I’ve worked on systems ranging from AI-assisted support automation and model evaluation to credit underwriting, regulatory validation, and quantitative financial research.\nEditorial Keywords\nReliable AI\nLLM Systems\nBackend Engineering\nFinTech\nQuantitative Systems\nHuman-in-the-Loop AI"
+    },
+    {
+      "slug": "education",
+      "label": "Education",
+      "heading": "CHAPTER 3: EDUCATION",
+      "entries": [
+        {
+          "id": "gwu",
+          "institution": "George Washington University",
+          "degree": "Master of Science in Computer Science",
+          "dates": "2024 to 2026",
+          "highlights": [
+            "Software systems · cloud infrastructure",
+            "Algorithms · applied AI engineering"
+          ]
+        },
+        {
+          "id": "nmims",
+          "institution": "NMIMS",
+          "degree": "Integrated Diploma + B.Tech (3+3 years), Honors in Artificial Intelligence",
+          "dates": "Jul 2018 to May 2024",
+          "highlights": [
+            "Computer Engineering",
+            "Six-year integrated program"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "experience",
+      "label": "Experience",
+      "heading": "CHAPTER 4: EXPERIENCE",
+      "copy": "George Washington University\nTechnical Assistant\nAI Systems, Automation & Platform Support\nJuly 2025 to May 2026\nBuilt and supported technology systems used across GW Law while identifying opportunities to replace repetitive operational workflows with automation and AI-assisted decision support.\n* Built a Python-based AI support pipeline integrating Freshdesk, Kaltura, and Epiphan workflows to classify recurring incidents and improve troubleshooting and routing.\n* Developed structured classification and evaluation workflows for support-device status information using Llama 3, Llama 3.1, and Mistral-based models.\n* Improved model quality by 20%+ across ROUGE, METEOR, and BERTScore evaluations, while introducing entity-level evaluation to detect hallucinated or unsupported information.\n* Developed REST-based health checks and operational dashboards for classroom capture infrastructure to surface device and service issues earlier.\n* Reduced incident handling time by approximately 30% from dispatch through resolution logging by removing repetitive diagnosis and triage steps.\n* Worked directly with faculty, staff, classrooms, and technical systems where reliability and clear failure handling mattered more than simply producing an AI response.\nTechnologies\nPython · LLMs · REST APIs · Freshdesk · Kaltura · Epiphan · Model Evaluation · Automation\n\nGeorge Washington University: SEAS\nResearch Assistant\nResearch Tooling & Evaluation\nFebruary 2025 to April 2025\nWorked on engineering infrastructure supporting reproducible evaluation of programming assignments and notebook-based experiments.\n* Built a Python autograding framework for Jupyter notebooks capable of executing deterministic hidden tests against student submissions.\n* Designed the system around strict Blackboard submission constraints while keeping evaluation logic isolated from student-visible code.\n* Developed repeatable checks for notebook outputs, implementation correctness, and execution behavior.\n* Improved reliability by testing edge cases, environment differences, and deterministic grading behavior before weekly demonstrations.\n* Iterated on the system through continuous testing, validation, and research-team feedback.\nTechnologies\nPython · Jupyter · Automated Testing · Experiment Validation · Blackboard\n\nVipul Enterprise\nSoftware Engineer\nBackend Systems, Automation & Data Infrastructure\nJune 2023 to July 2024 · Mumbai, India\nEngineered backend and operational systems supporting inventory, reporting, deployments, and business workflows across multiple warehouse environments.\n* Built and maintained systems supporting 10,000+ SKUs across five warehouses.\n* Improved stock accuracy from approximately 92% to 99% through stronger validation, transactional controls, and inventory consistency checks.\n* Reduced stock-report latency from approximately 1.4 seconds to 350 milliseconds by eliminating N+1 access patterns and introducing targeted database indexing.\n* Implemented row-level concurrency controls to prevent conflicting inventory updates during simultaneous operations.\n* Built asynchronous alerting and workflow automation using Celery and Redis.\n* Reduced recurring support issues by approximately 80% through improvements to core operational tooling and data consistency.\n* Supported deployments across nine customer environments, including configuration, integrations, CI/CD, monitoring, and technical documentation.\n* Reduced deployment overhead by approximately 30% through automation and more standardized delivery workflows.\n* Worked with business and product data to support account-health analysis, renewal-risk reasoning, operational reporting, and product usage insights.\nTechnologies\nPython · Java · Node.js · MongoDB · SQL · Redis · Celery · REST APIs · CI/CD · Docker\n\nVipul Enterprise\nJunior Software Engineer\nWeb Platforms & Backend Engineering\nAugust 2022 to June 2023 · Mumbai, India\nStarted as a backend and web engineer working on internal operational systems before being promoted to Software Engineer within ten months.\n* Developed REST APIs and backend functionality supporting catalog, inventory, order-management, and internal operational workflows.\n* Maintained MongoDB data models and introduced stronger schema-validation rules to reduce inconsistent operational data.\n* Debugged production incidents across APIs, databases, and web applications as part of regular support and on-call workflows.\n* Worked on query optimization, application reliability, and production issue resolution.\n* Contributed across the application stack using React, Node.js, Python, and MongoDB.\nTechnologies\nJavaScript · Node.js · Python · React · MongoDB · REST APIs · Git"
+    },
+    {
+      "slug": "venture",
+      "label": "Venture",
+      "heading": "CHAPTER 5: VENTURE"
+    },
+    {
+      "slug": "selected-work",
+      "label": "Selected work",
+      "heading": "CHAPTER 6: SELECTED WORK",
+      "copy": "Featured Projects\n\n01: Verdict\nCalibrated Abstention for Credit Underwriting\nProblem\nAI-assisted underwriting becomes dangerous when a model is forced to produce a decision despite uncertain, missing, or out-of-distribution financial evidence.\nSolution\nVerdict is a credit-underwriting agent designed around field-level calibrated abstention. It extracts financial facts with provenance, performs deterministic underwriting calculations, propagates uncertainty through the workflow, and routes low-confidence cases to human review.\nCore Architecture\nDocument ingestion\n→ Structured financial extraction\n→ Provenance tracking\n→ Deterministic DSCR / leverage calculations\n→ Hierarchical confidence propagation\n→ Adaptive conformal thresholds\n→ OOD detection\n→ Human-review routing\nResults\n6.9% realized miscoverage against a 10% target\n76.1% of fields automated\nRouting violations reduced to 14.7% vs. 57.2% baseline\n88 automated tests\nTechnologies\nTypeScript · Next.js · PostgreSQL · LLM Orchestration · Conformal Prediction · Human-in-the-Loop AI\nLive: verdict-bice.vercel.app\n\n02: NorthPort\nHigh-Scale SEC Form N-PORT Validation Engine\nProblem\nRegulatory filings contain millions of structured fields where schema validity alone cannot identify financially inconsistent or logically impossible data.\nSolution\nNorthPort implements a two-tier validation architecture for SEC Form N-PORT filings.\nTier 1: Structural and schema validation\nTier 2: Deterministic financial and cross-field validation rules\nScale\n1.3M+ holdings processed\n4,024 filings evaluated\nApproximately 7,000 holdings / second\nApproximately 11,600 violations surfaced\nApproximately 4,800 false positives eliminated\nTechnologies\nPython · FastAPI · SEC N-PORT · Validation Systems · Financial Data Engineering\nLive: north-port.vercel.app\n\n03: QuantEra AI\nEvidence-Grounded Financial Research Engine\nProblem\nGeneral-purpose LLMs can discuss finance fluently while still producing incorrect calculations, stale fundamentals, or unsupported claims.\nSolution\nQuantEra separates deterministic financial computation from language-model narration and requires generated explanations to operate on structured financial evidence.\nCore Architecture\nMarket / SEC Data\n→ Data normalization\n→ Deterministic calculations\n→ Retrieval\n→ Context construction\n→ LLM explanation\n→ Validation / fail-closed checks\nResult\n95.8% field-level accuracy when validated against SEC 10-K data across eight large-cap companies.\nTechnologies\nPython · FastAPI · RAG · LLMs · yfinance · Finnhub · Cytoscape.js\n\n04: BNPL Marketplace\nFull-Stack Buy Now, Pay Later Infrastructure\nProblem\nA BNPL marketplace needs to combine merchant discovery, user eligibility, underwriting, payment-plan generation, and reliable communication between services.\nSolution\nBuilt a backend platform supporting merchant discovery and Pay-in-4 / 6 / 12 / 24 financing flows with staged underwriting and signed webhook infrastructure.\nArchitecture\nClient\n→ FastAPI Services\n→ Eligibility\n→ Three-Stage Underwriting\n→ Financing Plans\n→ Merchant / Transaction Services\n→ Signed Webhooks\nPerformance\n600 merchants\n90% search coverage\nSearch P95 <4 ms\nAutocomplete <1 ms\n53 automated tests\nContainerized deployment with health probes and autoscaling support.\nTechnologies\nPython · FastAPI · MySQL · Redis · Docker · Kubernetes · REST APIs · CI/CD\n\nPROJECT ARCHIVE\nCodeKraft\nAI-assisted code-generation system trained on a dataset of 500K+ examples, reaching 52.3% CodeBLEU, 75.4% token F1, and sub-250ms inference on an NVIDIA T4.\nPython · PyTorch · CodeT5 · FastAPI\n\nScalable Blog Platform\nCloud-native Java backend deployed on AWS EKS with containerized services, Helm-based deployments, security scanning, CI/CD, and zero-downtime release workflows.\nJava 21 · Spring Boot · PostgreSQL · AWS EKS · Docker · Kubernetes · Helm\n\nMindMate\nFull-stack support platform built during the Georgetown H2AI Hackathon and recognized during the event.\nReact · Node.js · MongoDB · Gemini\n\nSKILLS\nLanguages\nPython\nJava\nJavaScript / TypeScript\nSQL\n\nAI & LLM Systems\nRAG\nLangChain\nLangGraph\nLLM orchestration\nPrompt & context engineering\nLLM evaluation\nConformal prediction\nHuman-in-the-loop systems\nHallucination evaluation\nLlama 3.x\nMistral\nPyTorch\nTensorFlow\nHugging Face Transformers\n\nBackend Engineering\nFastAPI\nNode.js\nREST APIs\nMicroservices\nPostgreSQL\nMySQL\nMongoDB\nRedis\nCelery\nPydantic\nSQLAlchemy\n\nInfrastructure\nDocker\nKubernetes\nAWS\nAWS EKS / ECR\nCI/CD\nGitHub Actions\nGit\n\nData & Machine Learning\npandas\nNumPy\nscikit-learn\nJupyter\nModel evaluation\nClassification\nRegression\nFeature engineering\nExperiment validation\n\nReliability Engineering\nFail-closed system design\nOOD handling\nHuman review routing\nConfidence calibration\nDeterministic validation\nModel evaluation\nObservability\nAutomated testing\n\nDomain Knowledge\nCredit underwriting\nCommercial lending concepts\nEquities\nFundamental analysis\nTrading mechanics\nFinancial statements\nSEC filings\nForm N-PORT\n10-K filings\nPortfolio data\nFinancial research"
+    },
+    {
+      "slug": "contact",
+      "label": "Contact",
+      "heading": "CHAPTER 7: CONTACT",
+      "copy": "Let's talk.\nI’m interested in engineering problems where AI meets real infrastructure: especially systems that must operate reliably around financial, operational, or other high-stakes data.\nI’m open to conversations around AI engineering, applied LLM systems, backend and platform engineering, financial technology, technical collaboration, research, venture building, and speaking.\nIf you’re building systems where reliability matters as much as intelligence, I’d like to hear about it.\nConnect\nEmail\nLinkedIn\nGitHub\nX / Twitter\nResume\nDownload Resume ↓\n\nFinal Footer\nKaran Patel\nAI Systems Engineer · Software Engineer · Founder\nBuilt around one principle:\nMake the system intelligent. Make the intelligence accountable."
+    }
+  ],
+  "unresolved": [
+    "Optional Side Metric Strip\n3+ Years & 8 Years in Capital Market (1 x Cofounder ) Software & AI Engineering\n10K+ SKUs Production inventory infrastructure supported\n1.3M Holdings Processed through regulatory validation systems\n658K+ Impressions Organic reach generated through Twods Capital\n\n",
+    "GitHub: [Repository Link]",
+    "GitHub: [Repository Link]",
+    "GitHub: [Repository Link]",
+    "Demo: [Demo Link]",
+    "GitHub: [Repository Link]",
+    "Demo: [Demo Link if active]",
+    "BGE embeddings and Qdrant should remain here only if you have actually implemented them in a project rather than only studied them.",
+    "Include Jenkins only if you have hands-on implementation experience with it.",
+    "[LinkedIn URL]",
+    "[GitHub URL]",
+    "[X URL]"
+  ],
+  "notes": [
+    "Source headings and labels remain in these strings; developers must map them to the component schema.",
+    "Contact labels have no destination until user supplies links. Resume action requires a supplied file.",
+    "About optional metrics omitted as a group to avoid presenting an ambiguous duration. Other chapter metrics remain untouched.",
+    "TODO: Confirm NMIMS highlights beyond the supplied integrated-program and AI-honors details; no GPA or additional dates are available.",
+    "TODO: Confirm QuantEra AI source integrations, data freshness, retrieval store, model/service boundaries, and deployment topology before making the architecture more specific."
+  ],
+  "projectLinks": {
+    "Verdict": {
+      "repo": "https://github.com/karan-patel11/Verdict",
+      "demo": "https://verdict-bice.vercel.app"
+    },
+    "NorthPort": {
+      "repo": "https://github.com/karan-patel11/NorthPort",
+      "demo": "https://north-port.vercel.app"
+    },
+    "QuantEra AI": {
+      "repo": "https://github.com/karan-patel11/QuantEra-AI",
+      "demo": null
+    },
+    "BNPL Marketplace": {
+      "repo": "https://github.com/karan-patel11/BNPL-Marketplace",
+      "demo": "https://bnplmarketplace.vercel.app/"
+    },
+    "CodeKraft": {
+      "repo": "https://github.com/karan-patel11/CodeKraft",
+      "demo": null
+    },
+    "Scalable Blog Platform": {
+      "repo": "https://github.com/karan-patel11/Scalable-Blog-App-Deployment-Pipeline",
+      "demo": null
+    },
+    "MindMate": {
+      "repo": "https://github.com/karan-patel11/MentalHealthAi",
+      "demo": null
+    }
+  },
+  "items": {
+    "experience": [
+      {
+        "slug": "gwu-technical-assistant",
+        "name": "Technical Assistant",
+        "employer": "George Washington University",
+        "dates": "July 2025 to May 2026",
+        "subtitle": "AI Systems, Automation & Platform Support",
+        "description": "Built and supported technology systems used across GW Law while identifying opportunities to replace repetitive operational workflows with automation and AI-assisted decision support.",
+        "bullets": [
+          "Built a Python-based AI support pipeline integrating Freshdesk, Kaltura, and Epiphan workflows to classify recurring incidents and improve troubleshooting and routing.",
+          "Developed structured classification and evaluation workflows for support-device status information using Llama 3, Llama 3.1, and Mistral-based models.",
+          "Improved model quality by 20%+ across ROUGE, METEOR, and BERTScore evaluations, while introducing entity-level evaluation to detect hallucinated or unsupported information.",
+          "Developed REST-based health checks and operational dashboards for classroom capture infrastructure to surface device and service issues earlier.",
+          "Reduced incident handling time by approximately 30% from dispatch through resolution logging by removing repetitive diagnosis and triage steps.",
+          "Worked directly with faculty, staff, classrooms, and technical systems where reliability and clear failure handling mattered more than simply producing an AI response."
+        ],
+        "stack": "Python · LLMs · REST APIs · Freshdesk · Kaltura · Epiphan · Model Evaluation · Automation",
+        "impact": "Reduced incident handling time by approximately 30%.",
+        "indexStack": "Python · LLMs · REST APIs",
+        "indexDates": "July 2025 to May 2026"
+      },
+      {
+        "slug": "gwu-research-assistant",
+        "name": "Research Assistant",
+        "employer": "George Washington University: SEAS",
+        "dates": "February 2025 to April 2025",
+        "subtitle": "Research Tooling & Evaluation",
+        "description": "Worked on engineering infrastructure supporting reproducible evaluation of programming assignments and notebook-based experiments.",
+        "bullets": [
+          "Built a Python autograding framework for Jupyter notebooks capable of executing deterministic hidden tests against student submissions.",
+          "Designed the system around strict Blackboard submission constraints while keeping evaluation logic isolated from student-visible code.",
+          "Developed repeatable checks for notebook outputs, implementation correctness, and execution behavior.",
+          "Improved reliability by testing edge cases, environment differences, and deterministic grading behavior before weekly demonstrations.",
+          "Iterated on the system through continuous testing, validation, and research-team feedback."
+        ],
+        "stack": "Python · Jupyter · Automated Testing · Experiment Validation · Blackboard",
+        "impact": "Built deterministic hidden tests for Jupyter notebooks.",
+        "indexStack": "Python · Jupyter · Automated Testing",
+        "indexDates": "February 2025 to April 2025"
+      },
+      {
+        "slug": "vipul-software-engineer",
+        "name": "Software Engineer",
+        "employer": "Vipul Enterprise",
+        "dates": "June 2023 to July 2024 · Mumbai, India",
+        "subtitle": "Backend Systems, Automation & Data Infrastructure",
+        "description": "Engineered backend and operational systems supporting inventory, reporting, deployments, and business workflows across multiple warehouse environments.",
+        "bullets": [
+          "Built and maintained systems supporting 10,000+ SKUs across five warehouses.",
+          "Improved stock accuracy from approximately 92% to 99% through stronger validation, transactional controls, and inventory consistency checks.",
+          "Reduced stock-report latency from approximately 1.4 seconds to 350 milliseconds by eliminating N+1 access patterns and introducing targeted database indexing.",
+          "Implemented row-level concurrency controls to prevent conflicting inventory updates during simultaneous operations.",
+          "Built asynchronous alerting and workflow automation using Celery and Redis.",
+          "Reduced recurring support issues by approximately 80% through improvements to core operational tooling and data consistency.",
+          "Supported deployments across nine customer environments, including configuration, integrations, CI/CD, monitoring, and technical documentation.",
+          "Reduced deployment overhead by approximately 30% through automation and more standardized delivery workflows.",
+          "Worked with business and product data to support account-health analysis, renewal-risk reasoning, operational reporting, and product usage insights."
+        ],
+        "stack": "Python · Java · Node.js · MongoDB · SQL · Redis · Celery · REST APIs · CI/CD · Docker",
+        "impact": "Improved stock accuracy from approximately 92% to 99%.",
+        "indexStack": "Python · SQL · Redis · Celery",
+        "indexDates": "June 2023 to July 2024"
+      },
+      {
+        "slug": "vipul-junior-engineer",
+        "name": "Junior Software Engineer",
+        "employer": "Vipul Enterprise",
+        "dates": "August 2022 to June 2023 · Mumbai, India",
+        "subtitle": "Web Platforms & Backend Engineering",
+        "description": "Started as a backend and web engineer working on internal operational systems before being promoted to Software Engineer within ten months.",
+        "bullets": [
+          "Developed REST APIs and backend functionality supporting catalog, inventory, order-management, and internal operational workflows.",
+          "Maintained MongoDB data models and introduced stronger schema-validation rules to reduce inconsistent operational data.",
+          "Debugged production incidents across APIs, databases, and web applications as part of regular support and on-call workflows.",
+          "Worked on query optimization, application reliability, and production issue resolution.",
+          "Contributed across the application stack using React, Node.js, Python, and MongoDB."
+        ],
+        "stack": "JavaScript · Node.js · Python · React · MongoDB · REST APIs · Git",
+        "impact": "Promoted to Software Engineer within ten months.",
+        "indexStack": "Node.js · Python · React · MongoDB",
+        "indexDates": "August 2022 to June 2023"
+      }
+    ],
+    "venture": [
+      {
+        "slug": "twods-capital",
+        "name": "Twods Capital",
+        "diagram": {
+          "title": "QuantEra AI system design",
+          "instruction": "Select a stage to read its role.",
+          "stageLabel": "Stage",
+          "labels": ["Market / SEC data", "Normalize data", "Calculate", "Retrieve", "Build context", "Explain", "Fail closed"],
+          "notes": [
+            "Market and SEC data are named sources.",
+            "Data normalization precedes deterministic calculations.",
+            "Financial calculations happen in software.",
+            "Retrieval gathers relevant evidence.",
+            "Context is constructed for explanation.",
+            "The LLM explains structured evidence.",
+            "Insufficient evidence leads to a fail-closed check."
+          ]
+        },
+        "copy": "Twods Capital\nCo-Founder & Lead Engineer\nSeptember 2019 to Present\nTwods Capital began as a financial-education initiative built around a simple principle: investment decisions should be driven by structured reasoning rather than market noise.\nWhat started as a small investing community grew into an ecosystem spanning educational content, investor sessions, webinars, financial research, and eventually software systems for quantitative analysis.\nGrowth\n658K+\nOrganic search impressions\n104K+\nOrganic clicks\n15.9%\nSearch CTR\n300+\ncommunity members\n\n\nFlagship Initiative\nQuantEra AI\nFrom Financial Research to Computational Research Infrastructure\nQuantEra AI extends the research philosophy behind Twods Capital into software.\nRather than allowing an LLM to generate financial conclusions directly, the platform separates computation from narration.\nFinancial metrics, company fundamentals, relationships, and quantitative calculations are generated through deterministic software. LLMs operate primarily at the interpretation and explanation layer.\nInvestment Thesis\nThe system is built around three principles:\nEvidence before narrative.\nEvery conclusion should trace back to observable financial or market data.\nDeterministic computation before generation.\nRatios, metrics, and quantitative relationships are computed in software rather than delegated to an LLM.\nAbstention over fabrication.\nIf sufficient evidence cannot be retrieved or calculated, the system should fail closed rather than create unsupported financial claims.\nArchitecture\nFinancial Sources\n↓\nMarket + Fundamental Data Ingestion\n↓\nNormalization & Deterministic Computation\n↓\nFinancial Knowledge / Relationship Layer\n↓\nRetrieval & Context Construction\n↓\nLLM Reasoning / Narration\n↓\nEvidence-Aware Research Output\nTechnologies\nPython · FastAPI · RAG · Financial APIs · yfinance · Finnhub · Cytoscape.js · LLM Orchestration"
+      }
+    ],
+    "selected-work": [
+      {
+        "slug": "verdict",
+        "name": "Verdict",
+        "subtitle": "Calibrated Abstention for Credit Underwriting",
+        "stack": "TypeScript · Next.js · PostgreSQL · LLM Orchestration · Conformal Prediction · Human-in-the-Loop AI",
+        "impact": "6.9% realized miscoverage against a 10% target",
+        "groups": {
+          "Problem": [
+            "AI-assisted underwriting becomes dangerous when a model is forced to produce a decision despite uncertain, missing, or out-of-distribution financial evidence."
+          ],
+          "Solution": [
+            "Verdict is a credit-underwriting agent designed around field-level calibrated abstention. It extracts financial facts with provenance, performs deterministic underwriting calculations, propagates uncertainty through the workflow, and routes low-confidence cases to human review."
+          ],
+          "Core Architecture": [
+            "Document ingestion",
+            "→ Structured financial extraction",
+            "→ Provenance tracking",
+            "→ Deterministic DSCR / leverage calculations",
+            "→ Hierarchical confidence propagation",
+            "→ Adaptive conformal thresholds",
+            "→ OOD detection",
+            "→ Human-review routing"
+          ],
+          "Results": [
+            "6.9% realized miscoverage against a 10% target",
+            "76.1% of fields automated",
+            "Routing violations reduced to 14.7% vs. 57.2% baseline",
+            "88 automated tests"
+          ],
+          "Technologies": [
+            "TypeScript · Next.js · PostgreSQL · LLM Orchestration · Conformal Prediction · Human-in-the-Loop AI"
+          ]
+        },
+        "indexStack": "TypeScript · Next.js · PostgreSQL",
+        "indexDescription": "Credit underwriting with abstention",
+        "indexImpact": "6.9% miscoverage; 10% target"
+      },
+      {
+        "slug": "northport",
+        "name": "NorthPort",
+        "subtitle": "High-Scale SEC Form N-PORT Validation Engine",
+        "stack": "Python · FastAPI · SEC N-PORT · Validation Systems · Financial Data Engineering",
+        "impact": "1.3M+ holdings processed",
+        "groups": {
+          "Problem": [
+            "Regulatory filings contain millions of structured fields where schema validity alone cannot identify financially inconsistent or logically impossible data."
+          ],
+          "Solution": [
+            "NorthPort implements a two-tier validation architecture for SEC Form N-PORT filings.",
+            "Tier 1: Structural and schema validation",
+            "Tier 2: Deterministic financial and cross-field validation rules"
+          ],
+          "Scale": [
+            "1.3M+ holdings processed",
+            "4,024 filings evaluated",
+            "Approximately 7,000 holdings / second",
+            "Approximately 11,600 violations surfaced",
+            "Approximately 4,800 false positives eliminated"
+          ],
+          "Technologies": [
+            "Python · FastAPI · SEC N-PORT · Validation Systems · Financial Data Engineering"
+          ]
+        },
+        "indexStack": "Python · FastAPI · SEC N-PORT",
+        "indexDescription": "SEC Form N-PORT validation",
+        "indexImpact": "1.3M+ holdings processed"
+      },
+      {
+        "slug": "quantera-ai",
+        "name": "QuantEra AI",
+        "subtitle": "Evidence-Grounded Financial Research Engine",
+        "stack": "Python · FastAPI · RAG · LLMs · yfinance · Finnhub · Cytoscape.js",
+        "impact": "95.8% field-level accuracy when validated against SEC 10-K data across eight large-cap companies.",
+        "groups": {
+          "Problem": [
+            "General-purpose LLMs can discuss finance fluently while still producing incorrect calculations, stale fundamentals, or unsupported claims."
+          ],
+          "Solution": [
+            "QuantEra separates deterministic financial computation from language-model narration and requires generated explanations to operate on structured financial evidence."
+          ],
+          "Core Architecture": [
+            "Market / SEC Data",
+            "→ Data normalization",
+            "→ Deterministic calculations",
+            "→ Retrieval",
+            "→ Context construction",
+            "→ LLM explanation",
+            "→ Validation / fail-closed checks"
+          ],
+          "Result": [
+            "95.8% field-level accuracy when validated against SEC 10-K data across eight large-cap companies."
+          ],
+          "Technologies": [
+            "Python · FastAPI · RAG · LLMs · yfinance · Finnhub · Cytoscape.js"
+          ]
+        },
+        "indexStack": "Python · FastAPI · RAG · LLMs",
+        "indexDescription": "Evidence-grounded financial research",
+        "indexImpact": "95.8% field-level accuracy"
+      },
+      {
+        "slug": "bnpl-marketplace",
+        "name": "BNPL Marketplace",
+        "subtitle": "Full-Stack Buy Now, Pay Later Infrastructure",
+        "stack": "Python · FastAPI · MySQL · Redis · Docker · Kubernetes · REST APIs · CI/CD",
+        "impact": "600 merchants",
+        "groups": {
+          "Problem": [
+            "A BNPL marketplace needs to combine merchant discovery, user eligibility, underwriting, payment-plan generation, and reliable communication between services."
+          ],
+          "Solution": [
+            "Built a backend platform supporting merchant discovery and Pay-in-4 / 6 / 12 / 24 financing flows with staged underwriting and signed webhook infrastructure."
+          ],
+          "Architecture": [
+            "Client",
+            "→ FastAPI Services",
+            "→ Eligibility",
+            "→ Three-Stage Underwriting",
+            "→ Financing Plans",
+            "→ Merchant / Transaction Services",
+            "→ Signed Webhooks"
+          ],
+          "Performance": [
+            "600 merchants",
+            "90% search coverage",
+            "Search P95 <4 ms",
+            "Autocomplete <1 ms",
+            "53 automated tests",
+            "Containerized deployment with health probes and autoscaling support."
+          ],
+          "Technologies": [
+            "Python · FastAPI · MySQL · Redis · Docker · Kubernetes · REST APIs · CI/CD"
+          ]
+        },
+        "indexStack": "Python · FastAPI · MySQL · Redis",
+        "indexDescription": "Buy now, pay later infrastructure",
+        "indexImpact": "600 merchants; 90% search coverage"
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+/* hero.js owns the timeline. These states are armed before paint only for a
+   fresh, eligible bare URL; static HTML and every skip stay fully readable. */
+.hero [data-name-line-text]{display:block}
+.hero [data-name-word]{display:inline-block}
+:root[data-intro-pending] .hero .name-mask,
+:root[data-intro-pending] .hero .line-mask{
+ overflow:hidden;
+ padding:.12em .06em;
+ margin:-.12em -.06em;
+}
+:root[data-intro-pending] .hero [data-name-row]{opacity:0}
+:root[data-intro-pending] .hero [data-name-word],
+:root[data-intro-pending] .hero [data-line]{transform:translateY(100%)}
+:root[data-intro-pending] .hero [data-reveal-line]{opacity:0}
+:root[data-intro-pending] .hero .explore{opacity:1!important}
+:root[data-intro-pending] .hero .explore [data-line]{transform:none!important}
+/* The real name reserves both lines throughout the year/name handoff. The
+   decorative year overlays its first line and never changes the grid tracks. */
+:root[data-intro-pending] [data-hero-year]{
+ display:block;
+ position:absolute;
+ inset:calc(var(--header) + var(--gap)) auto auto var(--gutter);
+ width:calc((100% - 2 * var(--gutter) - var(--gap)) * 1.4 / 2.4);
+ height:.95em;
+ overflow:hidden;
+ z-index:2;
+ pointer-events:none;
+ font-family:var(--font-display);
+ font-size:var(--fs-hero);
+ font-weight:300;
+ font-variation-settings:"SOFT" 0,"WONK" 0,"opsz" 144;
+ font-variant-numeric:tabular-nums;
+ line-height:.95;
+ letter-spacing:-.02em;
+}
+:root[data-intro-pending] [data-year-row]{display:flex;height:.95em;opacity:0;transform:translateY(10px)}
+:root[data-intro-pending] [data-year-start-text]{display:block;overflow:hidden}
+:root[data-intro-pending] [data-year-start-text] .char{display:inline-block;animation:hero-prefix-rise 600ms var(--ease-sig) both}
+:root[data-intro-pending] [data-year-start-text] .char + .char{animation-delay:60ms}
+:root[data-intro-pending] .year-window{display:block;height:.95em;overflow:hidden}
+:root[data-intro-pending] [data-year-strip]{display:block;will-change:transform}
+:root[data-intro-pending] .year-strip-cell{display:block;height:.95em;line-height:.95}
+:root[data-intro-pending] [data-loading-base-overlay]{
+ display:block;
+ position:absolute;
+ inset:0;
+ z-index:-2;
+ pointer-events:none;
+ background:var(--surface-dark);
+ transform:scaleY(0);
+ transform-origin:bottom;
+}
+/* The rail is operable for the entire intro, including before deferred JS. */
+[data-intro-header]{opacity:1!important}
+/* Inline GSAP transforms may outlive an input skip or a slow-CDN deadline.
+   Removing the arming attribute is sufficient to settle every mask. */
+:root:not([data-intro-pending]) .hero [data-name-row],
+:root:not([data-intro-pending]) .hero [data-reveal-line]{opacity:1!important}
+:root:not([data-intro-pending]) .hero [data-name-word],
+:root:not([data-intro-pending]) .hero [data-line]{transform:none!important}
+@keyframes hero-prefix-rise{from{transform:translateY(102%)}to{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){
+ [data-hero-year],[data-loading-base-overlay]{display:none!important}
+ .hero [data-name-row],.hero [data-reveal-line]{opacity:1!important}
+ .hero [data-name-word],.hero [data-line]{transform:none!important}
+}

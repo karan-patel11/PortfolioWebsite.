@@ -1,0 +1,39 @@
+/* Core entrances share chapter-motion.js ownership. Idle content is readable. */
+.chapter::after,
+html.motion-ready .chapter.is-entering::after,
+html.motion-ready .chapter.is-entering[data-entry-direction="reverse"]::after{animation:none!important;clip-path:none!important}
+.motion-ready .is-entering [data-enter]{animation:none}
+.chapter-word-mask{display:inline-block;overflow:hidden;vertical-align:top;padding-block:.14em;margin-block:-.14em}
+.chapter-word{display:inline-block;vertical-align:baseline}
+.motion-ready [data-motion-kind="words"].is-motion-entering .chapter-word{animation:chapter-word-rise var(--entry-duration) var(--ease-sig) calc(var(--motion-delay) + var(--word-delay)) both}
+.motion-ready [data-motion-kind="support"].is-motion-entering{animation:chapter-support-rise var(--entry-duration) var(--ease-sig) var(--motion-delay) both}
+[data-motion-kind="cover"]{position:relative}
+[data-motion-kind="cover"]::after{content:"";position:absolute;left:0;top:0;width:var(--cover-width,100%);height:var(--cover-height,100%);background:var(--bronze);pointer-events:none;transform:scaleX(0);transform-origin:right;visibility:hidden}
+.motion-ready [data-motion-kind="cover"].is-motion-entering::after{visibility:visible;animation:chapter-cover-clear var(--entry-duration) var(--ease-sig) var(--motion-delay) both}
+.employer{position:relative}
+.employer::before{content:"";position:absolute;top:-8px;left:0;right:0;height:1px;background:var(--bronze);transform-origin:left;pointer-events:none}
+.motion-ready .employer.is-motion-entering::before{animation:rule-arrive var(--entry-duration) var(--ease-sig) var(--motion-delay) both}
+.experience-role{position:relative}
+.experience-role::after{content:"";position:absolute;left:-1px;top:0;bottom:0;width:1px;background:var(--rule);transform-origin:top;pointer-events:none}
+.motion-ready .experience-role.is-motion-entering{border-left-color:transparent}
+.motion-ready .experience-role.is-motion-entering::after{animation:chapter-role-rule 380ms var(--ease-sig) var(--motion-rule-delay) both}
+.motion-ready .selected-work.is-entering .work-row::after{animation:none}
+.motion-ready .selected-work .work-row.is-motion-entering::after{animation:rule-arrive 440ms var(--ease-sig) var(--motion-rule-delay) both}
+.motion-ready .education-card-copy.is-motion-entering ul{border-top-color:transparent;position:relative}
+.motion-ready .education-card-copy.is-motion-entering ul::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--rule);transform-origin:left;animation:rule-arrive 440ms var(--ease-sig) var(--motion-rule-delay) both}
+.motion-document-hidden .data-packet{animation-play-state:paused!important}
+@keyframes chapter-word-rise{from{transform:translate3d(0,calc(100% + .16em),0)}to{transform:translate3d(0,0,0)}}
+@keyframes chapter-support-rise{from{opacity:1;transform:translate3d(0,8px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes chapter-cover-clear{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@keyframes chapter-role-rule{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+/* A focused control settles immediately and keeps its separate focus ring. */
+[data-motion-kind].is-motion-entering:focus-visible,
+[data-motion-kind].is-motion-entering:has(:focus-visible){animation:none!important}
+.chapter-masked-heading.is-motion-entering:has(:focus-visible) .chapter-word{animation:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){
+ .chapter::before{transform:none!important;animation:none!important}
+ .chapter::after{animation:none!important;clip-path:none!important}
+ .chapter-word,[data-motion-kind],.experience-role::after,.employer::before,.work-row::after{animation:none!important;transform:none!important}
+ [data-motion-kind="cover"]::after{visibility:hidden!important;animation:none!important;transform:scaleX(0)!important}
+ .data-packet{animation:none!important;opacity:0!important}
+}

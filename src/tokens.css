@@ -1,0 +1,50 @@
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/fraunces-latin-full-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geist Sans";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--surface-hero:#3A3632;--surface-paper:#FAF9F6;--surface-stone:#EDEAE6;--surface-dark:#1F1D1B;--ink:#2E2B28;--text-light:#F3EEE8;--muted-light:#C8C0B8;--rule:#817a73;--font-display:"Fraunces",serif;--font-body:"Geist Sans",sans-serif;--ease-sig:cubic-bezier(.3,.86,.36,.95);--body:var(--fs-body);--title:clamp(22px,min(3.2vw,4.5vh),46px);--subtitle:clamp(16px,min(2vw,2.8vh),28px);--gap:clamp(6px,min(1.5vw,1.8vh),24px);--gutter:clamp(12px,3vw,64px);--header:48px;--media-budget:30dvh}
+*{box-sizing:border-box;min-width:0}body{margin:0;font:400 var(--body)/1.6 var(--font-body);color:var(--ink);background:var(--surface-paper)}
+@media(max-width:767px){:root{--header:0px;--gutter:20px;--media-budget:12dvh}}
+@media(max-height:499px){:root{--header:44px;--media-budget:16dvh}}
+
+/* Desktop display scale. The mobile scale is explicit below. */
+:root{
+ --fs-hero:clamp(4.5rem,11vw,10rem);
+ --fs-chapter-xl:clamp(3.5rem,8vw,8rem);
+ --fs-work-title:clamp(2rem,4.4vw,3.5rem);
+ --fs-heading:clamp(1.75rem,2.6vw,2.5rem);
+ --fs-body:1.0625rem;
+ --fs-meta:0.875rem;
+}
+@media (max-width: 767px){
+ :root{
+  --fs-hero:3.25rem;
+  --fs-chapter-xl:2.75rem;
+  --fs-work-title:1.75rem;
+  --fs-heading:1.75rem;
+  --fs-body:1rem;
+ }
+}
+
+/* Daylight is the initial palette, including when scripts are unavailable. */
+:root,:root[data-theme="light"]{
+ color-scheme:light;
+ --surface-hero:#FAF9F6;--surface-paper:#FAF9F6;--surface-stone:#EFE9E1;
+ --surface-dark:#EFE9E1;--surface-venture:#EEE9E2;--surface-contact:#D3E6DD;
+ --ink:#25302E;--text-light:#25302E;--muted-light:#455C57;--rule:#657F76;
+ --jade:#1F635C;--jade-soft:rgba(31,99,92,.12);--jade-deep:#174F49;
+ --rail-surface:#FAF9F6;--rail-ink:#25302E;--scrim:rgba(22,35,32,.75);
+}
+:root[data-theme="dark"]{
+ color-scheme:dark;
+ --surface-hero:#3A3632;--surface-paper:#FAF9F6;--surface-stone:#EDEAE6;
+ --surface-dark:#1F1D1B;--surface-venture:#1F1D1B;--surface-contact:#102B29;
+ --ink:#2E2B28;--text-light:#F3EEE8;--muted-light:#C8C0B8;--rule:#817a73;
+ --jade:#A9D6C6;--jade-soft:rgba(169,214,198,.18);--jade-deep:#1F635C;
+ --rail-surface:#3A3632;--rail-ink:#F3EEE8;--scrim:rgba(12,21,20,.82);
+}
+
+/* Atmosphere accents: bronze paint is decorative; text has its own AA token. */
+:root{--oxblood:#592F36;--bronze:#A67C52;--bronze-ink:#705035;--light-pool:rgba(166,124,82,.09);--edge-shade:rgba(46,43,40,.045);--frame-shadow:rgba(55,38,24,.16)}
+.hero,.dark{--bronze-ink:#DFC09E;--light-pool:rgba(210,172,133,.12);--edge-shade:rgba(0,0,0,.14)}
+.contact{--light-pool:rgba(169,214,198,.14)}
+:root[data-theme="light"] .chapter{--bronze-ink:#705035;--light-pool:rgba(166,124,82,.08);--edge-shade:rgba(46,43,40,.035)}
+:root[data-theme="light"] .contact{--light-pool:rgba(31,99,92,.08)}

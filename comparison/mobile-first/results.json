@@ -1,0 +1,4913 @@
+{
+  "scope": {
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        375,
+        667
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        767,
+        900
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "headless": true,
+    "touchEmulated": true,
+    "physicalDevice": false
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.58",
+    "revision": "@a654841425914cbb703a2931e07b70a83aedbafd",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "matrix": [
+    {
+      "width": 320,
+      "height": 568,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 320,
+        "length": 2240,
+        "travel": 6551,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 320,
+            "start": 0,
+            "overflow": 182
+          },
+          {
+            "id": "about",
+            "left": 320,
+            "width": 320,
+            "start": 502,
+            "overflow": 511
+          },
+          {
+            "id": "education",
+            "left": 640,
+            "width": 320,
+            "start": 1333,
+            "overflow": 626
+          },
+          {
+            "id": "experience",
+            "left": 960,
+            "width": 320,
+            "start": 2279,
+            "overflow": 164
+          },
+          {
+            "id": "venture",
+            "left": 1280,
+            "width": 320,
+            "start": 2763,
+            "overflow": 2419
+          },
+          {
+            "id": "selected-work",
+            "left": 1600,
+            "width": 320,
+            "start": 5502,
+            "overflow": 304
+          },
+          {
+            "id": "contact",
+            "left": 1920,
+            "width": 320,
+            "start": 6126,
+            "overflow": 425
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 182,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 511,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 626,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 164,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 280,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 280,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 280,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 280,
+              "height": 80.59375,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 2419,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 304,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 280,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 280,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 280,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 280,
+              "height": 146.875,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 568,
+          "overflowX": 0,
+          "overflowY": 425,
+          "documentOverflowX": 0,
+          "targets": []
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 37,
+          "y": 421.390625,
+          "width": 263,
+          "height": 23.09375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 20,
+          "y": 432.015625,
+          "width": 280,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 20,
+          "y": 403.015625,
+          "width": 280,
+          "height": 52.78125,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 375,
+        "length": 2625,
+        "travel": 5678,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 375,
+            "start": 0,
+            "overflow": 39
+          },
+          {
+            "id": "about",
+            "left": 375,
+            "width": 375,
+            "start": 414,
+            "overflow": 326
+          },
+          {
+            "id": "education",
+            "left": 750,
+            "width": 375,
+            "start": 1115,
+            "overflow": 511
+          },
+          {
+            "id": "experience",
+            "left": 1125,
+            "width": 375,
+            "start": 2001,
+            "overflow": 36
+          },
+          {
+            "id": "venture",
+            "left": 1500,
+            "width": 375,
+            "start": 2412,
+            "overflow": 2012
+          },
+          {
+            "id": "selected-work",
+            "left": 1875,
+            "width": 375,
+            "start": 4799,
+            "overflow": 205
+          },
+          {
+            "id": "contact",
+            "left": 2250,
+            "width": 375,
+            "start": 5379,
+            "overflow": 299
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 39,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 66.453125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 326,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 511,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 36,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 335,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 335,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 335,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 335,
+              "height": 80.59375,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 2012,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 205,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 335,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 335,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 335,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 335,
+              "height": 146.875,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 667,
+          "overflowX": 0,
+          "overflowY": 299,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 235.0625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 37,
+          "y": 519.5,
+          "width": 318,
+          "height": 23.09375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 20,
+          "y": 531.421875,
+          "width": 335,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 20,
+          "y": 502.625,
+          "width": 335,
+          "height": 52.78125,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 390,
+        "length": 2730,
+        "travel": 4720,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 390,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 390,
+            "width": 390,
+            "start": 390,
+            "overflow": 149
+          },
+          {
+            "id": "education",
+            "left": 780,
+            "width": 390,
+            "start": 929,
+            "overflow": 296
+          },
+          {
+            "id": "experience",
+            "left": 1170,
+            "width": 390,
+            "start": 1615,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 1560,
+            "width": 390,
+            "start": 2005,
+            "overflow": 1811
+          },
+          {
+            "id": "selected-work",
+            "left": 1950,
+            "width": 390,
+            "start": 4206,
+            "overflow": 28
+          },
+          {
+            "id": "contact",
+            "left": 2340,
+            "width": 390,
+            "start": 4624,
+            "overflow": 96
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 66.453125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 149,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 296,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 350,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 350,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 350,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 350,
+              "height": 80.59375,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 1811,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 28,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 350,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 350,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 350,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 350,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 137.078125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "overflowX": 0,
+          "overflowY": 96,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 244.328125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 37,
+          "y": 555.5,
+          "width": 333,
+          "height": 23.09375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 20,
+          "y": 708.59375,
+          "width": 350,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 20,
+          "y": 679.234375,
+          "width": 339.453125,
+          "height": 52.78125,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 767,
+      "height": 900,
+      "clientWidth": 767,
+      "scrollWidth": 767,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 767,
+        "length": 5369,
+        "travel": 6184,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 767,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 767,
+            "width": 767,
+            "start": 767,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 1534,
+            "width": 767,
+            "start": 1534,
+            "overflow": 242
+          },
+          {
+            "id": "experience",
+            "left": 2301,
+            "width": 767,
+            "start": 2543,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 3068,
+            "width": 767,
+            "start": 3310,
+            "overflow": 1340
+          },
+          {
+            "id": "selected-work",
+            "left": 3835,
+            "width": 767,
+            "start": 5417,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 4602,
+            "width": 767,
+            "start": 6184,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 66.453125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 242,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 727,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 727,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 727,
+              "height": 80.59375,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 727,
+              "height": 80.59375,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 1340,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 727,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 727,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 727,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 727,
+              "height": 146.875,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 137.078125,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 287.296875,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 37,
+          "y": 555.5,
+          "width": 631.171875,
+          "height": 23.09375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 20,
+          "y": 764.078125,
+          "width": 631.171875,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 20,
+          "y": 592.671875,
+          "width": 339.453125,
+          "height": 52.78125,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 768,
+        "length": 5376,
+        "travel": 4954,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 768,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 768,
+            "width": 768,
+            "start": 768,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 1536,
+            "width": 768,
+            "start": 1536,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 2304,
+            "width": 768,
+            "start": 2304,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 3072,
+            "width": 768,
+            "start": 3072,
+            "overflow": 346
+          },
+          {
+            "id": "selected-work",
+            "left": 3840,
+            "width": 768,
+            "start": 4186,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 4608,
+            "width": 768,
+            "start": 4954,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 86.890625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 324.875,
+              "height": 72.78125,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 324.875,
+              "height": 72.78125,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 324.875,
+              "height": 72.78125,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 324.875,
+              "height": 72.78125,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 346,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 721.9375,
+              "height": 117.671875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 721.9375,
+              "height": 117.671875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 721.9375,
+              "height": 117.671875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 721.9375,
+              "height": 117.671875,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 145.640625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 313.40625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 437.09375,
+          "y": 833.203125,
+          "width": 307.875,
+          "height": 27.1875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 23.03125,
+          "y": 968.15625,
+          "width": 631.171875,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 389.75,
+          "y": 887.40625,
+          "width": 355.21875,
+          "height": 93.078125,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 1024,
+        "length": 7168,
+        "travel": 6179,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 1024,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 1024,
+            "width": 1024,
+            "start": 1024,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 2048,
+            "width": 1024,
+            "start": 2048,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 3072,
+            "width": 1024,
+            "start": 3072,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 4096,
+            "width": 1024,
+            "start": 4096,
+            "overflow": 35
+          },
+          {
+            "id": "selected-work",
+            "left": 5120,
+            "width": 1024,
+            "start": 5155,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 6144,
+            "width": 1024,
+            "start": 6179,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 86.890625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 433.15625,
+              "height": 79.953125,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 433.15625,
+              "height": 79.953125,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 433.15625,
+              "height": 79.953125,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 433.15625,
+              "height": 79.953125,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 35,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "01Market / SEC data",
+              "width": 130.453125,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "02Normalize data",
+              "width": 130.453125,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "03Calculate",
+              "width": 130.453125,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "04Retrieve",
+              "width": 130.46875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "05Build context",
+              "width": 130.46875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "06Explain",
+              "width": 130.453125,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "07Fail closed",
+              "width": 130.453125,
+              "height": 94,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 962.5625,
+              "height": 66.796875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 962.5625,
+              "height": 66.796875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 962.5625,
+              "height": 66.796875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 962.5625,
+              "height": 66.796875,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 145.640625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 313.40625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 577.125,
+          "y": 649.515625,
+          "width": 416.15625,
+          "height": 27.1875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 411.453125,
+          "y": 712.359375,
+          "width": 581.828125,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 518.90625,
+          "y": 654,
+          "width": 474.375,
+          "height": 68.1875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 1440,
+        "length": 10080,
+        "travel": 8640,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 1440,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 1440,
+            "width": 1440,
+            "start": 1440,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 2880,
+            "width": 1440,
+            "start": 2880,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 4320,
+            "width": 1440,
+            "start": 4320,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 5760,
+            "width": 1440,
+            "start": 5760,
+            "overflow": 0
+          },
+          {
+            "id": "selected-work",
+            "left": 7200,
+            "width": 1440,
+            "start": 7200,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 8640,
+            "width": 1440,
+            "start": 8640,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "SCROLL ↘",
+              "width": 86.890625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 609.140625,
+              "height": 87.5,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 609.140625,
+              "height": 87.5,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 609.140625,
+              "height": 87.5,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 609.140625,
+              "height": 87.5,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "01Market / SEC data",
+              "width": 189.546875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "02Normalize data",
+              "width": 189.546875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "03Calculate",
+              "width": 189.546875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "04Retrieve",
+              "width": 189.5625,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "05Build context",
+              "width": 189.5625,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "06Explain",
+              "width": 189.546875,
+              "height": 94,
+              "visible": true
+            },
+            {
+              "text": "07Fail closed",
+              "width": 189.546875,
+              "height": 94,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 1353.625,
+              "height": 77.1875,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 1353.625,
+              "height": 77.1875,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 1353.625,
+              "height": 77.1875,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 1353.625,
+              "height": 77.1875,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 145.640625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 1440,
+          "height": 900,
+          "overflowX": 0,
+          "overflowY": 0,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "patelkaran.tech@gmail.com",
+              "width": 313.40625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 804.671875,
+          "y": 757.25,
+          "width": 592.140625,
+          "height": 27.1875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 578.609375,
+          "y": 844.203125,
+          "width": 631.171875,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 728.09375,
+          "y": 781.25,
+          "width": 668.71875,
+          "height": 70.5625,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "clientWidth": 844,
+      "scrollWidth": 844,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "intro",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 844,
+        "length": 5908,
+        "travel": 6827,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 844,
+            "start": 0,
+            "overflow": 119
+          },
+          {
+            "id": "about",
+            "left": 844,
+            "width": 844,
+            "start": 963,
+            "overflow": 118
+          },
+          {
+            "id": "education",
+            "left": 1688,
+            "width": 844,
+            "start": 1925,
+            "overflow": 181
+          },
+          {
+            "id": "experience",
+            "left": 2532,
+            "width": 844,
+            "start": 2950,
+            "overflow": 53
+          },
+          {
+            "id": "venture",
+            "left": 3376,
+            "width": 844,
+            "start": 3847,
+            "overflow": 1011
+          },
+          {
+            "id": "selected-work",
+            "left": 4220,
+            "width": 844,
+            "start": 5702,
+            "overflow": 41
+          },
+          {
+            "id": "contact",
+            "left": 5064,
+            "width": 844,
+            "start": 6587,
+            "overflow": 240
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "panels": [
+        {
+          "id": "intro",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 119,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "about",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 118,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "education",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 181,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "experience",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 53,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Technical AssistantJuly 2025 to May 2026",
+              "width": 426,
+              "height": 47.1875,
+              "visible": true
+            },
+            {
+              "text": "Research AssistantFebruary 2025 to April 2025",
+              "width": 426,
+              "height": 74.375,
+              "visible": true
+            },
+            {
+              "text": "Software EngineerJune 2023 to July 2024",
+              "width": 426,
+              "height": 47.1875,
+              "visible": true
+            },
+            {
+              "text": "Junior Software EngineerAugust 2022 to June 2023",
+              "width": 426,
+              "height": 74.375,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "venture",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 1011,
+          "documentOverflowX": 0,
+          "targets": []
+        },
+        {
+          "id": "selected-work",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 41,
+          "documentOverflowX": 0,
+          "targets": [
+            {
+              "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Ne",
+              "width": 793.375,
+              "height": 52.78125,
+              "visible": true
+            },
+            {
+              "text": "NorthPort1.3M+ holdings processedPython · FastAPI ",
+              "width": 793.375,
+              "height": 52.78125,
+              "visible": true
+            },
+            {
+              "text": "QuantEra AI95.8% field-level accuracyPython · Fast",
+              "width": 793.375,
+              "height": 52.78125,
+              "visible": true
+            },
+            {
+              "text": "BNPL Marketplace600 merchants; 90% search coverage",
+              "width": 793.375,
+              "height": 52.78125,
+              "visible": true
+            },
+            {
+              "text": "Explore all skills →",
+              "width": 145.640625,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "left": 0,
+          "top": 0,
+          "width": 844,
+          "height": 390,
+          "overflowX": 0,
+          "overflowY": 240,
+          "documentOverflowX": 0,
+          "targets": []
+        }
+      ],
+      "longContent": [
+        {
+          "text": "August 2022 to June 2023",
+          "x": 620.171875,
+          "y": 297.140625,
+          "width": 198.5,
+          "height": 54.375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "experience"
+        },
+        {
+          "text": "Select a stage to read its role.",
+          "x": 25.3125,
+          "y": 338.671875,
+          "width": 631.171875,
+          "height": 23.796875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "venture"
+        },
+        {
+          "text": "Make the system intelligent. Make the intelligence accountable.",
+          "x": 434,
+          "y": 252.890625,
+          "width": 134.640625,
+          "height": 108.75,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0,
+          "id": "contact"
+        }
+      ]
+    }
+  ],
+  "reduced": [
+    {
+      "width": 320,
+      "height": 568,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 320,
+        "length": 2240,
+        "travel": 6551,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 320,
+            "start": 0,
+            "overflow": 182
+          },
+          {
+            "id": "about",
+            "left": 320,
+            "width": 320,
+            "start": 502,
+            "overflow": 511
+          },
+          {
+            "id": "education",
+            "left": 640,
+            "width": 320,
+            "start": 1333,
+            "overflow": 626
+          },
+          {
+            "id": "experience",
+            "left": 960,
+            "width": 320,
+            "start": 2279,
+            "overflow": 164
+          },
+          {
+            "id": "venture",
+            "left": 1280,
+            "width": 320,
+            "start": 2763,
+            "overflow": 2419
+          },
+          {
+            "id": "selected-work",
+            "left": 1600,
+            "width": 320,
+            "start": 5502,
+            "overflow": 304
+          },
+          {
+            "id": "contact",
+            "left": 1920,
+            "width": 320,
+            "start": 6126,
+            "overflow": 425
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 375,
+        "length": 2625,
+        "travel": 5678,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 375,
+            "start": 0,
+            "overflow": 39
+          },
+          {
+            "id": "about",
+            "left": 375,
+            "width": 375,
+            "start": 414,
+            "overflow": 326
+          },
+          {
+            "id": "education",
+            "left": 750,
+            "width": 375,
+            "start": 1115,
+            "overflow": 511
+          },
+          {
+            "id": "experience",
+            "left": 1125,
+            "width": 375,
+            "start": 2001,
+            "overflow": 36
+          },
+          {
+            "id": "venture",
+            "left": 1500,
+            "width": 375,
+            "start": 2412,
+            "overflow": 2012
+          },
+          {
+            "id": "selected-work",
+            "left": 1875,
+            "width": 375,
+            "start": 4799,
+            "overflow": 205
+          },
+          {
+            "id": "contact",
+            "left": 2250,
+            "width": 375,
+            "start": 5379,
+            "overflow": 299
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 390,
+        "length": 2730,
+        "travel": 4720,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 390,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 390,
+            "width": 390,
+            "start": 390,
+            "overflow": 149
+          },
+          {
+            "id": "education",
+            "left": 780,
+            "width": 390,
+            "start": 929,
+            "overflow": 296
+          },
+          {
+            "id": "experience",
+            "left": 1170,
+            "width": 390,
+            "start": 1615,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 1560,
+            "width": 390,
+            "start": 2005,
+            "overflow": 1811
+          },
+          {
+            "id": "selected-work",
+            "left": 1950,
+            "width": 390,
+            "start": 4206,
+            "overflow": 28
+          },
+          {
+            "id": "contact",
+            "left": 2340,
+            "width": 390,
+            "start": 4624,
+            "overflow": 96
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 767,
+      "height": 900,
+      "clientWidth": 767,
+      "scrollWidth": 767,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 767,
+        "length": 5369,
+        "travel": 6184,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 767,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 767,
+            "width": 767,
+            "start": 767,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 1534,
+            "width": 767,
+            "start": 1534,
+            "overflow": 242
+          },
+          {
+            "id": "experience",
+            "left": 2301,
+            "width": 767,
+            "start": 2543,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 3068,
+            "width": 767,
+            "start": 3310,
+            "overflow": 1340
+          },
+          {
+            "id": "selected-work",
+            "left": 3835,
+            "width": 767,
+            "start": 5417,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 4602,
+            "width": 767,
+            "start": 6184,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 768,
+        "length": 5376,
+        "travel": 4954,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 768,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 768,
+            "width": 768,
+            "start": 768,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 1536,
+            "width": 768,
+            "start": 1536,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 2304,
+            "width": 768,
+            "start": 2304,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 3072,
+            "width": 768,
+            "start": 3072,
+            "overflow": 346
+          },
+          {
+            "id": "selected-work",
+            "left": 3840,
+            "width": 768,
+            "start": 4186,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 4608,
+            "width": 768,
+            "start": 4954,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 1024,
+        "length": 7168,
+        "travel": 6179,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 1024,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 1024,
+            "width": 1024,
+            "start": 1024,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 2048,
+            "width": 1024,
+            "start": 2048,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 3072,
+            "width": 1024,
+            "start": 3072,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 4096,
+            "width": 1024,
+            "start": 4096,
+            "overflow": 35
+          },
+          {
+            "id": "selected-work",
+            "left": 5120,
+            "width": 1024,
+            "start": 5155,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 6144,
+            "width": 1024,
+            "start": 6179,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 1440,
+        "length": 10080,
+        "travel": 8640,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 1440,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 1440,
+            "width": 1440,
+            "start": 1440,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 2880,
+            "width": 1440,
+            "start": 2880,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 4320,
+            "width": 1440,
+            "start": 4320,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 5760,
+            "width": 1440,
+            "start": 5760,
+            "overflow": 0
+          },
+          {
+            "id": "selected-work",
+            "left": 7200,
+            "width": 1440,
+            "start": 7200,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 8640,
+            "width": 1440,
+            "start": 8640,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "clientWidth": 844,
+      "scrollWidth": 844,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 844,
+        "length": 5908,
+        "travel": 6827,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 844,
+            "start": 0,
+            "overflow": 119
+          },
+          {
+            "id": "about",
+            "left": 844,
+            "width": 844,
+            "start": 963,
+            "overflow": 118
+          },
+          {
+            "id": "education",
+            "left": 1688,
+            "width": 844,
+            "start": 1925,
+            "overflow": 181
+          },
+          {
+            "id": "experience",
+            "left": 2532,
+            "width": 844,
+            "start": 2950,
+            "overflow": 53
+          },
+          {
+            "id": "venture",
+            "left": 3376,
+            "width": 844,
+            "start": 3847,
+            "overflow": 1011
+          },
+          {
+            "id": "selected-work",
+            "left": 4220,
+            "width": 844,
+            "start": 5702,
+            "overflow": 41
+          },
+          {
+            "id": "contact",
+            "left": 5064,
+            "width": 844,
+            "start": 6587,
+            "overflow": 240
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      },
+      "values": [
+        "658K+",
+        "104K+",
+        "15.9%",
+        "300+"
+      ],
+      "animations": []
+    }
+  ],
+  "themes": [
+    {
+      "width": 375,
+      "height": 667,
+      "chosen": "dark",
+      "persisted": "dark",
+      "restored": "light"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "chosen": "dark",
+      "persisted": "dark",
+      "restored": "light"
+    }
+  ],
+  "gestures": [
+    {
+      "kind": "wheel",
+      "axis": "vertical",
+      "before": {
+        "scroll": 0,
+        "left": 0
+      },
+      "after": {
+        "scroll": 260,
+        "left": -260
+      },
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0.110613",
+        "display": "flex",
+        "width": 317.796875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      },
+      "faded": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 317.796875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      }
+    },
+    {
+      "kind": "touch",
+      "axis": "vertical",
+      "before": {
+        "scroll": 39,
+        "left": 0
+      },
+      "after": {
+        "scroll": 514,
+        "left": -375
+      },
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 285.1875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      },
+      "faded": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 285.1875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      }
+    },
+    {
+      "kind": "wheel",
+      "axis": "horizontal",
+      "before": {
+        "scroll": 0,
+        "left": 0
+      },
+      "after": {
+        "scroll": 260,
+        "left": -260
+      },
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0.169051",
+        "display": "flex",
+        "width": 317.796875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      },
+      "faded": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 317.796875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      }
+    },
+    {
+      "kind": "touch",
+      "axis": "horizontal",
+      "before": {
+        "scroll": 39,
+        "left": 0
+      },
+      "after": {
+        "scroll": 302,
+        "left": -263
+      },
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 285.1875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      },
+      "faded": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "0",
+        "display": "flex",
+        "width": 285.1875,
+        "height": 54,
+        "hidden": false,
+        "className": "scroll-hint is-dismissed"
+      }
+    }
+  ],
+  "metrics": {
+    "goals": [
+      "658K+",
+      "104K+",
+      "15.9%",
+      "300+"
+    ],
+    "intermediate": [
+      "217K+",
+      "34K+",
+      "5.2%",
+      "99+"
+    ],
+    "samples": [
+      [
+        "658K+",
+        "0K+",
+        "27K+",
+        "53K+",
+        "79K+",
+        "104K+",
+        "128K+",
+        "151K+",
+        "174K+",
+        "196K+",
+        "217K+",
+        "238K+",
+        "258K+",
+        "277K+",
+        "296K+",
+        "314K+",
+        "332K+",
+        "348K+",
+        "365K+",
+        "380K+",
+        "395K+",
+        "410K+",
+        "424K+",
+        "438K+",
+        "451K+",
+        "463K+",
+        "475K+",
+        "486K+",
+        "497K+",
+        "508K+",
+        "518K+",
+        "527K+",
+        "537K+",
+        "545K+",
+        "553K+",
+        "561K+",
+        "569K+",
+        "576K+",
+        "582K+",
+        "589K+",
+        "595K+",
+        "600K+",
+        "605K+",
+        "610K+",
+        "615K+",
+        "619K+",
+        "623K+",
+        "627K+",
+        "630K+",
+        "634K+",
+        "637K+",
+        "639K+",
+        "642K+",
+        "644K+",
+        "646K+",
+        "648K+",
+        "649K+",
+        "651K+",
+        "652K+",
+        "653K+",
+        "654K+",
+        "655K+",
+        "656K+",
+        "657K+",
+        "658K+"
+      ],
+      [
+        "104K+",
+        "0K+",
+        "4K+",
+        "8K+",
+        "12K+",
+        "16K+",
+        "20K+",
+        "24K+",
+        "27K+",
+        "31K+",
+        "34K+",
+        "38K+",
+        "41K+",
+        "44K+",
+        "47K+",
+        "50K+",
+        "52K+",
+        "55K+",
+        "58K+",
+        "60K+",
+        "63K+",
+        "65K+",
+        "67K+",
+        "69K+",
+        "71K+",
+        "73K+",
+        "75K+",
+        "77K+",
+        "79K+",
+        "80K+",
+        "82K+",
+        "83K+",
+        "85K+",
+        "86K+",
+        "87K+",
+        "89K+",
+        "90K+",
+        "91K+",
+        "92K+",
+        "93K+",
+        "94K+",
+        "95K+",
+        "96K+",
+        "97K+",
+        "98K+",
+        "99K+",
+        "100K+",
+        "101K+",
+        "102K+",
+        "103K+",
+        "104K+"
+      ],
+      [
+        "15.9%",
+        "0.0%",
+        "0.7%",
+        "1.3%",
+        "1.9%",
+        "2.5%",
+        "3.1%",
+        "3.7%",
+        "4.2%",
+        "4.7%",
+        "5.2%",
+        "5.7%",
+        "6.2%",
+        "6.7%",
+        "7.2%",
+        "7.6%",
+        "8.0%",
+        "8.4%",
+        "8.8%",
+        "9.2%",
+        "9.6%",
+        "9.9%",
+        "10.2%",
+        "10.6%",
+        "10.9%",
+        "11.2%",
+        "11.5%",
+        "11.8%",
+        "12.0%",
+        "12.3%",
+        "12.5%",
+        "12.7%",
+        "13.0%",
+        "13.2%",
+        "13.4%",
+        "13.6%",
+        "13.7%",
+        "13.9%",
+        "14.1%",
+        "14.2%",
+        "14.4%",
+        "14.5%",
+        "14.6%",
+        "14.7%",
+        "14.9%",
+        "15.0%",
+        "15.1%",
+        "15.2%",
+        "15.3%",
+        "15.4%",
+        "15.5%",
+        "15.6%",
+        "15.7%",
+        "15.8%",
+        "15.9%"
+      ],
+      [
+        "300+",
+        "0+",
+        "12+",
+        "24+",
+        "36+",
+        "47+",
+        "58+",
+        "69+",
+        "79+",
+        "89+",
+        "99+",
+        "108+",
+        "118+",
+        "126+",
+        "135+",
+        "143+",
+        "151+",
+        "159+",
+        "166+",
+        "173+",
+        "180+",
+        "187+",
+        "193+",
+        "200+",
+        "205+",
+        "211+",
+        "217+",
+        "222+",
+        "227+",
+        "232+",
+        "236+",
+        "240+",
+        "245+",
+        "249+",
+        "252+",
+        "256+",
+        "259+",
+        "263+",
+        "266+",
+        "268+",
+        "271+",
+        "274+",
+        "276+",
+        "278+",
+        "280+",
+        "282+",
+        "284+",
+        "286+",
+        "287+",
+        "289+",
+        "290+",
+        "291+",
+        "293+",
+        "294+",
+        "295+",
+        "296+",
+        "297+",
+        "298+",
+        "299+",
+        "300+"
+      ]
+    ],
+    "revisit": [
+      65,
+      51,
+      55,
+      60
+    ],
+    "community": "Organic search impressions658K+658K+Organic clicks104K+104K+Search CTR15.9%15.9%community members300+300+"
+  },
+  "navigation": {
+    "opened": {
+      "modal": true,
+      "focusInside": true,
+      "locked": true
+    },
+    "trapped": true,
+    "tabOrder": [
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#intro",
+        "text": "01Hero↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#about",
+        "text": "02About↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#education",
+        "text": "03Education↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#experience",
+        "text": "04Experience↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#venture",
+        "text": "05Venture↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#selected-work",
+        "text": "06Selected work↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#contact",
+        "text": "07Contact↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "BUTTON",
+        "href": null,
+        "text": "Close ×"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#intro",
+        "text": "01Hero↗"
+      },
+      {
+        "modifiers": 0,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#about",
+        "text": "02About↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#intro",
+        "text": "01Hero↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "BUTTON",
+        "href": null,
+        "text": "Close ×"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#contact",
+        "text": "07Contact↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#selected-work",
+        "text": "06Selected work↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#venture",
+        "text": "05Venture↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#experience",
+        "text": "04Experience↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#education",
+        "text": "03Education↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#about",
+        "text": "02About↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "A",
+        "href": "/PortfolioWebsite./#intro",
+        "text": "01Hero↗"
+      },
+      {
+        "modifiers": 8,
+        "inside": true,
+        "tag": "BUTTON",
+        "href": null,
+        "text": "Close ×"
+      }
+    ],
+    "escaped": {
+      "restored": true,
+      "unlocked": true,
+      "tag": "BUTTON",
+      "className": "dock-menu"
+    },
+    "selected": {
+      "open": false,
+      "chapter": "venture",
+      "left": 0
+    }
+  },
+  "detail": {
+    "route": "#selected-work/verdict",
+    "detailOpen": {
+      "modal": true,
+      "headingFocused": true,
+      "locked": true
+    },
+    "escapeFocus": {
+      "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Next.js · PostgreSQL",
+      "x": 20,
+      "y": 108.4375,
+      "width": 335,
+      "height": 146.875,
+      "visible": true,
+      "opacity": "1",
+      "documentOverflowX": 0
+    },
+    "backRestored": true
+  },
+  "resize": {
+    "grown": {
+      "width": 1440,
+      "height": 900,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "flex",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 1440,
+        "length": 10080,
+        "travel": 8640,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 1440,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 1440,
+            "width": 1440,
+            "start": 1440,
+            "overflow": 0
+          },
+          {
+            "id": "education",
+            "left": 2880,
+            "width": 1440,
+            "start": 2880,
+            "overflow": 0
+          },
+          {
+            "id": "experience",
+            "left": 4320,
+            "width": 1440,
+            "start": 4320,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 5760,
+            "width": 1440,
+            "start": 5760,
+            "overflow": 0
+          },
+          {
+            "id": "selected-work",
+            "left": 7200,
+            "width": 1440,
+            "start": 7200,
+            "overflow": 0
+          },
+          {
+            "id": "contact",
+            "left": 8640,
+            "width": 1440,
+            "start": 8640,
+            "overflow": 0
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      }
+    },
+    "shrunk": {
+      "width": 390,
+      "height": 844,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "theme": "light",
+      "horizontal": true,
+      "chapter": "venture",
+      "railDisplay": "none",
+      "controls": [
+        {
+          "hook": "menu",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 0,
+          "height": 0,
+          "visible": false,
+          "label": "Switch to dark theme"
+        },
+        {
+          "hook": "menu",
+          "width": 124.984375,
+          "height": 48,
+          "visible": true,
+          "label": null
+        },
+        {
+          "hook": "theme",
+          "width": 44,
+          "height": 48.796875,
+          "visible": true,
+          "label": "Switch to dark theme"
+        }
+      ],
+      "order": [
+        "intro",
+        "about",
+        "education",
+        "experience",
+        "venture",
+        "selected-work",
+        "contact"
+      ],
+      "measurement": {
+        "width": 390,
+        "length": 2730,
+        "travel": 4720,
+        "boxes": [
+          {
+            "id": "intro",
+            "left": 0,
+            "width": 390,
+            "start": 0,
+            "overflow": 0
+          },
+          {
+            "id": "about",
+            "left": 390,
+            "width": 390,
+            "start": 390,
+            "overflow": 149
+          },
+          {
+            "id": "education",
+            "left": 780,
+            "width": 390,
+            "start": 929,
+            "overflow": 296
+          },
+          {
+            "id": "experience",
+            "left": 1170,
+            "width": 390,
+            "start": 1615,
+            "overflow": 0
+          },
+          {
+            "id": "venture",
+            "left": 1560,
+            "width": 390,
+            "start": 2005,
+            "overflow": 1811
+          },
+          {
+            "id": "selected-work",
+            "left": 1950,
+            "width": 390,
+            "start": 4206,
+            "overflow": 28
+          },
+          {
+            "id": "contact",
+            "left": 2340,
+            "width": 390,
+            "start": 4624,
+            "overflow": 96
+          }
+        ]
+      },
+      "remoteScripts": [],
+      "hint": {
+        "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+        "opacity": "1",
+        "display": "none",
+        "width": 0,
+        "height": 0,
+        "hidden": true,
+        "className": "scroll-hint"
+      }
+    }
+  },
+  "noScript": {
+    "theme": "light",
+    "horizontal": false,
+    "overflowX": 0,
+    "panels": [
+      {
+        "id": "intro",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 706,
+        "contentHeight": 706,
+        "opacity": "1"
+      },
+      {
+        "id": "about",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 993,
+        "contentHeight": 993,
+        "opacity": "1"
+      },
+      {
+        "id": "education",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 1178,
+        "contentHeight": 1178,
+        "opacity": "1"
+      },
+      {
+        "id": "experience",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 1036,
+        "contentHeight": 1036,
+        "opacity": "1"
+      },
+      {
+        "id": "venture",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 2679,
+        "contentHeight": 2679,
+        "opacity": "1"
+      },
+      {
+        "id": "selected-work",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 1289,
+        "contentHeight": 1289,
+        "opacity": "1"
+      },
+      {
+        "id": "contact",
+        "display": "flex",
+        "overflow": "visible",
+        "height": 966,
+        "contentHeight": 966,
+        "opacity": "1"
+      }
+    ],
+    "counters": [
+      "658K+",
+      "104K+",
+      "15.9%",
+      "300+"
+    ]
+  },
+  "screenshots": [
+    "comparison/mobile-first/375x667-light-onboarding.png",
+    "comparison/mobile-first/375x667-light-intro.png",
+    "comparison/mobile-first/375x667-light-venture.png",
+    "comparison/mobile-first/1440x900-light-intro.png",
+    "comparison/mobile-first/375x667-light-metrics.png",
+    "comparison/mobile-first/375x667-light-navigation-sheet.png",
+    "comparison/mobile-first/375x667-no-script-light.png"
+  ],
+  "console": [],
+  "failures": [],
+  "firstLoad": [
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "horizontal": true,
+      "ready": "true",
+      "nameOpacity": "1",
+      "nameTransform": "none",
+      "remote": [
+        "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      ]
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "theme": "light",
+      "horizontal": true,
+      "ready": "true",
+      "nameOpacity": "1",
+      "nameTransform": "none",
+      "remote": []
+    }
+  ],
+  "firstHint": {
+    "text": "Scroll down to move sidewaysScroll to explore the chapters →×",
+    "opacity": "1",
+    "display": "flex",
+    "width": 285.1875,
+    "height": 54,
+    "hidden": false,
+    "className": "scroll-hint"
+  },
+  "assertions": 351,
+  "elapsedSeconds": 17.21,
+  "content": {
+    "experienceBullets": 25,
+    "missingBullets": [],
+    "images": 4,
+    "missingAssets": []
+  },
+  "releaseChecks": {
+    "contrast": [
+      {
+        "width": 320,
+        "theme": "light",
+        "misses": []
+      },
+      {
+        "width": 320,
+        "theme": "dark",
+        "misses": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "misses": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "misses": []
+      }
+    ],
+    "dialogs": [
+      {
+        "theme": "light",
+        "id": "experience/gwu-technical-assistant",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Technical AssistantJuly 2025 to May 2026",
+          "x": 20,
+          "y": 188.21875,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "experience/gwu-research-assistant",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Research AssistantFebruary 2025 to April 2025",
+          "x": 20,
+          "y": 280.8125,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "experience/vipul-software-engineer",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Software EngineerJune 2023 to July 2024",
+          "x": 20,
+          "y": 283.296875,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "experience/vipul-junior-engineer",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Junior Software EngineerAugust 2022 to June 2023",
+          "x": 20,
+          "y": 375.890625,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "selected-work/verdict",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Next.js · PostgreSQL",
+          "x": 20,
+          "y": 108.4375,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "selected-work/northport",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "NorthPort1.3M+ holdings processedPython · FastAPI · SEC N-PORT",
+          "x": 20,
+          "y": 255.3125,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "selected-work/quantera-ai",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "QuantEra AI95.8% field-level accuracyPython · FastAPI · RAG · LLMs",
+          "x": 20,
+          "y": 98.1875,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "selected-work/bnpl-marketplace",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "BNPL Marketplace600 merchants; 90% search coveragePython · FastAPI · MySQL · Redis",
+          "x": 20,
+          "y": 245.0625,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "light",
+        "id": "selected-work/skills",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Explore all skills →",
+          "x": 20,
+          "y": 411.9375,
+          "width": 137.078125,
+          "height": 44,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "experience/gwu-technical-assistant",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Technical AssistantJuly 2025 to May 2026",
+          "x": 20,
+          "y": 188.21875,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "experience/gwu-research-assistant",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Research AssistantFebruary 2025 to April 2025",
+          "x": 20,
+          "y": 280.8125,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "experience/vipul-software-engineer",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Software EngineerJune 2023 to July 2024",
+          "x": 20,
+          "y": 283.296875,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "experience/vipul-junior-engineer",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Junior Software EngineerAugust 2022 to June 2023",
+          "x": 20,
+          "y": 375.890625,
+          "width": 280,
+          "height": 80.59375,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "selected-work/verdict",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Verdict6.9% miscoverage; 10% targetTypeScript · Next.js · PostgreSQL",
+          "x": 20,
+          "y": 108.4375,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "selected-work/northport",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "NorthPort1.3M+ holdings processedPython · FastAPI · SEC N-PORT",
+          "x": 20,
+          "y": 255.3125,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "selected-work/quantera-ai",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "QuantEra AI95.8% field-level accuracyPython · FastAPI · RAG · LLMs",
+          "x": 20,
+          "y": 98.1875,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "selected-work/bnpl-marketplace",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "BNPL Marketplace600 merchants; 90% search coveragePython · FastAPI · MySQL · Redis",
+          "x": 20,
+          "y": 245.0625,
+          "width": 280,
+          "height": 146.875,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "id": "selected-work/skills",
+        "overflowX": 0,
+        "scrollable": true,
+        "card": {
+          "text": "Explore all skills →",
+          "x": 20,
+          "y": 411.9375,
+          "width": 137.078125,
+          "height": 44,
+          "visible": true,
+          "opacity": "1",
+          "documentOverflowX": 0
+        }
+      }
+    ],
+    "routes": [
+      {
+        "route": "#hero",
+        "hash": "#intro",
+        "chapter": "intro"
+      },
+      {
+        "route": "#projects",
+        "hash": "#selected-work",
+        "chapter": "selected-work"
+      },
+      {
+        "route": "#skills",
+        "hash": "#selected-work/skills",
+        "chapter": "selected-work",
+        "modal": "selected-work/skills"
+      },
+      {
+        "route": "#featured-skills",
+        "hash": "#selected-work/skills",
+        "chapter": "selected-work",
+        "modal": "selected-work/skills"
+      },
+      {
+        "route": "#%E0%A4%A",
+        "hash": "#%E0%A4%A",
+        "chapter": "intro"
+      }
+    ],
+    "enlargedText": [
+      {
+        "width": 320,
+        "id": "intro",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "about",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "education",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "experience",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "venture",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "selected-work",
+        "overflowX": 0
+      },
+      {
+        "width": 320,
+        "id": "contact",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "intro",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "about",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "education",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "experience",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "venture",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "selected-work",
+        "overflowX": 0
+      },
+      {
+        "width": 768,
+        "id": "contact",
+        "overflowX": 0
+      }
+    ],
+    "assets": [
+      {
+        "path": "/PortfolioWebsite./assets/favicon.svg",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./fonts/fraunces-latin-full-normal.woff2",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./fonts/geist-latin-wght-normal.woff2",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./style.css",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./hero.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./main.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./chapter-motion.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/karan-160.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/karan-320.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/karan-640.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/gwu-campus-400.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/gwu-campus-800.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/gwu-campus.jpg",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/nmims-320.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/nmims-640.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/nmims-960.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/twods-160.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/twods-320.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/twods-640.webp",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./assets/paper-grain.svg",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./motion.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./metrics.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./navigation.js",
+        "status": 200
+      },
+      {
+        "path": "/PortfolioWebsite./horizontal-layout.js",
+        "status": 200
+      }
+    ]
+  },
+  "completed": true
+}

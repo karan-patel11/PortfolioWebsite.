@@ -1,0 +1,37 @@
+/* Pointer and keyboard use one foreground state; sibling text keeps full contrast. */
+.selected-work .work-row.is-active::before{transform:scaleX(1)}
+.selected-work .work-row.is-active h3{transform:translateX(4px)}
+.selected-work .work-row.is-active{background:rgba(166,124,82,.055)}
+.work-rows.is-emphasizing .work-row:not(.is-active)::before{transform:scaleX(0);transform-origin:right}
+.work-rows.is-emphasizing .work-row:not(.is-active) h3{transform:none}
+.selected-work .work-row::before{transform-origin:right}
+.selected-work .work-row:is(.is-active,:hover,:focus-visible)::before{transform-origin:left}
+
+/* State-derived transitions reverse safely without queues or delayed class cleanup. */
+.motion-underline{position:relative;text-decoration:none}
+.motion-underline::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:currentColor;pointer-events:none;transform:scaleX(0);transform-origin:right;transition:transform 400ms var(--ease-sig)}
+.motion-underline:is(.is-emphasized,:hover,:focus-visible)::after{transform:scaleX(1);transform-origin:left}
+.contact-email.motion-underline::after{bottom:3px}
+
+/* Equal panels follow clientWidth so a visible scrollbar cannot crop content. */
+[data-horizontal-panel]{flex-basis:100%;width:100%;max-width:100%}
+[data-horizontal-track]{width:100%}
+[data-horizontal-active] [data-horizontal-panel]{flex-basis:var(--panel-width);width:var(--panel-width);max-width:var(--panel-width)}
+[data-horizontal-active] [data-horizontal-track]{width:calc(var(--panel-count) * var(--panel-width))}
+
+/* Chapter palette uses existing tokens; navigation is always visible and operable. */
+.rail{transition:none;--rail-accent:var(--jade)}
+.rail[data-palette-transition]{transition:background-color 500ms var(--ease-sig),border-color 500ms var(--ease-sig)}
+html:is([data-active-chapter="about"],[data-active-chapter="education"],[data-active-chapter="experience"],[data-active-chapter="selected-work"]) .rail{background:var(--surface-paper);color:var(--ink);--rail-accent:var(--jade-deep)}
+html[data-active-chapter="venture"] .rail{background:var(--surface-venture);color:var(--text-light)}
+html[data-active-chapter="contact"] .rail{background:var(--surface-contact);color:var(--text-light)}
+.rail [data-header-scroll-progress],.header-rail a[aria-current]::before{background:var(--rail-accent)}
+.header-rail a:is(:hover,:focus-visible),.theme-toggle:is(:hover,:focus-visible){color:var(--rail-accent)}
+
+/* Preserve one existing bounded dialog entrance; closing is immediate. */
+.chapter>dialog[data-detail]{position:fixed}
+dialog[data-detail][open]{animation:detail-in 500ms var(--ease-sig)}
+@media(prefers-reduced-motion:reduce){
+ .work-row h3{transform:none!important}
+ .motion-underline::after{animation:none!important;transition:none!important}
+}
