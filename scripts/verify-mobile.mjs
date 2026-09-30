@@ -18,7 +18,7 @@ const chrome = spawn(process.env.CHROME_PATH || (process.platform==='darwin'?'/A
   '--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--disable-dev-shm-usage', 'about:blank',
 ], { stdio: ['ignore', 'ignore', 'pipe'], detached:process.platform!=='win32' });
 const report = {
-  scope: { viewports, headless: true, touchEmulated: true, physicalDevice: false },
+  scope: { targetURL: base, viewports, headless: true, touchEmulated: true, physicalDevice: false },
   browser: null, matrix: [], reduced: [], themes: [], gestures: [], metrics: null,
   navigation: null, detail: null, resize: null, noScript: null, screenshots: [], console: [], failures: [],
 };
@@ -56,6 +56,7 @@ async function configure(width, height, reduced = false) {
 }
 async function navigate(hash = '#intro') {
   const url = `${base}/?mobile-verification=${++navigationId}${hash}`;
+  await evaluate("if(document.documentElement)document.documentElement.dataset.ready='navigating'");
   await call('Page.navigate', { url });
   await until(() => evaluate(`location.href.split('#')[0] === ${JSON.stringify(url.split('#')[0])} && document.documentElement?.dataset.ready === 'true'`), 'app readiness', 12000);
 }
@@ -183,13 +184,14 @@ try {
   report.firstLoad = [];
   for (const [width, height] of [[1440, 900], [375, 667]]) {
     await configure(width, height);
+    await evaluate("if(document.documentElement)document.documentElement.dataset.ready='navigating'");
     await call('Page.navigate', { url: `${base}/` });
     await until(() => evaluate('document.documentElement?.dataset.ready === "true" && !document.documentElement.hasAttribute("data-intro-pending")'), 'bare first-load ready');
     const first = await evaluate(`(() => ({theme:document.documentElement.dataset.theme,
       horizontal:Boolean(window.portfolioMotion), ready:document.documentElement.dataset.ready,
       nameOpacity:getComputedStyle(document.querySelector('[data-name-row]')).opacity,
       nameTransform:getComputedStyle(document.querySelector('[data-name-word]')).transform,
-      remote:[...document.scripts].map(s=>s.src).filter(s=>s.startsWith('https:'))}))()`);
+      remote:[...document.scripts].map(s=>s.src).filter(s=>/^https?:/.test(s)&&new URL(s).origin!==location.origin)}))()`);
     assert(first.theme === 'light' && first.horizontal && first.nameOpacity === '1' && first.nameTransform === 'none', `${width}x${height}: bare first load settles with CDN blocked`);
     if (width < 768) assert(first.remote.length === 0, 'mobile first load requests no third-party animation scripts');
     report.firstLoad.push({width,height,...first});
@@ -425,6 +427,7 @@ try {
     report.releaseChecks.routes.push({route,...result});
   }
   for(const slug of ['verdict','northport','quantera-ai','bnpl-marketplace']){
+    await evaluate("if(document.documentElement)document.documentElement.dataset.ready='navigating'");
     await call('Page.navigate',{url:`${base}/projects/${slug}/`});
     await until(()=>evaluate(`document.documentElement?.dataset.ready==='true'&&document.querySelector('[data-detail="selected-work/${slug}"]')?.open`),'project route redirect');
     assert(await evaluate(`location.pathname===${JSON.stringify(`${basePath}/`)}&&location.hash==='#selected-work/${slug}'`),`project redirect retains deployment prefix: ${slug}`);
@@ -452,8 +455,10 @@ try {
   }
 
   await configure(375, 667); await call('Emulation.setScriptExecutionDisabled', { value: true });
-  await call('Page.navigate', { url: `${base}/?no-script-mobile=${++navigationId}` });
-  await until(() => evaluate('Boolean(document.querySelector("#contact"))'), 'no-script markup'); await delay(80);
+  await evaluate("if(document.documentElement)document.documentElement.dataset.ready='navigating'");
+  const noScriptURL=`${base}/?no-script-mobile=${++navigationId}`;
+  await call('Page.navigate', { url: noScriptURL });
+  await until(() => evaluate(`location.href===${JSON.stringify(noScriptURL)}&&!document.documentElement?.dataset.ready&&Boolean(document.querySelector("#contact"))`), 'no-script markup'); await delay(80);
   const noScript = await evaluate(`(() => ({ theme: document.documentElement.dataset.theme,
     horizontal: Boolean(window.portfolioMotion), overflowX: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     panels: [...document.querySelectorAll('[data-horizontal-panel]')].map(p => {
