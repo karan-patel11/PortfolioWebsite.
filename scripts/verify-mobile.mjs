@@ -57,7 +57,7 @@ async function configure(width, height, reduced = false) {
 async function navigate(hash = '#intro') {
   const url = `${base}/?mobile-verification=${++navigationId}${hash}`;
   await call('Page.navigate', { url });
-  await until(() => evaluate(`location.href.split('#')[0] === ${JSON.stringify(url.split('#')[0])} && document.documentElement.dataset.ready === 'true'`), 'app readiness', 12000);
+  await until(() => evaluate(`location.href.split('#')[0] === ${JSON.stringify(url.split('#')[0])} && document.documentElement?.dataset.ready === 'true'`), 'app readiness', 12000);
 }
 async function frames() {
   await evaluate('new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))');
@@ -183,7 +183,7 @@ try {
   for (const [width, height] of [[1440, 900], [375, 667]]) {
     await configure(width, height);
     await call('Page.navigate', { url: `${base}/` });
-    await until(() => evaluate('document.documentElement.dataset.ready === "true" && !document.documentElement.hasAttribute("data-intro-pending")'), 'bare first-load ready');
+    await until(() => evaluate('document.documentElement?.dataset.ready === "true" && !document.documentElement.hasAttribute("data-intro-pending")'), 'bare first-load ready');
     const first = await evaluate(`(() => ({theme:document.documentElement.dataset.theme,
       horizontal:Boolean(window.portfolioMotion), ready:document.documentElement.dataset.ready,
       nameOpacity:getComputedStyle(document.querySelector('[data-name-row]')).opacity,
@@ -425,7 +425,7 @@ try {
   }
   for(const slug of ['verdict','northport','quantera-ai','bnpl-marketplace']){
     await call('Page.navigate',{url:`${base}/projects/${slug}/`});
-    await until(()=>evaluate(`document.documentElement.dataset.ready==='true'&&document.querySelector('[data-detail="selected-work/${slug}"]').open`),'project route redirect');
+    await until(()=>evaluate(`document.documentElement?.dataset.ready==='true'&&document.querySelector('[data-detail="selected-work/${slug}"]')?.open`),'project route redirect');
     assert(await evaluate(`location.pathname===${JSON.stringify(`${basePath}/`)}&&location.hash==='#selected-work/${slug}'`),`project redirect retains deployment prefix: ${slug}`);
   }
 
