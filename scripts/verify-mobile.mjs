@@ -15,7 +15,7 @@ mkdirSync(out, { recursive: true });
 const profile = mkdtempSync(join(tmpdir(), 'portfolio-mobile-'));
 const chrome = spawn(process.env.CHROME_PATH || (process.platform==='darwin'?'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome':'/usr/bin/google-chrome'), [
   '--headless=new', '--remote-debugging-port=0', `--user-data-dir=${profile}`,
-  '--no-first-run', '--no-default-browser-check', '--disable-background-networking', 'about:blank',
+  '--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--disable-dev-shm-usage', 'about:blank',
 ], { stdio: ['ignore', 'ignore', 'pipe'] });
 const report = {
   scope: { viewports, headless: true, touchEmulated: true, physicalDevice: false },
@@ -149,7 +149,7 @@ try {
     server = spawn(process.execPath, ['scripts/serve.mjs'], { stdio: 'ignore' });
     await until(() => fetch(base).then(r => r.ok).catch(() => false), 'local server');
   }
-  const endpoint = await until(() => chromeOutput.match(/DevTools listening on (ws:\/\/\S+)/)?.[1], 'Chrome launch');
+  const endpoint = await until(() => chromeOutput.match(/DevTools listening on (ws:\/\/\S+)/)?.[1], 'Chrome launch',30000);
   ws = new WebSocket(endpoint);
   await new Promise(resolve => ws.addEventListener('open', resolve, { once: true }));
   let nextId = 0;
@@ -469,10 +469,13 @@ try {
   report.completed = true;
 } catch (error) {
   report.failures.push(error.stack); console.error(error);
+  if(!report.browser&&chromeOutput) console.error('Chrome startup diagnostics:',chromeOutput.slice(-4000));
 } finally {
   save();
   console.log(`Mobile-first: ${assertions} assertions, ${report.failures.length} failures, ${report.elapsedSeconds}s`);
   if (report.failures.length) console.log(report.failures.join('\n'));
-  ws?.close(); chrome.kill(); server?.kill(); await delay(120); rmSync(profile, { recursive: true, force: true });
+  ws?.close(); chrome.kill(); server?.kill();
+  await Promise.race([new Promise(resolve=>{if(chrome.exitCode!==null||chrome.signalCode!==null)resolve();else chrome.once('exit',resolve)}),delay(2000)]);
+  rmSync(profile, { recursive: true, force: true, maxRetries:20, retryDelay:100 });
 }
 process.exitCode = report.failures.length ? 1 : 0;
