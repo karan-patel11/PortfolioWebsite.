@@ -16,13 +16,13 @@ const profile = mkdtempSync(join(tmpdir(), 'portfolio-mobile-'));
 const chrome = spawn(process.env.CHROME_PATH || (process.platform==='darwin'?'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome':'/usr/bin/google-chrome'), [
   '--headless=new', '--remote-debugging-port=0', `--user-data-dir=${profile}`,
   '--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--disable-dev-shm-usage', 'about:blank',
-], { stdio: ['ignore', 'ignore', 'pipe'] });
+], { stdio: ['ignore', 'ignore', 'pipe'], detached:process.platform!=='win32' });
 const report = {
   scope: { viewports, headless: true, touchEmulated: true, physicalDevice: false },
   browser: null, matrix: [], reduced: [], themes: [], gestures: [], metrics: null,
   navigation: null, detail: null, resize: null, noScript: null, screenshots: [], console: [], failures: [],
 };
-let chromeOutput = '', server, ws, sessionId, call, evaluate, navigationId = 0, assertions = 0;
+let chromeOutput = '', server, ws, sessionId, call, evaluate, closeBrowser, navigationId = 0, assertions = 0;
 const started = Date.now();
 chrome.stderr.on('data', chunk => { chromeOutput += chunk; });
 chrome.on('error', error => { chromeOutput += error.message; });
@@ -165,6 +165,7 @@ try {
     const id = ++nextId; pending.set(id, { resolve, reject });
     ws.send(JSON.stringify({ id, method, params, sessionId: session }));
   });
+  closeBrowser=()=>send('Browser.close');
   report.browser = await send('Browser.getVersion');
   const { targetId } = await send('Target.createTarget', { url: 'about:blank' });
   ({ sessionId } = await send('Target.attachToTarget', { targetId, flatten: true }));
@@ -474,8 +475,17 @@ try {
   save();
   console.log(`Mobile-first: ${assertions} assertions, ${report.failures.length} failures, ${report.elapsedSeconds}s`);
   if (report.failures.length) console.log(report.failures.join('\n'));
-  ws?.close(); chrome.kill(); server?.kill();
+  if(closeBrowser&&ws?.readyState===WebSocket.OPEN) await Promise.race([closeBrowser().catch(()=>{}),delay(1500)]);
+  ws?.close(); server?.kill();
+  // Chrome launchers can exit before their children; terminate only this test's
+  // dedicated process group, never an existing user browser.
+  const stopChrome = signal => {try{if(process.platform!=='win32'&&chrome.pid)process.kill(-chrome.pid,signal);else chrome.kill(signal)}catch(error){if(error.code!=='ESRCH')throw error}};
+  stopChrome('SIGTERM');
   await Promise.race([new Promise(resolve=>{if(chrome.exitCode!==null||chrome.signalCode!==null)resolve();else chrome.once('exit',resolve)}),delay(2000)]);
-  rmSync(profile, { recursive: true, force: true, maxRetries:20, retryDelay:100 });
+  stopChrome('SIGKILL');await delay(100);
+  try{rmSync(profile, { recursive: true, force: true, maxRetries:5, retryDelay:100 })}catch(error){
+    // A disposable CI profile does not invalidate completed application checks.
+    report.cleanupWarning=error.message;save();console.warn('Temporary profile cleanup:',error.message);
+  }
 }
 process.exitCode = report.failures.length ? 1 : 0;
