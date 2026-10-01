@@ -2,7 +2,7 @@
   "contact": {
     "email": "patelkaran.tech@gmail.com"
   },
-  "intro": "Karan Patel\nAI Systems Engineer · Software Engineer · Founder\nBuilding reliable AI systems at the intersection of LLM orchestration, backend infrastructure, quantitative finance, and high-stakes decision systems.\nProduction AI · Applied LLMs · Backend Systems · FinTech\nScroll → Explore the Chapters\nI build AI systems that know when to automate, when to verify, and when to abstain.\nFrom credit underwriting and SEC filing validation to production support automation and quantitative research systems, my work focuses on making AI useful without sacrificing reliability, traceability, or engineering rigor.\n\n",
+  "intro": "Karan Patel\nAI Systems Engineer · Software Engineer · Founder\nBuilding reliable systems at the intersection of LLM orchestration, backend infrastructure, quantitative finance, and high-stakes decision systems.\nProduction AI · Applied LLMs · Backend Systems · FinTech\nScroll down to explore\nModels don't crash. They fail confidently.\nI build the verification and abstention layers that catch wrong answers before they become wrong decisions.\nFrom credit underwriting and SEC filing validation to production support automation and quantitative research systems, my work focuses on making AI useful without sacrificing reliability, traceability, or engineering rigor.\n\n",
   "chapters": [
     {
       "slug": "intro",
@@ -26,19 +26,32 @@
           "degree": "Master of Science in Computer Science",
           "dates": "2024 to 2026",
           "highlights": [
-            "Software systems · cloud infrastructure",
-            "Algorithms · applied AI engineering"
+            "Data Mining",
+            "Neural Networks & Deep Learning",
+            "Trustworthy AI",
+            "Design & Analysis of Algorithms",
+            "Object-Oriented Design",
+            "Cloud Computing"
           ]
         },
         {
           "id": "nmims",
           "institution": "NMIMS",
-          "degree": "Integrated Diploma + B.Tech (3+3 years), Honors in Artificial Intelligence",
+          "degree": "Bachelor of Technology (Honors in AI)",
           "dates": "Jul 2018 to May 2024",
           "highlights": [
-            "Computer Engineering",
-            "Six-year integrated program"
-          ]
+            "Statistics & Probability",
+            "Machine Learning",
+            "Natural Language Processing",
+            "Linear Algebra",
+            "Software Project Management",
+            "NN & DL",
+            "Machine Learning Optimization Algorithms",
+            "Artificial Intelligence",
+            "Image Processing",
+            "Cloud Computing"
+          ],
+          "trackNote": "3 years diploma + 3 years B.Tech"
         }
       ]
     },
@@ -84,7 +97,6 @@
     "Source headings and labels remain in these strings; developers must map them to the component schema.",
     "Contact labels have no destination until user supplies links. Resume action requires a supplied file.",
     "About optional metrics omitted as a group to avoid presenting an ambiguous duration. Other chapter metrics remain untouched.",
-    "TODO: Confirm NMIMS highlights beyond the supplied integrated-program and AI-honors details; no GPA or additional dates are available.",
     "TODO: Confirm QuantEra AI source integrations, data freshness, retrieval store, model/service boundaries, and deployment topology before making the architecture more specific."
   ],
   "projectLinks": {
@@ -209,7 +221,15 @@
           "title": "QuantEra AI system design",
           "instruction": "Select a stage to read its role.",
           "stageLabel": "Stage",
-          "labels": ["Market / SEC data", "Normalize data", "Calculate", "Retrieve", "Build context", "Explain", "Fail closed"],
+          "labels": [
+            "Market / SEC data",
+            "Normalize data",
+            "Calculate",
+            "Retrieve",
+            "Build context",
+            "Explain",
+            "Fail closed"
+          ],
           "notes": [
             "Market and SEC data are named sources.",
             "Data normalization precedes deterministic calculations.",

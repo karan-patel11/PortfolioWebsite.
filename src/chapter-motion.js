@@ -2,6 +2,7 @@
 (() => {
   const root = document.documentElement;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const lightweight = matchMedia('(max-width: 1023px), (pointer: coarse)');
   const panels = [...document.querySelectorAll('[data-horizontal-panel]')];
   const diagram = document.querySelector('.system-diagram');
   const tooltip = diagram?.querySelector('.diagram-tooltip');
@@ -23,6 +24,7 @@
   // Each mask is a word, so the actual font and available width decide wrapping.
   // The original heading remains the only accessible heading and retains its text.
   document.querySelectorAll('#about-title, .employer > h3, #venture-title, #contact-title').forEach(heading => {
+    if (lightweight.matches) return;
     if (heading.querySelector('.chapter-word-mask')) return;
     const words = heading.textContent.match(/\S+|\s+/g) || [];
     const line = document.createElement('span');
@@ -176,7 +178,7 @@
     if (width >= rect.width * .6 && height >= Math.min(rect.height, innerHeight) * .6) enter(diagram);
   }
   function travel() {
-    if (disposed) return;
+    if (disposed || lightweight.matches) return;
     const delta = scrollY - lastTravel;
     if (Math.abs(delta) > .5) direction = delta < 0 ? 'reverse' : 'forward';
     lastTravel = scrollY;
@@ -205,12 +207,18 @@
     }
     if (!reduced.matches) inspectDiagram();
   }
+  document.addEventListener('deck-layout', () => {
+    panels.splice(0, panels.length, ...document.querySelectorAll('[data-horizontal-panel]'));
+    targetsByPanel.clear();
+    panels.forEach(panel => targetsByPanel.set(panel, entranceTargets.filter(target => target.closest('[data-horizontal-panel]') === panel)));
+    if (!disposed) observe();
+  });
   // Existing rail/engine callbacks own scroll updates; no second scroll ticker.
   window.portfolioAtmosphere = { travel };
   function observe() {
     observer?.disconnect(); observer = null;
-    root.classList.toggle('motion-ready', !reduced.matches);
-    if (reduced.matches) {
+    root.classList.toggle('motion-ready', !reduced.matches && !lightweight.matches);
+    if (reduced.matches || lightweight.matches) {
       timers.forEach(clearTimeout); timers.clear(); candidates.clear(); completions.clear(); targetCompletions.clear();
       entranceTargets.forEach(target => { revealed.add(target); target.classList.remove('is-in-view'); settleTarget(target); });
       [...panels, diagram].filter(Boolean).forEach(target => {
@@ -237,6 +245,7 @@
       node.addEventListener('mouseenter', onHover); node.addEventListener('focus', onHover); node.addEventListener('click', onClick);
     });
     reduced.addEventListener('change', observe);
+    lightweight.addEventListener('change', observe);
     document.addEventListener('visibilitychange', visibility); visibility();
     // Fail open even with a font response that never resolves.
     observe();
@@ -248,6 +257,7 @@
     timers.forEach(clearTimeout); timers.clear(); candidates.clear(); completions.clear(); targetCompletions.clear();
     entranceTargets.forEach(target => { target.classList.remove('is-in-view'); if (revealed.has(target)) settleTarget(target); });
     reduced.removeEventListener('change', observe);
+    lightweight.removeEventListener('change', observe);
     document.removeEventListener('visibilitychange', visibility);
     nodes.forEach(node => {
       node.removeEventListener('mouseenter', onHover); node.removeEventListener('focus', onHover); node.removeEventListener('click', onClick);

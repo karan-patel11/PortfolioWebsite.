@@ -7,7 +7,7 @@ html[data-horizontal-active]{scroll-snap-type:none}[data-horizontal-active] [dat
 @keyframes detail-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:1023px){.header-rail{grid-template-columns:repeat(7,minmax(0,1fr))}.rail{gap:6px}.wordmark{display:none}.theme-toggle{display:none}}
 @media(max-width:767px){.header-rail{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr;grid-template-rows:auto auto 1fr auto auto}.hero-role{grid-area:2/1}.hero-intro{grid-area:4/1}.hero-statement{grid-area:3/1}.hero-bottom{grid-area:5/1;flex-wrap:wrap}.hero-bottom p{max-width:44%}.about-grid{display:block}.about figure{float:left;margin-right:12px;max-width:35%}.about h2{font-size:clamp(20px,min(3.2vw,4.5vh),46px)}.education .two-col{grid-template-columns:1fr}.education article{display:flow-root}.education .photo{float:left;margin-right:12px}.index-grid{grid-template-columns:1fr;gap:0}.index-card{padding:6px 0;line-height:1.12}.index-card h3{font-size:clamp(16px,min(2vw,2.8vh),28px);margin-bottom:3px}.index-card p{margin-bottom:3px}.two-col,.contact footer{grid-template-columns:1fr}.detail-copy{columns:auto}.venture .two-col{grid-template-columns:1fr}.venture .twods{--media-budget:12dvh}.contact h2{font-size:var(--title)}}
-@media(max-width:767px),(max-height:499px){dialog{overflow-y:auto;overflow-x:hidden}.inline-detail{overflow-y:auto;overscroll-behavior:contain}.venture .twods{float:none}.detail-copy{columns:auto}}
+@media(max-width:767px),(max-height:499px){dialog{overflow-y:hidden;overflow-x:hidden}.inline-detail{overflow-y:hidden;overscroll-behavior:contain}.venture .twods{float:none}.detail-copy{columns:auto}}
 @media(max-height:499px){.header-rail{grid-template-columns:repeat(7,minmax(0,1fr))}.index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1.4fr 1fr;grid-template-rows:auto 1fr auto}.hero-role{grid-area:1/2}.hero-intro{grid-area:2/2}.hero-statement{grid-area:2/1}.hero-bottom{grid-area:3/1/4/3}.about-grid{display:grid}.education .two-col,.contact-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 /* The full technology inventories remain in the details; index summaries fit a page. */
@@ -35,7 +35,7 @@ p{max-width:68ch}
 .impact{font-weight:500}
 
 @media (max-width:767px){.venture .inline-detail{font-size:var(--fs-body)}}
-dialog[data-detail="selected-work/verdict"]{overflow-y:auto}
+dialog[data-detail="selected-work/verdict"]{overflow-y:hidden}
 
 /* Part 3: each chapter uses a distinct full-frame composition. */
 .selected-work,.experience,.about,.education,.contact,.venture{display:flex;flex-direction:column}
@@ -56,7 +56,7 @@ dialog[data-detail="selected-work/verdict"]{overflow-y:auto}
 .role-name{font-weight:500}
 .about-grid{flex:1;align-items:center}.about .keywords{margin-top:auto;padding-top:var(--gap);border-top:1px solid var(--rule)}
 .education>.two-col{flex:1;grid-template-columns:1.3fr 1fr;gap:8%;align-items:center}
-.education article{display:flow-root}.education #nmims{align-self:end;padding-bottom:4vh}
+.education article{display:flow-root}.education #nmims{align-self:stretch}
 .education .gwu{float:left;margin-right:20px;--media-budget:25dvh}
 .venture .inline-detail{flex:1;height:auto;min-height:0}
 .venture-split{display:grid;grid-template-columns:1fr 1.7fr;gap:4%}
@@ -82,7 +82,7 @@ dialog[data-detail="selected-work/verdict"]{overflow-y:auto}
  .about{--gap:3px}.about-grid{flex:0;margin-block:auto}.about .keywords{margin-top:0;padding-top:4px}
  .education>.two-col{grid-template-columns:1fr;gap:12px;align-content:space-between}
  .education .gwu{--media-budget:12dvh;margin-right:12px}
- .education #nmims{padding-bottom:0}.education p,.education h3{margin-bottom:4px}
+ .education p,.education h3{margin-bottom:4px}
  .venture-split{display:block}.venture-statement{display:block}.venture .twods{margin-top:8px;--media-budget:12dvh}.venture .twods img{max-height:12dvh}
  .venture .metrics{grid-template-columns:repeat(2,1fr)}.venture .initiative{columns:auto}.venture .venture-technical .two-col{grid-template-columns:1fr}
  .contact{padding:var(--header) 12px 3px;display:block}
@@ -99,7 +99,7 @@ dialog[data-detail="selected-work/verdict"]{overflow-y:auto}
  .hero-statement{grid-area:2/1;align-self:end;margin:0}.hero-bottom{grid-area:2/2;flex-wrap:wrap;gap:4px;font-size:var(--fs-body)}
  .hero-bottom p{max-width:100%}
  .about{--gap:2px}.about-grid{grid-template-columns:.65fr 2fr;gap:24px}.about .keywords{padding-top:2px}
- .education>.two-col{grid-template-columns:1.3fr 1fr;gap:4%}.education #nmims{padding-bottom:0}.education p,.education h3{margin-bottom:2px}
+ .education>.two-col{grid-template-columns:1.3fr 1fr;gap:4%}.education p,.education h3{margin-bottom:2px}
  .education .gwu{--media-budget:16dvh;margin-right:12px}
  .employer{grid-template-columns:1fr 1.3fr;gap:5%}.employers{gap:8px}.roles{gap:8px}
  .experience-role{display:grid;grid-template-columns:1fr 1fr;gap:12px}

@@ -28,22 +28,19 @@ a,button{-webkit-tap-highlight-color:transparent}
 .selected-work .work-result{white-space:normal}
 .venture .metrics>div{flex-direction:column}
 .venture .metrics dd{min-inline-size:0;line-height:1.1;white-space:nowrap;order:-1}
+.metrics [data-count-up]{display:inline-block;min-inline-size:calc(var(--metric-chars) * 1ch);font-variant-numeric:tabular-nums;line-height:1.1}
+.hero-claim,.hero-verification{display:block}
+.hero-verification{margin-top:20px;font:400 var(--fs-body)/1.65 var(--font-body);max-width:46ch;letter-spacing:normal}
+.education-track{margin:0 0 8px;font-size:var(--fs-meta);color:var(--jade-deep)}
+.coursework-label{margin:20px 0 0;font-size:var(--fs-meta);font-weight:500;color:var(--jade-deep)}
+.education-card .coursework-label+ul{margin-top:8px;padding-top:12px}
 
-/* Without enhancement, every chapter remains a complete vertical document. */
-[data-horizontal-story]{overflow:visible}
-[data-horizontal-pin]{height:auto;overflow:visible}
-[data-horizontal-track]{width:100%;height:auto}
-[data-horizontal-panel]{height:auto;max-height:none;min-height:100dvh;overflow:visible;padding:calc(var(--header) + var(--chapter-top)) var(--gutter) var(--chapter-bottom)}
-.inline-detail,.venture .inline-detail{height:auto;min-height:min-content;overflow:visible;overscroll-behavior:auto}
-.venture .inline-detail{flex:1 0 auto}
-.selected-work .work-rows,.employers{min-height:min-content;flex-shrink:0}
-.education-cards,.education-card,.education-card-copy{min-height:min-content}
-.venture-support{justify-content:flex-start}
-.venture .initiative{overflow:visible}
-html[data-horizontal-active] [data-horizontal-story]{overflow:visible}
-html[data-horizontal-active] [data-horizontal-pin]{position:sticky;top:0;height:100dvh;overflow:hidden}
-html[data-horizontal-active] [data-horizontal-track]{display:flex;width:max-content;height:100dvh;will-change:transform}
-html[data-horizontal-active] [data-horizontal-panel]{flex:0 0 var(--panel-width);width:var(--panel-width);max-width:var(--panel-width);height:100dvh;max-height:100dvh;min-height:0;overflow:hidden;scroll-snap-align:none;touch-action:pan-y pinch-zoom}
+/* Viewport containment and native snapping are owned by viewport-deck.css. */
+html[data-native-scroll] .chapter::after{display:none}
+html[data-native-scroll] .chapter::before{transform:none;animation:none}
+html[data-native-scroll] .data-packet{animation:none!important}
+html[data-native-scroll] .rail[data-palette-transition]{transition:none}
+html[data-native-scroll] .header-rail a.is-settling::before{animation:none}
 
 /* A compact chapter sheet shares the same tokens as the page. */
 .mobile-dock{display:none}
@@ -56,7 +53,7 @@ dialog.navigation-sheet{
  margin:0;
  padding:20px;
  transform:translate(-50%,-50%);
- overflow-y:auto;
+ overflow-y:hidden;
  overflow-x:hidden;
  border:1px solid var(--rule);
  border-radius:20px;
@@ -74,7 +71,7 @@ dialog.navigation-sheet[open]{animation:sheet-arrive 220ms var(--ease-sig)}
 .navigation-sheet nav .label{font-size:.75rem;color:var(--jade)}
 .navigation-sheet nav a[aria-current]{color:var(--jade);background:var(--jade-soft)}
 .navigation-sheet nav a:is(:hover,:focus-visible),.menu-close:is(:hover,:focus-visible){background:var(--jade-soft)}
-dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) calc(32px + env(safe-area-inset-bottom));overflow-y:auto;overflow-x:hidden}
+dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) calc(32px + env(safe-area-inset-bottom));overflow-y:hidden;overflow-x:hidden}
 .detail-top{gap:16px;margin-bottom:24px}
 .detail-top h2{font-size:var(--fs-heading);line-height:1.1}
 .detail-top h2,.menu-heading h2{overflow-wrap:anywhere}
@@ -85,7 +82,7 @@ dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) 
 .detail-copy{line-height:1.65}
 .skill-grid{gap:24px}
 
-/* The finite gesture animation explains the vertical-to-horizontal mapping. */
+/* A finite transform-only cue demonstrates scrolling down. */
 .scroll-hint{
  --hint-x:0px;
  position:fixed;
@@ -117,8 +114,8 @@ dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) 
 .hint-touch{display:none}
 .gesture-cue{position:relative;display:block;width:28px;height:28px;flex:none;color:var(--jade)}
 .gesture-cue::before{content:"";position:absolute;left:2px;top:2px;width:11px;height:17px;border:1.5px solid currentColor;border-radius:7px;animation:gesture-progress 1600ms ease-in-out 300ms 3}
-.gesture-cue::after{content:"↓ →";position:absolute;left:8px;bottom:0;white-space:nowrap;font-size:13px;line-height:1}
-@keyframes gesture-progress{0%,100%{transform:translate3d(0,0,0)}35%{transform:translate3d(0,5px,0)}70%{transform:translate3d(5px,5px,0)}}
+.gesture-cue::after{content:"↓";position:absolute;left:18px;bottom:0;font-size:13px;line-height:1}
+@keyframes gesture-progress{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,5px,0)}}
 @keyframes sheet-arrive{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
 
 @media(max-width:767px){
@@ -171,7 +168,7 @@ dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) 
  .hint-touch{display:inline}
  .hint-pointer{display:none}
 
- /* One readable column gives tall chapters a natural scrollHeight. */
+ /* Base mobile composition; measured sibling slides use viewport-deck.css. */
  .hero{display:flex;flex-direction:column;gap:20px}
  .hero [data-hero-name]{order:0}
  #identity{margin:0;line-height:.96}
@@ -196,7 +193,6 @@ dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) 
  .education-card .education-dates{font-size:.875rem;margin-bottom:0}
  .education-card ul{margin-top:16px;padding-top:16px}
  .education-card li{line-height:1.55;margin-bottom:6px}
- .education #nmims{padding-bottom:18px}
  .employers{flex:0 0 auto;gap:36px}
  .employer{display:grid;grid-template-columns:1fr;gap:20px}
  .employer>h3{font-size:1.625rem;line-height:1.15;margin:0}
@@ -253,7 +249,7 @@ dialog[data-detail]{padding:calc(24px + env(safe-area-inset-top)) var(--gutter) 
  .skill-grid{grid-template-columns:1fr}
 }
 
-/* Short screens retain the same readable vertical flow inside each chapter. */
+/* Base short-screen typography; viewport-deck.css owns bounded pages. */
 @media(min-width:768px) and (max-height:499px){
  :root{--header:60px;--gap:16px}
  .chapter{padding-block:calc(var(--header) + 20px) 28px}

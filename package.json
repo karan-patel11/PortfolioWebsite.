@@ -6,8 +6,11 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/serve.mjs",
-    "test": "node scripts/verify-mobile.mjs",
-    "lint": "node scripts/lint.mjs"
+    "test": "node scripts/verify-deck.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test:animations": "node scripts/verify-animation.mjs",
+    "test:framing": "node scripts/verify-framing.mjs",
+    "profile:mobile": "node scripts/profile-mobile.mjs"
   },
   "engines": {
     "node": ">=22"

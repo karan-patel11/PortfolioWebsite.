@@ -1,12 +1,13 @@
-/* hero.js owns the timeline. These states are armed before paint only for a
-   fresh, eligible bare URL; static HTML and every skip stay fully readable. */
+/* Local hero.js owns the timeline. Every home viewport is armed before paint;
+   reduced motion, input skips and the deadline expose the reserved static layout. */
+.hero [data-hero-name]{position:relative}
 .hero [data-name-line-text]{display:block}
 .hero [data-name-word]{display:inline-block}
 :root[data-intro-pending] .hero .name-mask,
 :root[data-intro-pending] .hero .line-mask{
  overflow:hidden;
- padding:.12em .06em;
- margin:-.12em -.06em;
+ padding:0;
+ margin:0;
 }
 :root[data-intro-pending] .hero [data-name-row]{opacity:0}
 :root[data-intro-pending] .hero [data-name-word],
@@ -19,8 +20,8 @@
 :root[data-intro-pending] [data-hero-year]{
  display:block;
  position:absolute;
- inset:calc(var(--header) + var(--gap)) auto auto var(--gutter);
- width:calc((100% - 2 * var(--gutter) - var(--gap)) * 1.4 / 2.4);
+ inset:0 auto auto 0;
+ width:100%;
  height:.95em;
  overflow:hidden;
  z-index:2;
@@ -52,7 +53,7 @@
 }
 /* The rail is operable for the entire intro, including before deferred JS. */
 [data-intro-header]{opacity:1!important}
-/* Inline GSAP transforms may outlive an input skip or a slow-CDN deadline.
+/* An input skip or script deadline must expose every reserved text line.
    Removing the arming attribute is sufficient to settle every mask. */
 :root:not([data-intro-pending]) .hero [data-name-row],
 :root:not([data-intro-pending]) .hero [data-reveal-line]{opacity:1!important}
@@ -64,3 +65,9 @@
  .hero [data-name-row],.hero [data-reveal-line]{opacity:1!important}
  .hero [data-name-word],.hero [data-line]{transform:none!important}
 }
+
+/* Measure the final reserved geometry synchronously, before a frame can paint. */
+:root[data-intro-measuring] .hero [data-name-word],
+:root[data-intro-measuring] .hero [data-line]{transform:none!important}
+
+:root[data-intro-pending]:not([data-ready="true"]) [data-horizontal-track]{visibility:hidden}

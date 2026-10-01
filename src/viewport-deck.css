@@ -1,0 +1,312 @@
+/* Final architecture layer: no viewport, chapter, card or modal scrolls on Y. */
+:root{
+ --header:64px;
+ --chapter-top:clamp(16px,3dvh,32px);
+ --chapter-bottom:clamp(16px,3dvh,32px);
+ --gap:clamp(10px,1.8dvh,22px);
+ --fs-body:clamp(1rem,1.7dvh,1.0625rem);
+ --fs-meta:.875rem;
+ --fs-heading:clamp(1.75rem,min(3.5vw,5dvh),2.5rem);
+ --fs-hero:clamp(3.25rem,min(11vw,15dvh),10rem);
+ --fs-work-title:clamp(1.5rem,min(3.5vw,4dvh),3rem);
+}
+html,html[data-horizontal-active],html[data-native-scroll],html[data-horizontal-active]:not([data-native-scroll]){width:100%;height:100%;overflow:hidden;scrollbar-gutter:auto;scroll-snap-type:none;overscroll-behavior:none}
+body,main{width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
+[data-horizontal-story],html[data-horizontal-active] [data-horizontal-story]{height:100svh;height:100dvh;overflow:hidden}
+[data-horizontal-pin],html[data-horizontal-active] [data-horizontal-pin],html[data-native-scroll] [data-horizontal-pin]{position:relative;top:0;width:100%;height:100%;overflow:hidden}
+[data-horizontal-track],html[data-horizontal-active] [data-horizontal-track],html[data-native-scroll] [data-horizontal-track]{
+ display:flex;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;
+ scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;overscroll-behavior-y:none;touch-action:pan-x;
+ -webkit-overflow-scrolling:touch;scrollbar-width:none;will-change:auto;transform:none;
+}
+[data-horizontal-track]::-webkit-scrollbar{display:none}
+[data-horizontal-panel],html[data-horizontal-active] [data-horizontal-panel],html[data-native-scroll] [data-horizontal-panel]{
+ flex:0 0 var(--panel-width,100vw);width:var(--panel-width,100vw);max-width:var(--panel-width,100vw);
+ height:100%;min-height:0;max-height:100%;
+ padding:calc(var(--header) + var(--chapter-top)) var(--gutter) var(--chapter-bottom);
+ overflow:clip;scroll-snap-align:start;scroll-snap-stop:always;touch-action:pan-x;overscroll-behavior:none;contain:layout paint;
+}
+html[data-scroll-locked] [data-horizontal-track]{overflow:hidden}
+.chapter>*{flex-shrink:1}
+.chapter-head{flex:none;margin:0 0 var(--gap);padding-bottom:12px}
+.chapter-head p{font-size:.875rem;line-height:1.4}
+.chapter :is(p,li){line-height:1.5}
+.inline-detail,.venture .inline-detail{overflow:clip;min-height:0}
+.hero-verification{margin-top:var(--gap);line-height:1.5}
+.hero-intro{font-size:var(--fs-body)}
+.education-cards{min-height:0;flex:1;margin:0;align-items:stretch}
+.education-card{min-height:0;padding:clamp(12px,2dvh,24px)}
+.education-media{height:clamp(80px,18dvh,200px);margin-bottom:var(--gap)}
+.education-card li{line-height:1.35;margin-bottom:2px}
+.coursework-label{margin-top:var(--gap)}
+.education-card .coursework-label+ul{margin-top:8px;padding-top:8px}
+.selected-work .work-rows,.employers{min-height:0;flex:1}
+.venture .metrics dt{font-size:.875rem;line-height:1.4}
+.venture .metrics dd{font-size:clamp(2rem,5dvh,3rem);min-inline-size:0}
+.venture .metrics{gap:var(--gap);margin-top:var(--gap)}
+.venture .inline-detail{font-size:var(--fs-body)}
+.venture .twods{--artwork-height:min(14dvh,140px);margin:0 0 var(--gap);order:0}
+.venture .twods img{max-height:var(--artwork-height)}
+.venture .initiative{columns:2;column-gap:24px}
+.venture .initiative>h3{font-size:var(--fs-heading)}
+.venture .initiative>h4,.venture .principles h4{font-size:1rem;line-height:1.3}
+.venture .principles li{margin-bottom:var(--gap)}
+.venture .system-diagram{margin-top:var(--gap);padding-top:var(--gap)}
+.diagram-node{height:70px;min-height:44px;font-size:.875rem;line-height:1.3}
+.diagram-tooltip{font-size:.875rem;line-height:1.4}
+
+/* Measured sibling pages use a simple, generous reading composition. Packing
+   creates another page before a body font ever drops below 16px. */
+.chapter.deck-part{display:flex;flex-direction:column;gap:0}
+.deck-part .deck-content{display:flex;flex-direction:column;gap:var(--gap);width:100%;max-width:880px;margin-block:auto;align-self:center;flex:none;min-height:0}
+.deck-part .deck-content>*{flex:none}
+.deck-part .deck-block{display:flow-root;width:100%;font-size:var(--fs-body)}
+.deck-part .deck-block> :last-child{margin-bottom:0}
+.deck-part .deck-block :is(h2,h3){font-size:var(--fs-heading);line-height:1.12;margin-bottom:var(--gap)}
+.deck-part .deck-block h4{font-size:1.125rem;line-height:1.25}
+.deck-part .deck-block p{font-size:var(--fs-body);line-height:1.5;max-width:68ch;margin-bottom:var(--gap)}
+.deck-part .deck-block .deck-course{padding:0 0 0 12px;border-left:1px solid var(--bronze);margin:0}
+.deck-part .education-media{width:100%;height:clamp(72px,18dvh,180px)}
+.deck-part figure{display:flex;align-items:center;gap:20px;float:none;max-width:none;margin:0}
+.deck-part figure .photo{width:clamp(80px,20dvh,160px);max-width:40%;margin:0;flex:none}
+.deck-part figure figcaption{font-size:.875rem;max-width:24ch;margin:0}
+.deck-part .keywords{margin:0;padding-top:var(--gap)}
+.deck-part.hero .hero-role{margin:var(--gap) 0 0;font-size:.875rem}
+.deck-part.hero .hero-statement{margin:0;font-size:var(--fs-heading);font-family:var(--font-display);line-height:1.15}
+.deck-part.hero .hero-verification{font-family:var(--font-body);font-size:var(--fs-body);line-height:1.5}
+.deck-part.hero .hero-intro{margin:0;font-size:var(--fs-body)}
+.deck-part .hero-bottom{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:var(--gap);margin:0}
+.deck-part .hero-bottom p{margin:0;font-size:.875rem}
+.deck-part .photo.twods{float:none;width:clamp(70px,13dvh,120px);margin:0;--artwork-height:clamp(90px,18dvh,170px)}
+.deck-part .metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0;padding-top:16px;border-top:1px solid var(--rule)}
+.deck-part .metrics>div{display:flex;flex-direction:column;gap:8px}
+.deck-part .metrics dd{order:-1;font-size:clamp(2rem,6dvh,3rem);line-height:1.1;white-space:nowrap}
+.deck-part .metrics dt{font-size:.875rem;max-width:20ch}
+.deck-part .metrics [data-count-up]{min-inline-size:0}
+.deck-part .system-diagram{margin:0;padding-top:16px}
+.deck-part .diagram-flow{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.deck-part .diagram-stage:nth-child(n){grid-column:auto;grid-row:auto}
+.deck-part .diagram-node{height:70px;min-height:44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:4px;padding:8px}
+.deck-part .diagram-connector{display:none}
+.deck-part .diagram-tooltip{min-height:4.2em;margin:12px 0 0;font-size:.875rem;line-height:1.4}
+.deck-part .work-row{display:grid;grid-template-columns:1.1fr 1fr .8fr;gap:16px;min-height:44px;padding:14px 0;border-top:1px solid var(--bronze)}
+.deck-part .work-row :is(h3,p){margin:0}
+.deck-part .work-row h3{font-size:var(--fs-work-title)}
+.deck-part .work-row .stack{font-size:.875rem}
+.deck-part .experience-role{padding:10px 0 10px 16px;min-height:44px}
+.deck-part .experience-role .role-name{font-size:1.375rem;line-height:1.25;margin-bottom:6px}
+.deck-part .experience-role p:last-child{font-size:.875rem;margin:0}
+.deck-part.contact #contact-title{font-size:clamp(2.75rem,min(10vw,10dvh),6rem)}
+.deck-part.contact .contact-email{font-size:clamp(1rem,4.8vw,1.5rem);min-height:44px;overflow-wrap:anywhere}
+.deck-part.contact footer{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0;padding-top:16px}
+.deck-part.contact footer p{font-size:.875rem;line-height:1.5}
+
+/* Project and experience details have a fixed header, bounded page and pager. */
+dialog[data-detail]{display:none;overflow:hidden;padding:calc(20px + env(safe-area-inset-top)) var(--gutter) calc(16px + env(safe-area-inset-bottom))}
+dialog[data-detail][open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:16px}
+.detail-top{margin:0;gap:16px}
+.detail-top h2{font-size:clamp(1.5rem,4dvh,2.5rem);line-height:1.15}
+.detail-copy{columns:auto;min-height:0;overflow:hidden;max-width:960px;width:100%;justify-self:center;font-size:var(--fs-body);line-height:1.5}
+.detail-copy :is(p,li){margin-bottom:12px;line-height:1.5}
+.detail-copy h3{font-size:1.25rem;line-height:1.2;margin-bottom:12px}
+.detail-copy .project-links{margin:0}
+.detail-pager{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:960px;width:100%;justify-self:center;font-size:.875rem}
+.detail-pager button{min-height:44px;border-radius:8px}
+.detail-pager button:disabled{opacity:.45;cursor:default}
+dialog.navigation-sheet{overflow:hidden;max-height:100dvh}
+.navigation-sheet nav a{min-height:44px;padding-block:8px}
+.menu-heading{margin-bottom:12px}
+.scroll-hint{bottom:24px}
+
+@media(max-width:767px){
+ :root{--header:0px;--gutter:20px;--chapter-top:calc(clamp(16px,3dvh,28px) + env(safe-area-inset-top));--chapter-bottom:calc(88px + env(safe-area-inset-bottom));--gap:clamp(10px,2dvh,18px)}
+ .rail{display:none!important}
+ .mobile-dock{min-height:56px;border-radius:18px;bottom:calc(10px + env(safe-area-inset-bottom));padding:4px}
+ .mobile-dock :is(a,button){min-height:44px;padding-block:8px}
+ .scroll-hint{bottom:calc(78px + env(safe-area-inset-bottom))}
+ .deck-part .deck-content{max-width:520px}
+ .deck-part .diagram-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .deck-part .diagram-node{height:60px}
+ .deck-part .work-row{grid-template-columns:1fr;gap:6px;padding:12px 0}
+ .deck-part .work-row .work-result{font-size:1rem;line-height:1.4}
+ .deck-part.contact footer{grid-template-columns:1fr;gap:12px}
+ .deck-part figure .photo img{aspect-ratio:1;object-fit:cover}
+ dialog.navigation-sheet{padding:16px;max-height:calc(100dvh - 24px)}
+ .navigation-sheet nav a{font-size:.9375rem;min-height:44px;padding-block:8px}
+ .menu-heading h2{font-size:1.5rem}
+}
+@media(min-width:768px) and (max-height:599px){
+ :root{--header:52px;--chapter-top:12px;--chapter-bottom:16px;--gap:10px;--gutter:24px}
+ .deck-part .deck-content{max-width:1040px}
+ .deck-part .education-media{float:left;width:25%;height:110px;margin-right:24px}
+ .deck-part figure .photo{width:100px}
+ .deck-part .metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .deck-part .system-diagram{padding-top:0}
+ .deck-part .diagram-flow{grid-template-columns:repeat(7,minmax(0,1fr))}
+ .deck-part .diagram-node{height:60px}
+ .deck-part .diagram-tooltip{min-height:2.8em}
+ .navigation-sheet nav{grid-template-columns:1fr 1fr;column-gap:20px}
+ dialog.navigation-sheet{max-height:calc(100dvh - 24px);padding:12px 20px}
+}
+@media(prefers-reduced-motion:reduce){[data-horizontal-track]{scroll-behavior:auto}}
+.deck-part .chapter-head .deck-part-label{flex:1}
+.deck-part .chapter-head .label{flex:none;min-width:42px;text-align:right;white-space:nowrap}
+.deck-course-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.deck-part .deck-course-list .deck-course{margin:0;line-height:1.4}
+@media(max-width:359px){.deck-course-list{grid-template-columns:1fr}}
+
+/* Clip is not a scroll container, so a swipe over a slide, image or word mask
+   reaches the one horizontal track instead of stopping at a hidden scroller. */
+.chapter :is(.education-media,.chapter-word-mask,.line-mask,.name-mask){overflow:clip}
+/* Reserve portrait geometry before lazy decoding; fit measurements must see
+   the same square frame before and after the image request completes. */
+.deck-part figure .photo{aspect-ratio:1}
+.deck-part figure .photo img{width:100%;height:100%;max-height:none;object-fit:cover}
+
+/* Reflow cannot choose the next page on the reader's behalf. */
+[data-horizontal-track],[data-horizontal-panel]{overflow-anchor:none}
+
+/* Layout follows complete content groups, never alternating loose headings,
+   role links or paragraphs into unrelated grid cells. */
+.deck-part:not(.hero):not(.contact) .deck-content{max-width:1120px;margin-block:clamp(12px,3dvh,28px) 0;gap:clamp(16px,2.4dvh,28px)}
+.deck-part .deck-block{min-width:0}
+.deck-part .deck-block p{max-width:70ch}
+.deck-part .employer{display:flex;flex-direction:column;gap:18px;padding-top:18px;border-top:1px solid var(--bronze)}
+.deck-part .employer::before{display:none}
+.deck-part .employer>h3{margin:0;max-width:24ch}
+.deck-part .roles{display:flex;flex-direction:column;gap:16px;width:100%}
+.deck-part .experience-role{display:block;text-decoration:none;margin:0;padding:8px 0 8px 16px;border-left:1px solid var(--rule)}
+.deck-part .experience-role .role-name{font-size:clamp(1.125rem,2vw,1.375rem);font-weight:500}
+.deck-part .experience-role p:last-child{font-size:.875rem}
+.deck-part .education-card{display:flex;flex-direction:column;gap:0;height:auto;padding:18px}
+.deck-part .education-card-copy{display:block}
+.deck-part .education-card .education-media{float:none;width:100%;height:clamp(90px,16dvh,170px);margin:0 0 16px}
+.deck-part .education-card .education-media img{width:100%;height:100%;object-fit:cover}
+.deck-part .education-card ul{padding:12px 0 0 18px;margin:12px 0 0}
+.deck-part .education-card li{font-size:1rem;line-height:1.4;margin:0 0 4px}
+.deck-part .education-card .coursework-label{margin:16px 0 0;font-size:.875rem}
+.deck-part .education-card .degree,.deck-part .education-card .education-dates,.deck-part .education-card .education-track{margin-bottom:6px}
+.deck-part .venture-masthead{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.deck-part .venture-identity{width:auto;flex:1}
+.deck-part .venture-masthead .twods{flex:none;width:clamp(64px,10dvh,100px);--artwork-height:clamp(90px,14dvh,140px)}
+.deck-part .venture-masthead h2{font-size:clamp(2rem,4vw,3.25rem)}
+.deck-part .venture-masthead .degree{font-size:1rem}
+.deck-part .venture-narrative{max-width:78ch}
+.deck-part .venture-research,.deck-part .venture-thesis{border-top:1px solid var(--bronze);padding-top:18px}
+.deck-part .venture-research>.label,.deck-part .venture-thesis>h4{font-family:var(--font-body);font-size:.875rem;color:var(--jade);margin-bottom:12px}
+.deck-part .venture-research>h3{font-size:clamp(2rem,4vw,3.25rem)}
+.deck-part .venture-research>.degree{font-size:1rem;font-weight:500}
+.deck-part .principles{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:18px}
+.deck-part .principles li{margin:0;padding-left:16px;border-left:1px solid var(--rule)}
+.deck-part .principles h4{font-size:1rem;font-family:var(--font-body);font-weight:600;margin:0 0 6px}
+.deck-part .principles p{margin:0}
+.deck-part .metrics{padding-top:20px;gap:20px}
+.deck-part.selected-work .deck-content{gap:0}
+.deck-part.selected-work .work-row{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:6px;padding:18px 0;border-top:1px solid var(--bronze)}
+.deck-part.selected-work .work-row h3{font-size:clamp(1.5rem,2.7vw,2.5rem);line-height:1.16;overflow-wrap:normal}
+.deck-part.selected-work .work-row :is(p,h3){margin:0;min-width:0}
+.deck-part.selected-work .work-row .stack{font-size:.875rem;line-height:1.5}
+.deck-part.selected-work .skills-link{margin:0;padding-top:16px}
+.deck-part.contact .deck-content{gap:12px}
+.deck-part.contact .deck-block p{margin-bottom:12px}
+.deck-part.about .about-grid{display:flex;flex-direction:column;gap:16px;min-height:0}
+.deck-part.about figure{float:none;max-width:none}
+.deck-part.about .deck-block .keywords{font-size:.875rem;line-height:1.4;padding-top:12px;margin-top:16px}
+@media(max-width:767px){.deck-part.about figure .photo{width:96px}.deck-part.about figure figcaption{max-width:28ch}.deck-part .venture-masthead{gap:16px}}
+
+@media(min-width:768px) and (min-height:600px){
+ .deck-part.experience .deck-content,.chapter.deck-part.education .deck-content{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+ .deck-part.about .about-grid{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:32px;align-items:start}
+ .deck-part.about figure{flex-direction:column;align-items:flex-start;gap:16px}
+ .deck-part.about figure .photo{width:min(100%,240px);max-width:100%}
+ .deck-part.venture .deck-content:has(.venture-research){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+ .deck-part .metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .deck-part.selected-work .work-row{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr) minmax(0,.9fr);gap:24px;align-items:center;padding:24px 0}
+}
+@media(min-width:1800px){:root{--gutter:clamp(64px,5vw,120px)}.deck-part .deck-content{max-width:1280px}}
+
+/* One Education section: roomy columns, then compact stacked cards. */
+.chapter.deck-part.education .deck-content{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:1200px;gap:clamp(10px,1.8dvh,20px);margin:clamp(8px,1.6dvh,18px) auto 0}
+.deck-school{width:100%;min-width:0}
+.deck-part .education-card{display:grid;grid-template-columns:clamp(112px,18vw,180px) minmax(0,1fr);gap:clamp(14px,2vw,24px);align-items:center;padding:clamp(12px,1.8dvh,20px);width:100%;border:1px solid var(--rule);border-radius:14px;overflow:clip}
+.deck-part .education-card .education-media{float:none;display:block;width:100%;height:clamp(140px,21dvh,220px);margin:0;border-radius:8px;overflow:clip}
+.deck-part .education-card-copy h3{font-size:clamp(1.25rem,min(3vw,3.6dvh),2rem);line-height:1.15;margin:0 0 6px;text-wrap:balance}
+.deck-part .education-card-copy :is(.degree,.education-track,.education-dates){font-size:1rem;line-height:1.4;margin:0 0 4px;text-wrap:pretty}
+.coursework-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:clamp(8px,2dvh,20px)}
+.deck-part .education-card .coursework-label{margin:0;font-size:.875rem}
+.ticker-toggle{flex:none;min-height:44px;min-width:60px;padding:8px 12px;background:transparent;color:inherit;border:1px solid var(--rule);border-radius:999px;font:inherit;font-size:.875rem;cursor:pointer}
+.course-ticker{overflow:clip;contain:paint;width:100%;margin-top:8px;cursor:pointer}
+.ticker-track{display:flex;flex:none;width:max-content;max-width:none;animation:coursework-loop var(--ticker-duration,60s) linear infinite;animation-play-state:paused;will-change:auto}
+.deck-part .education-card .ticker-group{display:flex;flex:none;align-items:center;width:max-content;gap:10px;list-style:none;padding:0 10px 0 0;margin:0}
+.deck-part .education-card .ticker-group li{flex:none;white-space:nowrap;font-size:.875rem;line-height:1.4;padding:10px 14px;margin:0;border:1px solid var(--rule);border-radius:999px;color:inherit;background:var(--surface-paper)}
+.course-ticker[data-active="true"][data-paused="false"] .ticker-track{animation-play-state:running;will-change:transform}
+.course-ticker[data-held="true"] .ticker-track,.course-ticker[data-paused="true"] .ticker-track{animation-play-state:paused!important}
+@media(hover:hover){.education-card:hover .ticker-track{animation-play-state:paused!important}}
+@keyframes coursework-loop{to{transform:translate3d(-50%,0,0)}}
+@media(min-width:1000px) and (min-height:600px){
+ .chapter.deck-part.education .deck-content{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+ .deck-school{display:flex}
+ .deck-part .education-card{display:flex;flex-direction:column;align-items:stretch;gap:0;height:100%}
+ .deck-part .education-card .education-media{height:clamp(120px,22dvh,200px);margin:0 0 14px}
+ .education-card-copy{display:flex!important;flex:1;flex-direction:column;min-width:0}
+ .education-card-copy .coursework-heading{margin-top:auto;padding-top:12px}
+}
+@media(min-width:768px) and (max-height:760px){
+ .chapter.deck-part.education .deck-content{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+ .deck-school{display:flex}
+ .deck-part .education-card{display:flex;flex-direction:column;align-items:stretch;gap:0;height:100%}
+ .deck-part .education-card .education-media{height:clamp(64px,16dvh,120px);margin:0 0 12px}
+ .education-card-copy{display:flex!important;flex:1;flex-direction:column;min-width:0}
+ .education-card-copy .coursework-heading{margin-top:auto;padding-top:8px}
+}
+@media(max-width:767px){
+ .deck-part .education-card{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:12px}
+ .deck-part .education-card .education-media{height:clamp(52px,8dvh,80px);margin:0 0 10px}
+ .deck-part .education-card-copy h3{font-size:1.375rem;line-height:1.15;margin-bottom:4px}
+ .deck-part .education-card-copy :is(.degree,.education-track,.education-dates){font-size:.875rem;line-height:1.4;margin-bottom:3px}
+ .education .education-card-copy{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto auto minmax(44px,1fr);grid-template-areas:"name name" "degree degree" "track track" "dates dates" "ticker controls";column-gap:8px}
+ .education-card-copy h3{grid-area:name}
+ .education-card-copy .degree{grid-area:degree}
+ .education-card-copy .education-track{grid-area:track}
+ .education-card-copy .education-dates{grid-area:dates}
+ .education .coursework-heading{grid-area:controls;align-self:end;margin:4px 0 0;padding:0}
+ .education .course-ticker{grid-area:ticker;align-self:end}
+ .education .coursework-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px!important;overflow:clip;clip-path:inset(50%);white-space:nowrap}
+ .education .ticker-toggle{min-width:56px;padding:8px;font-size:.875rem}
+ .education .course-ticker{width:auto;margin-top:4px;height:44px;display:flex;align-items:center}
+ .deck-part .education-card .ticker-group li{padding:8px 12px}
+}
+@media(max-width:767px) and (max-height:700px){
+ .deck-part .education-card .education-media{display:none}
+ .deck-part .education-card-copy h3{font-size:1.25rem}
+ .chapter.deck-part.education .deck-content{gap:10px;margin-top:8px}
+}
+@media(max-height:499px) and (min-width:600px){
+ .chapter.deck-part.education .deck-content{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:8px}
+ .deck-part .education-card{display:flex;flex-direction:column;align-items:stretch;height:100%;padding:12px}
+ .deck-part .education-card .education-media{display:none}
+ .deck-part .education-card-copy h3{font-size:1.25rem}
+ .deck-part .education-card-copy :is(.degree,.education-track,.education-dates){font-size:.875rem;margin-bottom:3px}
+ .education .education-card-copy{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto auto minmax(44px,1fr);grid-template-areas:"name name" "degree degree" "track track" "dates dates" "ticker controls";column-gap:8px}
+ .education-card-copy h3{grid-area:name}
+ .education-card-copy .degree{grid-area:degree}
+ .education-card-copy .education-track{grid-area:track}
+ .education-card-copy .education-dates{grid-area:dates}
+ .education .coursework-heading{grid-area:controls;align-self:end;margin:4px 0 0;padding:0}
+ .education .course-ticker{grid-area:ticker;align-self:end}
+ .education .coursework-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px!important;overflow:clip;clip-path:inset(50%);white-space:nowrap}
+ .education .course-ticker{width:auto;height:44px;display:flex;align-items:center;margin-top:4px}
+}
+/* Keep content frames and typography predictable across chapter layouts. */
+.chapter-head>:first-child{flex:1;min-width:0;text-wrap:balance}
+.chapter-head>.label{flex:none;white-space:nowrap;text-align:right}
+.chapter :is(h2,h3,h4){text-wrap:balance}
+.chapter p:not(.label):not(.deck-part-label){text-wrap:pretty}
+.deck-content,.deck-block,.education-card-copy,.work-row,.employer,.venture-identity{min-width:0}
+.chapter img{max-width:100%}
+.chapter .contact-email{display:inline-flex;align-items:center;max-width:100%;min-height:44px;overflow-wrap:anywhere}
+.chapter .keywords{overflow-wrap:anywhere}
+:root:not([data-intro-pending]) [data-hero-year]{display:none!important}
+
+/* Deep links also wait for measured layout, avoiding a first-paint reflow. */
+:root[data-deck-pending] [data-horizontal-track]{visibility:hidden}

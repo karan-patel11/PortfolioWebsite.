@@ -47,6 +47,10 @@ jobs:
         run: npm test
         env:
           CHROME_PATH: /usr/bin/google-chrome
+      - name: Verify responsive framing
+        run: npm run test:framing
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -60,6 +60,7 @@ export function initMobileNavigation() {
     try { sessionStorage.setItem('portfolio-scroll-discovered', 'true'); } catch {}
     removeEventListener('wheel', onWheel);
     removeEventListener('touchmove', dismissHint);
+    removeEventListener('touchstart', dismissHint);
     removeEventListener('keydown', onKey);
     removeEventListener('scroll', onScroll);
   }
@@ -73,6 +74,7 @@ export function initMobileNavigation() {
     hint.hidden = false;
     addEventListener('wheel', onWheel, { passive: true });
     addEventListener('touchmove', dismissHint, { passive: true });
+    addEventListener('touchstart', dismissHint, { passive: true });
     addEventListener('keydown', onKey);
     addEventListener('scroll', onScroll, { passive: true });
     hint.querySelector('[data-hint-dismiss]').addEventListener('click', dismissHint);

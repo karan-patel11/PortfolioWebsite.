@@ -1,4 +1,4 @@
-// Seven equal pages use the available viewport, including classic scrollbars.
+// Measured sibling slides share the exact available viewport width.
 export function measureTrack(track, panels) {
   const width = document.documentElement.clientWidth;
   track.style.setProperty('--panel-count', panels.length);

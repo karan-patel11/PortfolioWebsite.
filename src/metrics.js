@@ -14,10 +14,10 @@ export function parseMetricValue(value) {
   };
 }
 
-export function initMetricCounters({ root = document, duration = 1200 } = {}) {
+export function initMetricCounters({ root = document, duration = 2200 } = {}) {
   const counters = [...root.querySelectorAll('[data-count-up]')];
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const runDuration = Number.isFinite(duration) ? Math.max(0, duration) : 1200;
+  const runDuration = Number.isFinite(duration) ? Math.max(0, duration) : 2200;
   const waiting = new Map();
   const running = new Map();
   let observer;
@@ -45,7 +45,8 @@ export function initMetricCounters({ root = document, duration = 1200 } = {}) {
         continue;
       }
       const eased = 1 - (1 - progress) ** 3;
-      element.textContent = render(metric, metric.target * eased);
+      const value = render(metric, metric.target * eased);
+      if (element.textContent !== value) element.textContent = value;
     }
     if (running.size) frame = requestAnimationFrame(tick);
   }
@@ -68,6 +69,12 @@ export function initMetricCounters({ root = document, duration = 1200 } = {}) {
     frame = 0;
     for (const [element, metric] of [...waiting, ...running]) finish(element, metric);
     observer?.disconnect();
+  }
+
+  function onSettled(event) {
+    for(const [element,metric] of waiting){
+      if(element.closest('[data-horizontal-panel]')===event.detail.panel)start(element,metric);
+    }
   }
 
   function onMotionChange() {
@@ -104,18 +111,22 @@ export function initMetricCounters({ root = document, duration = 1200 } = {}) {
     // its metrics are still below the fold, or translated offscreen sideways.
     observer = new IntersectionObserver(entries => {
       for (const entry of entries) {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.2) continue;
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.95) continue;
+        const panel=entry.target.closest('[data-horizontal-panel]');
+        if(panel && Math.abs(panel.getBoundingClientRect().left)>1)continue;
         const metric = waiting.get(entry.target);
         if (metric) start(entry.target, metric);
       }
       if (!waiting.size) observer.disconnect();
-    }, { threshold: [0, 0.2] });
+    }, { threshold: [0, 0.95, 1] });
     for (const element of waiting.keys()) observer.observe(element);
+    document.addEventListener('deck-settled', onSettled);
     reducedMotion.addEventListener('change', onMotionChange);
   }
 
   return function destroyMetricCounters() {
     settle();
     reducedMotion.removeEventListener('change', onMotionChange);
+    document.removeEventListener('deck-settled', onSettled);
   };
 }

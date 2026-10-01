@@ -2,4 +2,9 @@
 karan-patel-single-design-handoff/
 .openai/
 node_modules/
+dist/
+comparison/viewport-deck/
+comparison/framing-review/
+comparison/animation-review/
+comparison/mobile-overhaul/
 **/.DS_Store
