@@ -9,7 +9,8 @@ import { setTimeout as delay } from 'node:timers/promises';
 const {basePath=''} = JSON.parse(readFileSync('dist/site-config.json','utf8'));
 const base = (process.env.PORTFOLIO_TEST_URL || `http://localhost:4173${basePath}`).replace(/\/$/,'');
 const out = 'comparison/viewport-deck';
-const viewports = [[320,568],[320,701],[360,640],[375,667],[375,812],[390,844],[393,852],[412,915],[600,960],[767,900],[768,1024],[820,1180],[900,600],[1024,568],[1024,768],[1280,720],[1366,768],[1440,900],[1920,1080],[2560,1440],[667,375],[844,390]];
+const gesturesOnly = process.env.PORTFOLIO_GESTURES_ONLY === '1';
+const viewports = gesturesOnly ? [] : [[320,568],[320,701],[360,640],[375,667],[375,812],[390,844],[393,852],[412,915],[600,960],[767,900],[768,1024],[820,1180],[900,600],[1024,568],[1024,768],[1280,720],[1366,768],[1440,900],[1920,1080],[2560,1440],[667,375],[844,390]];
 const order = ['intro', 'about', 'education', 'experience', 'venture', 'selected-work', 'contact'];
 mkdirSync(out, { recursive: true });
 const profile = mkdtempSync(join(tmpdir(), 'portfolio-mobile-'));
@@ -18,7 +19,7 @@ const chrome = spawn(process.env.CHROME_PATH || (process.platform==='darwin'?'/A
   '--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--disable-dev-shm-usage', 'about:blank',
 ], { stdio: ['ignore', 'ignore', 'pipe'], detached:process.platform!=='win32' });
 const report = {
-  scope: { targetURL: base, viewports, headless: true, touchEmulated: true, physicalDevice: false },
+  scope: { targetURL: base, viewports, mode: gesturesOnly ? 'gestures-and-navigation' : 'full', headless: true, touchEmulated: true, physicalDevice: false },
   browser: null, matrix: [], reduced: [], themes: [], gestures: [], metrics: null,
   navigation: null, detail: null, resize: null, noScript: null, screenshots: [], console: [], failures: [],
 };
@@ -48,7 +49,7 @@ function save() {
 async function configure(width, height, reduced = false) {
   const coarse = width < 1024;
   await call('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: coarse });
-  await call('Emulation.setTouchEmulationEnabled', { enabled: coarse, maxTouchPoints: 1 });
+  await call('Emulation.setTouchEmulationEnabled', { enabled: coarse, maxTouchPoints: 2 });
   await call('Emulation.setEmulatedMedia', { features: [
     { name: 'prefers-reduced-motion', value: reduced ? 'reduce' : 'no-preference' },
     { name: 'prefers-color-scheme', value: 'dark' },
@@ -59,6 +60,9 @@ async function navigate(hash = '#intro') {
   await evaluate("if(document.documentElement)document.documentElement.dataset.ready='navigating'");
   await call('Page.navigate', { url });
   await until(() => evaluate(`location.href.split('#')[0] === ${JSON.stringify(url.split('#')[0])} && document.documentElement?.dataset.ready === 'true'`), 'app readiness', 12000);
+  // Device emulation can report DOM readiness before its new hit-test frame.
+  // Dispatch gestures only after the visible page has been painted.
+  await frames();
 }
 async function frames() {
   await evaluate('new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))');
@@ -168,7 +172,7 @@ try {
   });
   closeBrowser=()=>send('Browser.close');
   report.browser = await send('Browser.getVersion');
-  const { targetId } = await send('Target.createTarget', { url: 'about:blank' });
+  let { targetId } = await send('Target.createTarget', { url: 'about:blank' });
   ({ sessionId } = await send('Target.attachToTarget', { targetId, flatten: true }));
   call = (method, params = {}) => send(method, params, sessionId);
   evaluate = async expression => {
@@ -179,6 +183,16 @@ try {
   await call('Page.enable'); await call('Runtime.enable'); await call('Network.enable');
   // The main UX remains functional when every third-party CDN request is blocked.
   await call('Network.setBlockedURLs', { urls: ['*cdn.jsdelivr.net*', '*unpkg.com*'] });
+  async function freshTouchDevice(){
+    // A phone is a separate input device, not a desktop wheel widget resized
+    // into one. Chrome can drop its first touch stream after that mode switch.
+    const previous=targetId;
+    ({targetId}=await send('Target.createTarget',{url:'about:blank'}));
+    ({sessionId}=await send('Target.attachToTarget',{targetId,flatten:true}));
+    await call('Page.enable');await call('Runtime.enable');await call('Network.enable');
+    await call('Network.setBlockedURLs',{urls:['*cdn.jsdelivr.net*','*unpkg.com*']});
+    await send('Target.closeTarget',{targetId:previous});
+  }
 
 
   for (const [width,height] of viewports) {
@@ -221,21 +235,78 @@ try {
     report.matrix.push(row);save();console.log(`${width}x${height}: ${row.order.length} slides, ${row.details.length} detail pages; failures ${report.failures.length}`);
   }
 
-  // Pull every phone page vertically. Both the document and inner content must
-  // stay fixed while the track remains at the same snap point.
+  // Vertical pulls translate to one horizontal page; document/content Y stays
+  // fixed. Reverse pulls, boundaries and both axes share the same snap rules.
   await configure(375,667);await navigate();
   const phoneOrder=await evaluate('[...document.querySelectorAll("[data-horizontal-panel]")].map(p=>p.id)');
   const gestureState=()=>evaluate('({x:document.querySelector("[data-horizontal-track]").scrollLeft,y:scrollY,chapter:document.documentElement.dataset.activeChapter,tops:[...document.querySelectorAll("[data-horizontal-panel]")].map(p=>p.scrollTop)})');
+  let touchPaint = -1;
+  async function readyTouch(){
+    if(touchPaint===navigationId)return;
+    await call('Page.bringToFront');await frames();
+    // Flush the emulated viewport's compositor surface before its first touch.
+    // DOM-ready alone can target a retired surface after desktop/mobile resize.
+    await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
+    touchPaint=navigationId;
+  }
   async function drag(x,y,dx,dy,steps=8,ms=16){
+    await readyTouch();
     await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
     for(let i=1;i<=steps;i++){await call('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+dx*i/steps,y:y+dy*i/steps}]});await delay(ms);}
     await call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await delay(650);
   }
   for(const id of phoneOrder){
     await position(id);const before=await gestureState();await drag(260,340,0,-160);const after=await gestureState();
-    assert(Math.abs(before.x-after.x)<=1&&after.y===0&&after.tops.every(y=>y===0),`vertical touch stays fixed: ${id}`);
+    const expected=Math.min(before.x+375,(phoneOrder.length-1)*375);
+    assert(Math.abs(after.x-expected)<=1,`vertical swipe up advances exactly one page: ${id}`);
+    assert(after.y===0&&after.tops.every(y=>y===0),`vertical swipe has no document/content Y travel: ${id}`);
+    await drag(260,340,0,160);const reverse=await gestureState();
+    assert(Math.abs(reverse.x-Math.max(0,expected-375))<=1,`vertical swipe down returns exactly one page: ${id}`);
     report.gestures.push({kind:'vertical-pull',id,before,after});
   }
+  for(const [width,height] of [[375,667],[393,852],[412,915],[820,1180]]){
+    await configure(width,height);await navigate();
+    for(const [name,dx,dy,steps,ms] of [['vertical-slow',0,-160,12,30],['vertical-flick',0,-80,4,5],['horizontal-slow',-160,0,12,30],['horizontal-flick',-80,0,4,5],['diagonal',-80,-80,8,16]]){
+      await position('intro');await drag(width*.65,height*.55,dx,dy,steps,ms);
+      const forward=await gestureState();
+      assert(Math.abs(forward.x-width)<=1&&forward.y===0&&forward.tops.every(y=>y===0),`${width}x${height} ${name}: one page forward, Y locked`);
+      await drag(width*.25,height*.4,-dx,-dy,steps,ms);
+      assert(Math.abs((await gestureState()).x)<=1,`${width}x${height} ${name}: one page back`);
+      report.gestures.push({kind:name,width,height,forward});
+    }
+    await position('intro');await drag(width*.6,height*.5,0,-8,4,20);
+    assert(Math.abs((await gestureState()).x)<=1,`${width}x${height}: 8px vertical jitter does not navigate`);
+    await drag(width*.6,height*.5,-8,0,4,20);
+    assert(Math.abs((await gestureState()).x)<=1,`${width}x${height}: 8px horizontal jitter does not navigate`);
+    await drag(width*.6,height*.5,0,-16,4,80);
+    assert(Math.abs((await gestureState()).x)<=1,`${width}x${height}: slow subthreshold pull returns to its page`);
+    await drag(width*.6,height*.5,0,80);
+    assert(Math.abs((await gestureState()).x)<=1,`${width}x${height}: previous-page edge cannot overscroll`);
+  }
+  await configure(820,1180);await navigate();
+  await drag(400,1080,0,-960,16,8);
+  assert(Math.abs((await gestureState()).x-820)<=1,'vertical swipe longer than page width cannot skip pages');
+  await configure(375,667);await navigate();
+  await readyTouch();
+  const startPoint={x:260,y:350,id:1};
+  await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[startPoint]});
+  await call('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{...startPoint,y:270}]});await delay(50);
+  await call('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});await delay(650);
+  assert(Math.abs((await gestureState()).x)<=1,'cancelled gesture returns to its original page');
+  await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[startPoint]});
+  await call('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{...startPoint,y:270}]});await delay(50);
+  await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...startPoint,y:270},{x:100,y:270,id:2}]});
+  await call('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});await delay(650);
+  assert(Math.abs((await gestureState()).x)<=1,'adding a second finger cancels page navigation');
+  assert(await evaluate('getComputedStyle(document.querySelector("[data-horizontal-track]")).touchAction.includes("pinch-zoom")'),'CSS keeps pinch zoom available');
+  await position('intro');
+  await evaluate(`window.__touchSamples=[];window.__touchStart=performance.now();requestAnimationFrame(function sample(now){window.__touchSamples.push({ms:now-window.__touchStart,x:document.querySelector('[data-horizontal-track]').scrollLeft});if(now-window.__touchStart<1200)requestAnimationFrame(sample);})`);
+  await drag(260,350,0,-160,12,30);
+  const touchSamples=await evaluate('window.__touchSamples');
+  const touchSteps=touchSamples.slice(1).map((sample,index)=>sample.x-touchSamples[index].x);
+  assert(touchSamples.filter(sample=>sample.x>0&&sample.x<375).length>=12,'vertical drag/release renders intermediate frames');
+  assert(touchSteps.every(step=>step>=-1)&&Math.max(...touchSteps)<375*.3,'vertical drag/release is monotonic without a snap jump');
+  report.gestures.push({kind:'vertical-touch-trajectory',samples:touchSamples,maxStep:Math.max(...touchSteps)});
   for(const [name,steps,ms] of [['slow-drag',12,30],['rapid-flick',4,5]]){
     await position('intro');const before=await gestureState();await drag(315,300,-230,0,steps,ms);const after=await gestureState();
     assert(Math.abs(after.x-375)<=1,`${name}: advances exactly one slide ${JSON.stringify(after)}`);
@@ -249,11 +320,22 @@ try {
   await drag(card.x,card.y,-230,0);
   assert(!await evaluate('Boolean(document.querySelector("[data-detail][open]"))'),'card swipe does not activate detail');
   assert((await gestureState()).x>projectSwipeStart.x,'card swipe hands off to deck');
+  await position('selected-work');
+  const verticalCard=await evaluate('(()=>{const r=document.querySelector(".work-row").getBoundingClientRect();return {x:r.left+r.width*.65,y:r.top+Math.min(45,r.height/2)}})()');
+  await drag(verticalCard.x,verticalCard.y,0,-100);
+  assert(!await evaluate('Boolean(document.querySelector("[data-detail][open]"))'),'vertical card swipe does not activate detail');
+  assert((await gestureState()).x>projectSwipeStart.x,'vertical card swipe hands off to deck');
 
   await configure(1440,900);await navigate();
   for(let n=0;n<8;n++)await call('Input.dispatchMouseEvent',{type:'mouseWheel',x:600,y:400,deltaX:0,deltaY:120});
   await delay(750);const wheel=await gestureState();assert(Math.abs(wheel.x-1440)<=1&&wheel.y===0,'desktop wheel burst advances one page with no document travel');
   report.gestures.push({kind:'wheel-burst',after:wheel});
+  await delay(200);
+  await call('Input.dispatchMouseEvent',{type:'mouseWheel',x:600,y:400,deltaX:0,deltaY:-120});await delay(650);
+  assert(Math.abs((await gestureState()).x)<=1,'negative vertical wheel input returns one page');
+  await delay(200);
+  await call('Input.dispatchMouseEvent',{type:'mouseWheel',x:600,y:400,deltaX:120,deltaY:0});await delay(650);
+  assert(Math.abs((await gestureState()).x-1440)<=1,'horizontal trackpad input advances one page');
 
   // Low-effort navigation, long trackpad tails and idle desktop reflow were
   // reported regressions: exercise the actual browser event/scroll paths.
@@ -300,7 +382,7 @@ try {
   await call('Input.dispatchMouseEvent',{type:'mouseWheel',x:600,y:400,deltaX:0,deltaY:14});await delay(650);
   const nextIntent=await gestureState();assert(Math.abs(nextIntent.x-2880)<=1,'next deliberate gesture works without a long cooldown');
   report.gestures.push({kind:'inertia-tail',after:tail,nextIntent});
-  await configure(375,667);await navigate();
+  await freshTouchDevice();await configure(375,667);await navigate();
   await drag(260,300,-28,0,4,25);const assisted=await gestureState();
   assert(Math.abs(assisted.x-375)<=1,'short 28px mobile swipe advances without a half-screen drag');
   await drag(100,300,28,0,4,25);assert(Math.abs((await gestureState()).x)<=1,'short reverse swipe returns to previous slide');

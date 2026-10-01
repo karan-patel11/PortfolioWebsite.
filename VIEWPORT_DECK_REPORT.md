@@ -1,5 +1,7 @@
 # Viewport deck implementation and local verification
 
+> This report records the earlier release. The current bidirectional touch implementation, complete paste-ready code and integration instructions are documented in [TOUCH_NAVIGATION.md](TOUCH_NAVIGATION.md).
+
 Implemented and verified locally on September 30, 2026. No GitHub push or deployment was performed.
 
 ## Architecture

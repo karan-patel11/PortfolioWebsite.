@@ -1,3 +1,16 @@
+# Bidirectional touch navigation — complete drop-in code
+
+Replace the complete contents of `src/motion.js` starting at line 1 with the JavaScript below. The existing `src/main.js` import at line 3 and `initHorizontal({currentChapter,pagination})` call at line 117 already initialize it. The measured paginator and `src/horizontal-layout.js` remain the existing dependencies. The generated `dist/motion.js` is produced by the build.
+
+Update the existing track and panel CSS declarations in `src/viewport-deck.css` at lines 17–27 with the CSS below, preserving their other sizing/layout properties. Its selectors also allow it to be pasted at the end of that stylesheet.
+
+Up/left advances; down/right reverses. A single finger locks to its dominant axis after 10px, follows the finger through one requestAnimationFrame write per frame, and can travel/release only to the adjacent page. A 24px deliberate swipe qualifies, or a 12px flick at 0.18px/ms with a recent velocity sample. Short pulls return to their starting page. Diagonals lock once and cannot switch axes midway. Swipe-generated clicks are suppressed for 500ms; taps remain available. Cancellation or adding a second finger returns to the starting page. CSS permits pinch zoom and prevents native page pan/bounce. Dialogs lock the background deck.
+
+Wheel input uses the dominant deltaX/deltaY, converts line/page units to pixels and accumulates a signed 4px intent threshold. It moves the horizontal scrollLeft to one adjacent snap point with a 560ms glide. Events in the same inertia burst are consumed until 180ms of silence; raw wheel accumulation cannot skip several pages. Ctrl-wheel remains available for browser zoom. Keyboard and chapter-link navigation continue through the same engine.
+
+## Complete JavaScript
+
+```js
 import { measureTrack } from './horizontal-layout.js';
 
 // Both touch axes drive the horizontal track. Page selection belongs to input,
@@ -239,3 +252,47 @@ export function initHorizontal({ currentChapter, pagination, onReady = () => {} 
   addEventListener('pageshow', event => { if (event.persisted) { disposed = false; observer.observe(pin); measure(); } });
   onReady(); return engine;
 }
+```
+
+## Required CSS
+
+```css
+html, body, main { overflow: hidden; overscroll-behavior: none; }
+[data-horizontal-track],
+html[data-horizontal-active] [data-horizontal-track],
+html[data-native-scroll] [data-horizontal-track] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  touch-action: pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+}
+[data-horizontal-panel],
+html[data-horizontal-active] [data-horizontal-panel],
+html[data-native-scroll] [data-horizontal-panel] {
+  touch-action: pinch-zoom;
+  overscroll-behavior: none;
+}
+html[data-scroll-locked] [data-horizontal-track] { overflow: hidden; }
+```
+
+## Build and verify
+
+```sh
+npm run build
+npm run lint
+PORTFOLIO_GESTURES_ONLY=1 npm test
+npm test
+```
+
+Testing uses local Chrome with emulated touch input, including phone and tablet sizes. Physical iOS/Android devices are not represented by these measurements.
+
+## Local verification notes
+
+Final production-path navigation regression: 219 checks passed with zero failures in 134.72 seconds. This includes vertical/horizontal/diagonal input on phone and tablet profiles, small-motion rejection, reverse gestures, page boundaries, cancellation, adding a second finger, monotonic drag/release frames, card gesture handoff, vertical/horizontal desktop wheel input, inertia tails and idle-page stability.
+
+Intro/ticker regression: 143 checks passed with zero failures in 77.35 seconds across seven emulated sizes. Immediate tap/keyboard activation plus short and diagonal gestures passed seven focused browser checks. Build, syntax lint and whitespace checks passed.
+
+Chrome's emulated touch input received a fresh phone target after desktop wheel tests because the reused widget could drop the entire first touch stream; this is isolated in the test driver. The production handler requires no browser-specific workaround. The full 22-size regression and framing audit also run as deployment gates in GitHub Actions.

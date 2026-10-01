@@ -1,5 +1,7 @@
 # Local entry, swipe and coursework verification
 
+> This report records the earlier release. The current bidirectional touch implementation, complete paste-ready code and integration instructions are documented in [TOUCH_NAVIGATION.md](TOUCH_NAVIGATION.md).
+
 Updated September 30, 2026. Changes are built locally; nothing was pushed or deployed.
 
 ## Updated files

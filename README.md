@@ -27,7 +27,7 @@ indexes. Measured content partitioning and paged details require JavaScript; fon
 - `src/mobile-first.css`: mobile dock, chapter sheet, safe areas, and 44px controls.
 - `src/viewport-deck.css`: viewport containment, fluid sizing, native snap track and paged detail layouts.
 - `src/deck-pagination.js`: measured semantic sibling slides and bounded detail pages.
-- `src/motion.js`: native snap scrolling at every breakpoint; wheel/keyboard chapter navigation.
+- `src/motion.js`: bidirectional touch translation, smooth snap release and wheel/keyboard chapter navigation.
 - `src/hero.js` and `src/hero-motion.css`: local year/name entrance with prepaint masking and input skip.
 - `src/coursework.js`: coursework ticker activation, touch pause, keyboard controls and reduced motion.
 - `src/metrics.js`: once-only, viewport-triggered Twods counters with reduced-motion support.
@@ -50,7 +50,7 @@ invented. The two supplied live project URLs are included.
 
 `npm test` runs real Chrome checks at twenty-two phone, tablet, desktop, and landscape
 sizes. It checks every generated slide and detail page for clipping and overflow,
-vertical touch locking, slow/rapid forward and reverse swipes, card gesture handoff,
+vertical-to-horizontal touch translation, slow/rapid swipes on both axes, diagonal gestures, jitter rejection, cancellation, two-finger handoff, card gesture handoff,
 light wheel gestures, short swipes, inertia tails, idle page stability, counters,
 sheet locking, Escape/Back focus, breakpoint changes, reduced
 motion, content preservation, text contrast, asset URLs and project redirects.
@@ -81,8 +81,7 @@ project rows. About and Venture use coherent content groups rather than an
 alternating grid of loose paragraphs. A cached source tree restores whole groups
 after resizing from phone to laptop. Wide Venture metrics use four columns. The separate QuantEra system-design
 page is removed. Chapter and part numbers use Roman numerals. Page changes glide
-over 560ms for wheel/keyboard input. Touch release uses native smooth scrolling
-with mandatory snap kept active throughout the gesture. Project/role modals have bounded
+over 560ms for wheel/keyboard input. Single-finger vertical and horizontal movement drives the track once per animation frame. Direction locks after 10px, and travel is bounded to one neighboring page. CSS snap pauses during the drag and returns for native smooth release; `touch-action: pinch-zoom` preserves zoom while preventing native panning. Project/role modals have bounded
 pages with Previous/Next controls. The cue fades on first
 touch and stays dismissed for the browsing session. Touch devices omit parallax
 and decorative chapter entrances. Twods counters run once for 2200ms with
@@ -120,3 +119,7 @@ the host root. The preview server reads the generated path from `site-config.jso
 The release suite covers all generated detail pages, project redirects, text
 contrast in both themes, counter timing, and production resource availability.
 No push or deployment is performed by local verification.
+
+## Bidirectional touch navigation
+
+See [TOUCH_NAVIGATION.md](TOUCH_NAVIGATION.md) for the complete drop-in JavaScript, required CSS, exact integration locations and threshold behavior. `PORTFOLIO_GESTURES_ONLY=1 npm test` runs the gesture/navigation regression without repeating the responsive layout matrix.
